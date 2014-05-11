@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="gbk">
+        <title>搜狐二手车首页</title>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta content="telephone=no" name="format-detection">
+        <link type="text/css" rel="stylesheet" href="style/main.css"/>
+        <script type="text/javascript" src="js/zepto.js"></script>
+        <script type="text/javascript" src="js/extend/touch.js"></script>
+        <script type="text/javascript" src="js/extend/iscroll.js"></script>
+        <script type="text/javascript" src="js/extend/matchMedia.js"></script>
+        <script type="text/javascript" src="js/extend/event.ortchange.js"></script>
+        <script type="text/javascript" src="js/extend/highlight.js"></script>
+        <script type="text/javascript" src="js/extend/parseTpl.js"></script>
+        <script type="text/javascript" src="js/core/gmu.js"></script>
+        <script type="text/javascript" src="js/core/event.js"></script>
+        <script type="text/javascript" src="js/core/widget.js"></script>
+        <script type="text/javascript" src="js/widget/navigator/navigator.js"></script>
+        <script type="text/javascript" src="js/widget/navigator/scrolltonext.js"></script>
+        <script type="text/javascript" src="js/widget/navigator/$scrollable.js"></script>
+        <script type="text/javascript" src="js/widget/slider/slider.js"></script>
+        <script type="text/javascript" src="js/widget/slider/dots.js"></script>
+        <script type="text/javascript" src="js/widget/slider/$touch.js"></script>
+        <script type="text/javascript" src="js/widget/slider/$autoplay.js"></script>
+        <script type="text/javascript" src="js/widget/slider/$lazyloadimg.js"></script>
+        <script type="text/javascript" src="js/widget/slider/imgzoom.js"></script>
+        <script type="text/javascript" src="js/widget/dialog/dialog.js"></script>
+        <script type="text/javascript" src="js/widget/dialog/$position.js"></script>
+        <script type="text/javascript" src="js/widget/tabs/tabs.js"></script>
+        <script type="text/javascript" src="js/mobileSohuBase.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+        <!--头-->
+        <header>
+            <span class="logo"></span>
+            <a id="city" href="">
+                北京
+            </a>
+            <div class="icons">
+                <a class="icon" id="home" href="">
+
+                </a>
+                <a class="icon" id="history">
+                </a>
+                <a class="icon" id="search">
+                </a>
+                <a class="icon" id="sellCar">
+
+                </a>
+            </div>
+        </header>
+
+        <!--导航-->
+        <div id="nav_wrap">
+            <div id="nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">买车</a></li>
+                    <li><a href="#">卖车</a></li>
+                    <li><a href="#">估车宝</a></li>
+                    <li><a href="#">认证车</a></li>
+                    <li><a href="#">买车2</a></li>
+                    <li><a href="#">卖车2</a></li>
+                    <li><a href="#">估车宝2</a></li>
+                    <li><a href="#">认证车2</a></li>
+                    <li><a href="#">赢在二手车</a></li>
+                    <li><a href="#">买卖攻略</a></li>
+                    <li><a href="#">教育</a></li>
+                    <li><a href="#">财经</a></li>
+                    <li><a href="#">房产</a></li>
+                    <li><a href="#">汽车</a></li>
+                </ul>
+            </div>
+            <a id="nav_arrow"><span>&gt;</span></a>
+        </div>
+
+        <!--工具栏-->
+        <div id="toolbar">
+            <span class="option">品牌</span>
+            <span class="option">车型</span>
+            <span class="option">价格</span>
+            <span class="option lastOption">更多</span>
+        </div>
+
+        <!--选择品牌列表-->
+        <div id="wrapper1">
+            <div id="brandSelect">
+                <ul id="brandList">
+                    <li class="item-index">A</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-index">A</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-index">A</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-index">A</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--选择车型-->
+        <div id="wrapper2">
+            <div id="modelSelect">
+                <ul id="modelList">
+                    <li class="item-index">A</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-index">A</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-index">A</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-index">A</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                    <li class="item-option">奥迪</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--广告位-->
+        <a id="adBanner" href="">
+            <span class="tsc-logo"></span>
+            <span class="slogan"></span>
+            <em class="close"></em>
+            <span class="download">免费下载</span>
+        </a>
+
+        <!--快速检索-->
+        <div id="fastSearch">
+            <div class="head">
+                <span class="title">快速检索</span>
+            </div>
+            <ul id="selectList">
+                <li id="carType" class="selectItem">
+                    <div class="selectHead">
+                        <div class="mainHead">
+                            <a href="" class="mainItem">SUV</a>
+                            <a href="" class="mainItem">两厢车</a>
+                            <a href="" class="mainItem">三厢车</a>
+                            <a href="" class="mainItem">跑车</a>
+                            <a href="" class="mainItem">豪华车</a>
+                        </div>
+                        <a class="readmore"></a>
+                    </div>
+                    <div class="selectBody">
+                        <div class="items">
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                        </div>
+                        <div class="bottomAd">
+                            <a class="ad">宝马5系特价专场，7天包退啦！</a>
+                            <a class="allItems">所有车型</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="carBrand" class="selectItem">
+                    <div class="selectHead">
+                        <div class="mainHead">
+                            <a href="" class="mainItem">宝马</a>
+                            <a href="" class="mainItem">奥迪</a>
+                            <a href="" class="mainItem">别克</a>
+                            <a href="" class="mainItem">丰田</a>
+                            <a href="" class="mainItem">奔驰</a>
+                        </div>
+                        <a class="readmore"></a>
+                    </div>
+                    <div class="selectBody">
+                        <div class="items">
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                        </div>
+                        <div class="bottomAd">
+                            <a class="ad">宝马5系特价专场，7天包退啦！</a>
+                            <a class="allItems">所有车型</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="carPrice" class="selectItem">
+                    <div class="selectHead">
+                        <div class="mainHead">
+                            <a href="" class="mainItem">3万以下</a>
+                            <a href="" class="mainItem">5-10万</a>
+                            <a href="" class="mainItem">10-15万</a>
+                            <a href="" class="mainItem">15-20万</a>
+                        </div>
+                        <a class="readmore"></a>
+                    </div>
+                    <div class="selectBody">
+                        <div class="items">
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                        </div>
+                        <div class="bottomAd">
+                            <a class="ad">宝马5系特价专场，7天包退啦！</a>
+                            <a class="allItems">所有车型</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="carModel" class="selectItem">
+                    <div class="selectHead">
+                        <div class="mainHead">
+                            <a href="" class="mainItem">宝马X3</a>
+                            <a href="" class="mainItem">奥迪A6L</a>
+                            <a href="" class="mainItem">帕萨特</a>
+                            <a href="" class="mainItem">起亚K5</a>
+                        </div>
+                        <a class="readmore"></a>
+                    </div>
+                    <div class="selectBody">
+                        <div class="items">
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                        </div>
+                        <div class="bottomAd">
+                            <a class="ad">宝马5系特价专场，7天包退啦！</a>
+                            <a class="allItems">所有车型</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="hotCar" class="selectItem">
+                    <div class="selectHead">
+                        <div class="mainHead">
+                            <a href="" class="mainItem">准新车</a>
+                            <a href="" class="mainItem">代步车</a>
+                            <a href="" class="mainItem">特价车</a>
+                            <a href="" class="mainItem">占号车</a>
+                            <a href="" class="mainItem">热门车</a>
+                        </div>
+                        <a class="readmore"></a>
+                    </div>
+                    <div class="selectBody">
+                        <div class="items">
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                            <a href="" class="item">XXX</a>
+                        </div>
+                        <div class="bottomAd">
+                            <a class="ad">宝马5系特价专场，7天包退啦！</a>
+                            <a class="allItems">所有车型</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--今日焦点-->
+        <div id="todayFocus">
+            <div class="head">
+                <span class="title">今日焦点</span>
+            </div>
+            <div id="news-slider">
+                <a class="slider-item">
+                    <div class="news-pic"><img src="images/car.png" /></div>
+                    <p class="news-tit">奥迪6L时尚潮人主选车</p>
+                    <p class="price"><span class="num">123.18</span><span class="unit">万</span></p>
+                </a>
+                <a class="slider-item">
+                    <div class="news-pic"><img src="images/car.png" /></div>
+                    <p class="news-tit">奥迪6L时尚潮人主选车</p>
+                    <p class="price"><span class="num">123.18</span><span class="unit">万</span></p>
+                </a>
+                <a class="slider-item">
+                    <div class="news-pic"><img src="images/car.png" /></div>
+                    <p class="news-tit">奥迪6L时尚潮人主选车</p>
+                    <p class="price"><span class="num">123.18</span><span class="unit">万</span></p>
+                </a>
+                <a class="slider-item">
+                    <div class="news-pic"><img src="images/car.png" /></div>
+                    <p class="news-tit">奥迪6L时尚潮人主选车</p>
+                    <p class="price"><span class="num">123.18</span><span class="unit">万</span></p>
+                </a>
+            </div>
+            <div class="newsList">
+                <ul class="news">
+                    <li class="news-item">
+                        <a href="">车况不是问题 四款二手经典中级车型推荐</a>
+                    </li>
+                    <li class="news-item">
+                        <a href="">DSG变速器缩短延保 二手迈腾后期问题分析</a>
+                    </li>
+                    <li class="news-item">
+                        <a href="">二手车交易后及时过户 以免引发责任纠纷</a>
+                    </li>
+                    <li class="news-item">
+                        <a href="">售价五万区间 多款二手合资紧凑级车推荐</a>
+                    </li>
+                    <li class="news-item">
+                        <a href="">旧车抵价当心猫腻 一纸合同才是维权利器</a>
+                    </li>
+                    <li class="news-item last-news-item">
+                        <a href="">这些都可轻松实现 愚人节与二手车的故事</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--热门关注-->
+        <div id="hotFocus">
+            <div class="head">
+                <span class="title">热门关注</span>
+            </div>
+            <div id="focusSlider">
+                <div class="focus-item">
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon1.png"/>
+                        <p class="car-name">准新车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon2.png"/>
+                        <p class="car-name">占号车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon1.png"/>
+                        <p class="car-name">特价车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon2.png"/>
+                        <p class="car-name">人气车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon1.png"/>
+                        <p class="car-name">保值车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon2.png"/>
+                        <p class="car-name">省油车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon1.png"/>
+                        <p class="car-name">代步车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon2.png"/>
+                        <p class="car-name">旅行车</p>
+                    </a>
+                </div>
+                <div class="focus-item">
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon1.png"/>
+                        <p class="car-name">准新车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon2.png"/>
+                        <p class="car-name">占号车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon1.png"/>
+                        <p class="car-name">特价车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon2.png"/>
+                        <p class="car-name">人气车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon1.png"/>
+                        <p class="car-name">保值车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon2.png"/>
+                        <p class="car-name">省油车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon1.png"/>
+                        <p class="car-name">代步车</p>
+                    </a>
+                    <a href="">
+                        <img class="car-icon" src="images/car-icon2.png"/>
+                        <p class="car-name">旅行车</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--车源推荐-->
+        <div id="recommend-car">
+            <div class="head">
+                <span class="title">北京车源推荐</span>
+                <span class="more">&gt;</span>
+            </div>
+            <ul class="carList">
+                <li class="car-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
+                        <span class="authentication">认</span>
+                        <div class="description">
+                            <div class="left-des">
+                                <p class="promise">优途二手车可质保延期的放心车</p>
+                                <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                            </div>
+                            <div class="right-des">
+                                <p class="car-price">22.8万</p>
+                                <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="car-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
+                        <span class="authentication">认</span>
+                        <div class="description">
+                            <div class="left-des">
+                                <p class="promise">优途二手车可质保延期的放心车</p>
+                                <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                            </div>
+                            <div class="right-des">
+                                <p class="car-price">22.8万</p>
+                                <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="car-item">
+                    <a>
+                        <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
+                        <span class="authentication">认</span>
+                        <div class="description">
+                            <div class="left-des">
+                                <p class="promise">优途二手车可质保延期的放心车</p>
+                                <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                            </div>
+                            <div class="right-des">
+                                <p class="car-price">22.8万</p>
+                                <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="car-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
+                        <span class="authentication">认</span>
+                        <div class="description">
+                            <div class="left-des">
+                                <p class="promise">优途二手车可质保延期的放心车</p>
+                                <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                            </div>
+                            <div class="right-des">
+                                <p class="car-price">22.8万</p>
+                                <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="car-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
+                        <span class="authentication">认</span>
+                        <div class="description">
+                            <div class="left-des">
+                                <p class="promise">优途二手车可质保延期的放心车</p>
+                                <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                            </div>
+                            <div class="right-des">
+                                <p class="car-price">22.8万</p>
+                                <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="car-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
+                        <span class="authentication">认</span>
+                        <div class="description">
+                            <div class="left-des">
+                                <p class="promise">优途二手车可质保延期的放心车</p>
+                                <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                            </div>
+                            <div class="right-des">
+                                <p class="car-price">22.8万</p>
+                                <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--经销商推荐-->
+        <div id="recommend-shop">
+            <div class="head">
+                <span class="title">北京经销商推荐</span>
+                <span class="more">&gt;</span>
+            </div>
+            <ul class="shopList">
+                <li class="shop-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="shop-tit">北京第一站名车汇</h3>
+                        <div class="shop-info">
+                            <div class="info-left">
+                                <p class="car-num">共有 <span>79</span> 辆在售车辆</p>
+                                <p class="shop-phone">电话：400-809-9898  转 <span>9898</span></p>
+                            </div>
+                            <div class="info-right">
+                                <span class="message"></span>
+                                <span class="call"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="shop-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="shop-tit">北京第一站名车汇</h3>
+                        <div class="shop-info">
+                            <div class="info-left">
+                                <p class="car-num">共有 <span>79</span> 辆在售车辆</p>
+                                <p class="shop-phone">电话：400-809-9898  转 <span>9898</span></p>
+                            </div>
+                            <div class="info-right">
+                                <span class="message"></span>
+                                <span class="call"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="shop-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="shop-tit">北京第一站名车汇</h3>
+                        <div class="shop-info">
+                            <div class="info-left">
+                                <p class="car-num">共有 <span>79</span> 辆在售车辆</p>
+                                <p class="shop-phone">电话：400-809-9898  转 <span>9898</span></p>
+                            </div>
+                            <div class="info-right">
+                                <span class="message"></span>
+                                <span class="call"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="shop-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="shop-tit">北京第一站名车汇</h3>
+                        <div class="shop-info">
+                            <div class="info-left">
+                                <p class="car-num">共有 <span>79</span> 辆在售车辆</p>
+                                <p class="shop-phone">电话：400-809-9898  转 <span>9898</span></p>
+                            </div>
+                            <div class="info-right">
+                                <span class="message"></span>
+                                <span class="call"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="shop-item">
+                    <a href="javascript:void(0);">
+                        <h3 class="shop-tit">北京第一站名车汇</h3>
+                        <div class="shop-info">
+                            <div class="info-left">
+                                <p class="car-num">共有 <span>79</span> 辆在售车辆</p>
+                                <p class="shop-phone">电话：400-809-9898  转 <span>9898</span></p>
+                            </div>
+                            <div class="info-right">
+                                <span class="message"></span>
+                                <span class="call"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--工具-->
+        <div id="util">
+            <div class="head">
+                <span class="title">工具</span>
+            </div>
+            <div class="util-list">
+                <a class="util-item" href="">购买流程</a>
+                <a class="util-item" href="">车险理赔</a>
+                <a class="util-item" href="">评估询价</a>
+                <a class="util-item" href="">砍价技巧</a>
+                <a class="util-item" href="">购车注意</a>
+                <a class="util-item" href="">购买流程</a>
+                <a class="util-item" href="">违章查询</a>
+                <a class="util-item" href="">识别泡水车</a>
+            </div>
+        </div>
+
+        <!--手机下载-->
+        <div id="phone-down">
+            <div class="head">
+                <span class="title">手机下载</span>
+            </div>
+            <div class="down-content">
+                <div class="down-left"></div>
+                <div class="down-right">
+                    <h4>买卖二手车&nbsp;&nbsp;放心有保障</h4>
+                    <div class="down-icon">
+                        <a href="" class="iphone-down"></a>
+                        <a href="" class="android-down"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--底部-->
+        <div id="footer">
+            <div class="bottom">
+                <a href="">首页-二手车</a>
+                <span id="suggestion">^-^提提意见哦！</span>
+            </div>
+            <div class="menu">
+                <ul class="clearfix">
+                    <li class="current">触版</li>
+                    <li><a id="2scweb" href="http://2sc.sohu.com/">PC版</a></li>
+                    <li><a href="http://mobile.auto.sohu.com/mobile/download/getDetail.at?loadType=ershou">客户端</a></li>
+                </ul>
+            </div>
+            <p>Copyright 2014 Sohu.com</p>
+        </div>
+
+        <!--意见弹出对话框-->
+        <div id="suggest-dialog" title="建议">
+            <textarea id="suggest-content" placeholder="请输入您的建议"></textarea>
+        </div>
+
+        <!--留言弹出对话框-->
+        <div id="message-dialog">
+            <textarea id="message-content" placeholder="请输入您的留言"></textarea>
+        </div>
+
+        <!--搜索框-->
+        <div class="search-wrap">
+            <div class="search-box">
+                <form id="keyWordForm" name="keyWordForm" method="post">
+                    <p class="input-box">
+                        <input id="search-key" name="suggest" type="text" class="search-text" placeholder="请输入车型名称" autocomplete="off">
+                    </p>
+                    <input type="button" class="search-btn" value="搜索" onclick="doKeyWordSubmit()">
+                </form>
+                <div class="search-tips">
+                    <a target="_blank" href="">奥迪A6L</a>
+                    <a target="_blank" href="">宝马3系</a>
+                    <a target="_blank" href="">帕萨特</a>
+                    <a target="_blank" href="">POLO</a>
+                    <a target="_blank" href="">奥迪A4L</a>
+                </div>
+            </div>
+            <span class="search-ui-arrow"></span>
+        </div>
+
+        <!--历史框-->
+        <div class="history-wrap">
+            <div class="history-tabs">
+                <ul class="tabs-nav">
+                    <li><a href="#collect-record">收藏记录</a></li>
+                    <li><a href="#browsing-record">浏览记录</a></li>
+                </ul>
+                <a class="clearBtn"></a>
+                <div class="clear"></div>
+                <ul id="collect-record">
+                    <li>
+                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
+                    </li>
+                    <li>
+                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
+                    </li>
+                    <li>
+                        <a class="shopItem" href="">北京优图连锁经营中心</a><span class="shopPhone">400-809-3333转<i>333</i></span><span class="deleteBtn"></span>
+                    </li>
+                    <li class="lastItem">
+                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
+                    </li>
+                </ul>
+                <ul id="browsing-record">
+                    <li>
+                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
+                    </li>
+                    <li>
+                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
+                    </li>
+                    <li>
+                        <a class="shopItem" href="">北京优图连锁经营中心</a><span class="shopPhone">400-809-3333转<i>333</i></span><span class="deleteBtn"></span>
+                    </li>
+                    <li class="lastItem">
+                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
+                    </li>
+                </ul>
+            </div>
+            <span class="history-ui-arrow"></span>
+        </div>
+
+    </body>
+</html>
