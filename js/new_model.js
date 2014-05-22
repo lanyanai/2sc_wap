@@ -1,8 +1,10 @@
-var brandMods = [{
+var brandMods = [
+    {
     i: 218,
     n: 'A 阿尔法罗密欧',
     e: 'alfaromeo',
-    s: [{
+    s: [
+        {
         n: '阿尔法罗密欧',
         b: [{
             i: 1947,
@@ -24,13 +26,15 @@ var brandMods = [{
                 n: 'GTV',
                 e: 'gtv'
             }]
-    }]
+    }
+    ]
 },
     {
         i: 217,
         n: 'A 阿斯顿马丁',
         e: 'astonmartin',
-        s: [{
+        s: [
+            {
             n: '阿斯顿马丁',
             b: [{
                 i: 1941,
@@ -82,19 +86,22 @@ var brandMods = [{
                     n: 'Virage',
                     e: 'virage'
                 }]
-        }]
+        }
+        ]
     },
     {
         i: 191,
         n: 'A 奥迪',
         e: 'audi',
-        s: [{
+        s: [
+            {
             n: '一汽奥迪',
-            b: [{
-                i: 3964,
-                n: '100',
-                e: '1001'
-            },
+            b: [
+                {
+                    i: 3964,
+                    n: '100',
+                    e: '1001'
+                },
                 {
                     i: 2050,
                     n: 'A4',
@@ -124,7 +131,8 @@ var brandMods = [{
                     i: 1571,
                     n: 'Q5',
                     e: 'q5'
-                }]
+                }
+            ]
         },
             {
                 n: '奥迪S',
@@ -276,13 +284,15 @@ var brandMods = [{
                         n: 'TT',
                         e: 'tt'
                     }]
-            }]
+            }
+        ]
     },
     {
         i: 262,
         n: 'A 奥克斯',
         e: 'aokesi',
-        s: [{
+        s: [
+            {
             n: '奥克斯',
             b: [{
                 i: 2138,
@@ -299,7 +309,8 @@ var brandMods = [{
                     n: '原动力',
                     e: 'ydl'
                 }]
-        }]
+        }
+        ]
     },
     {
         i: 342,
@@ -1458,7 +1469,8 @@ var brandMods = [{
         i: 158,
         n: 'C 昌河',
         e: 'changhe',
-        s: [{
+        s: [
+            {
             n: '昌河',
             b: [{
                 i: 1201,
@@ -1491,7 +1503,8 @@ var brandMods = [{
         i: 242,
         n: 'C 长安',
         e: 'changan',
-        s: [{
+        s: [
+            {
             n: '长安',
             b: [{
                 i: 2060,
@@ -1623,7 +1636,8 @@ var brandMods = [{
                     n: '致尚XT',
                     e: 'zhishangxt'
                 }]
-        }]
+        }
+        ]
     },
     {
         i: 348,

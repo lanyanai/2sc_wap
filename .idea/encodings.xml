@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
-    <file url="file://$PROJECT_DIR$/js/api_v2.0.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/js/buycar.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/core/event.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/core/gmu.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/core/widget.js" charset="GBK" />
@@ -23,7 +23,8 @@
     <file url="file://$PROJECT_DIR$/js/main.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/mobileSohuBase.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/new_model.js" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/js/tuan.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/js/product.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/js/sell.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/widget/add2desktop/add2desktop.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/widget/button/$input.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/widget/button/button.js" charset="GBK" />
@@ -73,8 +74,12 @@
     <file url="file://$PROJECT_DIR$/js/widget/tabs/tabs.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/widget/toolbar/$position.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/widget/toolbar/toolbar.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/js/zepto.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/style/buycar.css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/style/dealer.css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/style/main.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/style/product.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/style/sell.css" charset="GBK" />
   </component>
 </project>
 

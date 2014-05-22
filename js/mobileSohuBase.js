@@ -337,312 +337,323 @@ SA.register('ui.menu',function(a,$){
 
 
 SA.register("app.carSelect",function(a,$){
-	
-	var trims=[]
-		, first=true
-		, useIndex=0;
 
-	var Data=function( url ){ this.url=url;}
-	Data.prototype={
-			cache:{
-				brands:null,
-				models:{},
-				trims:{}
-			},
-			status:{
-				init:false,
-				list:[]
-			},
-			getBrand:function(callBack){
-				var self=this;
-				if( this.cache['brands'] ){
-					callBack(this.cache['brands']);
-				}else{
-					this.status.list.push(callBack);
-					if( !this.status.init ){
-						this.status.init=true;
-						a.scriptLoader({
-							url : self.url.brand,
-							onComplete : function() {
-								self.cache['brands']=[];
-								var json = window.brandMods;
-								var ch =/^[a-zA-Z]{1}/;
-								for(var i=0, len =json.length;i<len;i++){
-									self.cache['brands'].push({i:json[i].i,n:json[i].n});
-									self.cache['models'][json[i].i] = { l:json[i].s, i:json[i].i };
-								}
-								for(var i=0, j=self.status.list.length; i<j; i++){
-									self.status.list[i](self.cache['brands']);
-								}
-							}
-						})
-					}
-				}
-			},
-			getModel:function(bid,callBack){
-				var self=this;
-				if( !bid||bid=='-1' ){
-					callBack([]);
-				}else{
-					this.cache['models'][bid] ? callBack(this.cache['models'][bid]) : callBack([]); 
-				}
-			},
-			getTrim:function(mid,callBack){
-				var self=this;
-				if( !mid||mid=='-1' ){
-					callBack([]);
-				}else{
-					this.cache['trims'][mid] ? callBack(this.cache['trims'][mid]) : 
-					$.getJSON(self.url.trim, {modelid:mid}, function(json){
-						var data=json.l;
-						data=data.sort(function(a,b){
-							return b.y-a.y;
-						})
-						self.cache['trims'][mid]=data;
-						callBack(data);
-					});
-				}
-			}
-	}
+    var trims=[]
+        , first=true
+        , useIndex=0;
 
-	var view={
-		renderBrand:function(data){
-			var self=this
-				, name=this.option.bText
-				, options='<li><i class="item-index">A</i>'
-				, id=this.current.brand.value||-1
-				, index='A'
-				, lastIndex='A'
-				, indexHtml=''
-				, brandName='';
-			$(data).each(function(i,v){
-				index=v.n.split(' ')[0]
-				, brandName=v.n.split(' ')[1];
-				if( index==lastIndex ){
-					options+='<a href="javascript:void(0)" class="option" title="'+brandName+'" value="'+v.i+'">'+indexHtml+'<span class="item-text">'+brandName+'</span></a>';
-				}else{
-					options+='</li><li><i class="item-index">'+index+'</i><a href="javascript:void(0)" class="option" title="'+brandName+'" value="'+v.i+'">'+indexHtml+'<span class="item-text">'+brandName+'</span></a>'
-				}
-				if( id==v.i ){
-					name=brandName;
-				}
-				lastIndex=index;
-			});
-			options+='</li>';
-			self.E.$brand.find('ul:first').html(options);
-			self.E.$brand.find('>.menu-name').text(name);
-			
-		},
-		renderModel:function(data){
-			var self=this
-			, id=self.current.model.value||-1
-			, name=this.option.mText;
-			var options='<li><span class="item-sep" value="0">'+name+'</span></li>';
+    var Data=function( url )
+    { this.url=url;};
 
-			$(data.l).each(function(i,v){
-		        options+='<li><span class="item-group">'+v.n+'</span></li>';
-		        $(v.b).each(function(i,v){
-					options+='<li><a href="javascript:void(0)" class="option" title="'+v.n+'" value="'+v.i+'"><span class="item-text">'+v.n+'</span></a></li>';
-					if( id==v.i ){
-						name=v.n;
-					}
-				});
-			});
-			self.E.$model.find('ul:first').html(options);
-			self.E.$model.find('>.menu-name').text(name);
+    Data.prototype={
+        cache:{
+            brands:null,
+            models:{},
+            years:{},
+            trims:{}
+        },
+        status:{
+            init:false,
+            list:[]
+        },
+        getBrand:function(callBack){
+            var self=this;
+            if( this.cache['brands'] ){
+                callBack(this.cache['brands']);
+            }else{
+                this.status.list.push(callBack);
+                if( !this.status.init ){
+                    this.status.init=true;
+                    a.scriptLoader({
+                        url : self.url.brand,
+                        onComplete : function() {
+                            self.cache['brands']=[];
+                            var json = window.brandMods;
+                            var ch =/^[a-zA-Z]{1}/;
+                            for(var i=0, len =json.length;i<len;i++){
+                                self.cache['brands'].push({i:json[i].i,n:json[i].n});
+                                self.cache['models'][json[i].i] = { l:json[i].s, i:json[i].i };
+                            }
+                            for(var i=0, j=self.status.list.length; i<j; i++){
+                                self.status.list[i](self.cache['brands']);
+                            }
+                        }
+                    })
+                }
+            }
+        },
+        getModel:function(bid,callBack){
+            var self=this;
+            if( !bid||bid=='-1' ){
+                callBack([]);
+            }else{
+                this.cache['models'][bid] ? callBack(this.cache['models'][bid]) : callBack([]);
+            }
+        },
+        getYear:function(mid,callBack){
+            var self=this;
+            if( !mid||mid=='-1' ){
+                callBack([]);
+            }else{
+                //var data = {"m":2050,"l":[{"y":2003,"t":[{"i":107810,"n":"1.8T 基本型"},{"i":107793,"n":"1.8T 基本型（手自一体）"},{"i":107794,"n":"1.8T 舒适型（手自一体）"},{"i":107796,"n":"2.4 舒适型"},{"i":107809,"n":"1.8T 技术领先型（手自一体）"},{"i":107797,"n":"2.4 舒适尊享型"},{"i":107795,"n":"2.4 舒适运动型"},{"i":107798,"n":"3.0 舒适型(手自一体)"}]},{"y":2006,"t":[{"i":107828,"n":"1.8T 基本型(手动)"},{"i":107827,"n":"1.8T 基本型（自动）"},{"i":107831,"n":"1.8T 舒适型"},{"i":107832,"n":"1.8T 舒适型+"},{"i":107834,"n":"1.8T 豪华型"},{"i":107833,"n":"1.8T 技术型"},{"i":107843,"n":"新A4 2.0T FSI 手自一体标准型"},{"i":107829,"n":"2.0T FSI? 尊享型"},{"i":107830,"n":"3.0 quattro 旗舰型"}]},{"y":2007,"t":[{"i":107845,"n":"07款 1.8T 手动标准型"},{"i":107835,"n":"新A4 1.8T 手动基本型"},{"i":107846,"n":"07款 1.8T 手动舒适型"},{"i":107847,"n":"07款 1.8T 手自一体标准型"},{"i":107836,"n":"新A4 1.8T 手自一体基本型"},{"i":107849,"n":"07款 1.8T 手自一体舒适型"},{"i":107837,"n":"新A4 1.8T 手自一体舒适型"},{"i":107848,"n":"07款 2.0T 手自一体标准型"},{"i":107853,"n":"1.8T 手动一体 个性风格版"},{"i":107850,"n":"07款 2.0T 手自一体舒适型"},{"i":107838,"n":"新A4 1.8T 手自一体舒适型+"},{"i":107851,"n":"07款 1.8T 手自一体豪华型"},{"i":107839,"n":"新A4 1.8T 手自一体豪华型"},{"i":107852,"n":"07款 2.0T 手自一体豪华型"},{"i":107840,"n":"新A4 1.8T 手自一体技术型"},{"i":107841,"n":"新A4 2.0T FSI 手自一体标准型"},{"i":107842,"n":"新A4 2.0T FSI 手自一体尊亨型"},{"i":107844,"n":"新A4 3.0 Quattro 手自一体旗舰型 四驱"},{"i":107854,"n":"07款 3.0 四驱 Quattro 旗舰型"}]},{"y":2004,"t":[{"i":107800,"n":"1.8T 基本型"},{"i":107811,"n":"1.8T 基本型（手自一体）"},{"i":107816,"n":"1.8T 舒适型（手自一体）"},{"i":107814,"n":"1.8T 技术领先型（手自一体）"},{"i":107813,"n":"2.4 舒适型"},{"i":107815,"n":"2.4 舒适尊享型"},{"i":107812,"n":"2.4 舒适运动型"},{"i":107817,"n":"2.4 豪华型"},{"i":107799,"n":"3.0 Quattro豪华尊享型"}]},{"y":2005,"t":[{"i":107802,"n":"1.8T 基本型（手动）"},{"i":107818,"n":"1.8T 入门型（手动）"},{"i":107819,"n":"1.8T 基本型(手动)"},{"i":107820,"n":"1.8T 入门型（手自一体）"},{"i":107801,"n":"1.8T 基本型（手自一体）"},{"i":107805,"n":"1.8T 舒适型（手自一体）"},{"i":107821,"n":"1.8T 基本型（手自一体）"},{"i":107806,"n":"1.8T 舒适型+（手自一体）"},{"i":107808,"n":"1.8T 豪华型"},{"i":107822,"n":"1.8T 技术领先型（手自一体）"},{"i":107807,"n":"1.8T 技术型（手自一体）"},{"i":107823,"n":"2.4 基本加热型（手自一体）"},{"i":107824,"n":"2.4 运动型（手自一体）"},{"i":107803,"n":"2.0 FSI尊享型（手自一体）"},{"i":107804,"n":"3.0i Quattro旗舰型"},{"i":107826,"n":"3.0 基本型（手自一体）"},{"i":107825,"n":"3.0 运动型（手自一体）"}]},{"y":2008,"t":[{"i":111024,"n":"1.8T 舒适型MT"},{"i":111023,"n":"1.8T 舒适型AT"},{"i":111021,"n":"1.8T Sline(个性风格版)"},{"i":107857,"n":"1.8T 豪华型"},{"i":107858,"n":"2.0TFSI Sline(个性风格版)"}]}]};
+                this.cache['years'][mid] ? callBack(this.cache['trims'][mid]) :
+                    $.getJSON(self.url.trim, {modelid:mid}, function(json){
+                        var data=json.l;
+                        data=data.sort(function(a,b){
+                            return b.y-a.y;
+                        });
+                        self.cache['years'][mid] = [];
+                        $.each(data, function(i, item)
+                        {
+                            self.cache['years'][mid].push(item.y);
+                            self.cache['trims'][item.y] = item.t;
+                        });
 
-		},
-		renderTrim:function(data){
-			var self=this
-				, id=self.current.trim.value||-1
-				, name=this.option.tText
-				, options='<li><span class="item-sep" value="0">'+name+'</span></li>'
-				, groups=''
-				, first=true;
+                        callBack(self.cache['years'][mid]);
+                    });
+            }
+        },
+        getTrim:function(yid, callback)
+        {
+            var self = this;
+            if(!yid || yid == '-1')
+            {
+                callback([]);
+            }
+            else
+            {
+                this.cache['trims'][yid] ? callback(this.cache['trims'][yid]): callback([]);
+            }
+        }
+    };
 
-			//@todo 年款匹配	
-			$(data).each(function(i,v){
-				if( $(v.t).length ){
-					groups+='<li'+(first?' class="cur"':'')+'><a href="javascript:void(0)" class="item-group">'+v.y+'</a></li>';
-					options+=first?'<div>':'<div style="display:none;">'
-					$(v.t).each(function(i,t){
-						options+='<li><a href="javascript:void(0)" class="option" title="'+t.n+'" value="'+v.y+'|'+t.i+'"><span class="item-text">'+t.n+'</span></a></a></li>';
-						if( id==t.i ){
-							name=t.n;
-						}
-					});
-					options+='</div>'
-					first=false;
-				}
-			});
-			self.E.$trim.find('div.years:first').html(groups);
-			self.E.$trim.find('ul:first').html(options);
-			self.E.$trim.find('>.menu-name').text(name);
+    var view={
+        renderBrand:function(data){
+            var self=this
+                , name=this.option.bText
+                , options='<option value="-1">' + name + '</option>'
+                , id=this.current.brand.value||-1
+                , index='A'
+                , lastIndex='A'
+                , indexHtml=''
+                , brandName='';
+            $(data).each(function(i,v){
+                index=v.n.split(' ')[0]
+                    , brandName=v.n.split(' ')[1];
+                options += '<option value="' + v.i + '">' + brandName + '</option>';
+            });
+            self.E.$brand.html(options);
+        },
+        renderModel:function(data){
+            var self=this
+                , id=self.current.model.value||-1
+                , name=this.option.mText;
+            var options='<option value="-1">' + name + '</option>';
 
-		}
-	};
-	var carSelect=function(option){
-		
-		this.option=$.extend({},this.defaultOption,option);
-		this.current={
-				brand:{ name:'', value:this.option.bid },
-				model:{ name:'', value:this.option.mid },
-				year:{ name:'', value:this.option.yid },
-				trim:{ name:'', value:this.option.tid }
-		};
-		
-		var self=this,o=this.option;
-		
-		this.E={
-			$brand:$(o.b),
-			$model:$(o.m),
-			$trim:$(o.t)
-		};
-		
-		var groupName='carSelect'+useIndex;
-		
-		new a.ui.menuSelect( this.E.$brand, groupName, 0, 376 );
-		new a.ui.menuSelect( this.E.$model, groupName, 1, 376 );
-		new a.ui.menuSelect( this.E.$trim, groupName, 2, 376 );
-		
-		useIndex++;
-		
-		this.E.$brand.change(function(event,data){
-			self.current.brand=data;
-			self.onModelChange();
-			self.option.onChange.call(self,'brand',self.current.brand);
-			self.current.select='brand';
-			
-			data.value&&data.value!='-1' ? self.E.$brand.removeClass('novalue') : self.E.$brand.addClass('novalue');
-			data.value&&data.value!='-1' ? self.E.$model.removeClass('disabled') : self.E.$model.addClass('disabled');
-			return false;
-		});
-		this.E.$model.change(function(event,data){
-			self.current.model=data;
-			self.onTrimChange();
-			self.option.onChange.call(self,'model',self.current.model);
-			self.current.select='model';
-			
-			data.value&&data.value!='-1' ? self.E.$model.removeClass('novalue') : self.E.$model.addClass('novalue');
-			data.value&&data.value!='-1' ? self.E.$trim.removeClass('disabled') : self.E.$trim.addClass('disabled');
-			return false;
-		});
-		
-		this.E.$trim.length && (function(){
-		
-			self.E.$trim.change(function(event,data){
-				if( data ){
-					var v=data.value.split('|');
-					self.current.year={name:v[0],value:v[0]};
-					data.value=v[1];
-					self.current.trim=data;
-				}else{
-					self.current.year={name:'',value:-1};
-					self.current.trim={name:'',value:-1};
-				}
-				self.option.onChange.call(self,'trim',self.current.trim);
-				self.current.select='trim';
-				
-				data.value&&data.value!='-1' ? self.E.$trim.removeClass('novalue') : self.E.$trim.addClass('novalue');
-				return false;
-			});
-			
-			var $year=self.E.$trim.find('div.years'),
-				$list=self.E.$trim.find('div.trim-list');
-			
-			$year.delegate('li','mouseover',function(e){
-				e.stopPropagation();
-				var $this=$(this)
-				, $children=$year.children()
-				, index=$children.index(this)
-				;
-				
-				$children.removeClass('cur').eq(index).addClass('cur');
-				$list.find('div').hide().eq(index).show();
-				
-			});
-			$year.click(function(){
-				return false;
-			});
-		})();
-		
-		this.Data=new Data( this.option.url );
-		this.View=this.option.view;
-		
-		this.Data.getBrand(function(data){
-			self.View.renderBrand.call(self,data);
-			
-			self.current.brand.value&&self.current.brand.value!='-1' ? self.E.$brand.removeClass('novalue') : self.E.$brand.addClass('novalue');
-			self.current.brand.value&&self.current.brand.value!='-1' ? self.E.$model.removeClass('disabled') : self.E.$model.addClass('disabled');
-			
-			self.Data.getModel(self.current.brand.value,function(data){
-				self.View.renderModel.call(self,data);
-				
-				self.current.model.value&&self.current.model.value!='-1' ? self.E.$model.removeClass('novalue') : self.E.$model.addClass('novalue');
-				self.current.model.value&&self.current.model.value!='-1' ? self.E.$trim.removeClass('disabled') : self.E.$trim.addClass('disabled');
-			
-				self.E.$trim.length && self.Data.getTrim(self.current.model.value,function(data){
-					self.View.renderTrim.call(self,data);
-					
-					self.current.trim.value&&self.current.trim.value!='-1' ? self.E.$trim.removeClass('novalue') : self.E.$trim.addClass('novalue');
-				})
-			})
-		});
-	};
-	carSelect.prototype={
-		defaultOption:{
-			b:'',
-			bid:'-1',
-			bText:'选择品牌',
-			m:'',
-			mid:'-1',
-			mText:'选择车型',
-			t:'',
-			yid:'-1',
-			tid:'-1',
-			tText:'选择车款',
-			url:{
-				brand:'http://2sc.sohu.com/js/new_model.js',
-				trim:'/util/getTrimmModelListJson.jsp'
-			},
-			onChange:function(){},
-			view:view
-		},
-		onBrandChange:function(event,data){
-			this.current.brand=data||{};
-			this.option.onChange.call(this,'brand',this.current.brand);
-			this.onModelChange();
-		},
-		onModelChange:function(event,data){
-			var self=this;
-			this.current.model=data||{};
-			this.Data.getModel(this.current.brand?this.current.brand.value:0,function(json){
+            $(data.l).each(function(i,v){
+                $(v.b).each(function(i,v){
+                    options+='<option value="' + v.i + '">' + v.n + '</option>';
+                });
+            });
+            self.E.$model.html(options);
+        },
+        renderYear:function(data){
+            var self = this
+                ,id = self.current.year.value || -1
+                ,name = this.option.yText
+                ,options = '<option value="-1">' + name + '</option>';
+            $(data).each(function(i,v)
+            {
+                options += '<option value="' + v + '">' + v + '</option>';
+            });
+            self.E.$year.html(options);
+        },
+        renderTrim:function(data){
+            var self=this
+                , id=self.current.trim.value||-1
+                , name=this.option.tText
+                , options='<option value="-1">'+name+'</option>';
 
-				self.View.renderModel.call(self,json);
-				
-				self.option.onChange.call(self,'model',self.current.model);
-				self.onTrimChange();
-			});
-			
-		},
-		onTrimChange:function(event,data){
+            $(data).each(function(i,v){
+                if(v.n)
+                {
+                    options += '<option value="' + v.i + '">' + v.n + '</option>';
+                }
+            });
+            self.E.$trim.html(options);
+
+        }
+    };
+    var carSelect=function(option){
+
+        this.option=$.extend({},this.defaultOption,option);
+        this.current={
+            brand:{ name:'', value:this.option.bid },
+            model:{ name:'', value:this.option.mid },
+            year:{ name:'', value:this.option.yid },
+            trim:{ name:'', value:this.option.tid }
+        };
+
+        var self=this,o=this.option;
+
+        this.E={
+            $brand:$(o.b),
+            $model:$(o.m),
+            $year:$(o.y),
+            $trim:$(o.t)
+        };
+
+        var groupName='carSelect'+useIndex;
+
+        useIndex++;
+
+        this.E.$brand.change(function(event){
+            self.current.brand={
+                name:self.E.$brand.find("option").not(function(){ return !this.selected }).text(),
+                value:self.E.$brand.find("option").not(function(){ return !this.selected }).val()
+            };
+            self.onModelChange();
+            self.option.onChange.call(self,'brand',self.current.brand);
+            self.current.select='brand';
+
+            self.current.brand.value&&self.current.brand.value!='-1' ? self.E.$brand.removeClass('novalue') : self.E.$brand.addClass('novalue');
+            self.current.brand.value&&self.current.brand.value!='-1' ? self.E.$model.removeClass('disabled') : self.E.$model.addClass('disabled');
+            return false;
+        });
+        this.E.$model.change(function(event){
+            self.current.model={
+                name:self.E.$model.find("option").not(function(){ return !this.selected }).text(),
+                value:self.E.$model.find("option").not(function(){ return !this.selected }).val()
+            };
+            self.onYearChange();
+            self.option.onChange.call(self,'model',self.current.model);
+            self.current.select='model';
+
+            self.current.model.value&&self.current.model.value!='-1' ? self.E.$model.removeClass('novalue') : self.E.$model.addClass('novalue');
+            self.current.model.value&&self.current.model.value!='-1' ? self.E.$year.prop('disabled', false) : self.E.$year.prop('disabled', true);
+            return false;
+        });
+
+        this.E.$year.change(function(event){
+            self.current.year = {
+                name:self.E.$year.find("option").not(function(){ return !this.selected }).text(),
+                value:self.E.$year.find("option").not(function(){ return !this.selected }).val()
+            };
+            self.onTrimChange();
+            self.option.onChange.call(self,'year',self.current.year);
+            self.current.select='year';
+
+            self.current.year.value&&self.current.year.value!='-1' ? self.E.$year.removeClass('novalue') : self.E.$year.addClass('novalue');
+            self.current.year.value&&self.current.year.value!='-1' ? self.E.$trim.prop('disabled', false) : self.E.$trim.prop('disabled', true);
+            return false;
+        });
+
+        self.E.$trim.change(function(event){
+            self.current.trim = {
+                name:self.E.$trim.find("option").not(function(){ return !this.selected }).text(),
+                value:self.E.$trim.find("option").not(function(){ return !this.selected }).val()
+            };
+            self.option.onChange.call(self, 'trim', self.current.trim);
+            self.current.select = 'trim';
+            return false;
+        });
+
+        this.Data=new Data( this.option.url );
+        this.View=this.option.view;
+
+        this.Data.getBrand(function(data){
+            self.View.renderBrand.call(self,data);
+
+            self.current.brand.value&&self.current.brand.value!='-1' ? self.E.$brand.removeClass('novalue') : self.E.$brand.addClass('novalue');
+            self.current.brand.value&&self.current.brand.value!='-1' ? self.E.$model.removeClass('disabled') : self.E.$model.addClass('disabled');
+
+            self.Data.getModel(self.current.brand.value,function(data)
+            {
+                self.View.renderModel.call(self,data);
+
+                self.current.model.value&&self.current.model.value!='-1' ? self.E.$model.removeClass('novalue') : self.E.$model.addClass('novalue');
+                self.current.model.value&&self.current.model.value!='-1' ? self.E.$trim.removeClass('disabled') : self.E.$trim.addClass('disabled');
+
+                self.E.$year.length && self.Data.getYear(self.current.model.value,function(data){
+                    self.View.renderYear.call(self,data);
+
+                    self.current.year.value&&self.current.year.value!='-1' ? self.E.$year.prop('disabled', true).addClass('novalue') : self.E.$year.prop("disabled", false).removeClass("novalue");
+                });
+                self.E.$trim.length && self.Data.getTrim(self.current.model.value,function(data){
+                    self.View.renderTrim.call(self,data);
+
+                    self.current.trim.value&&self.current.trim.value!='-1' ? self.E.$trim.prop('disabled', true).addClass('novalue') : self.E.$trim.prop("disabled", false).removeClass("novalue");
+                });
+            })
+        });
+    };
+    carSelect.prototype={
+        defaultOption:{
+            b:'',
+            bid:'-1',
+            bText:'选择品牌',
+            m:'',
+            mid:'-1',
+            mText:'选择车型',
+            y:'',
+            yid:'-1',
+            yText:'选择年份',
+            t:'',
+            tid:'-1',
+            tText:'选择车款',
+            url:{
+                brand:'http://2sc.sohu.com/js/new_model.js',
+                trim:'/util/getTrimmModelListJson.jsp'
+            },
+            onChange:function(){},
+            view:view
+        },
+        onBrandChange:function(event,data){
+            this.current.brand=data||{};
+            this.option.onChange.call(this,'brand',this.current.brand);
+            this.onModelChange();
+        },
+        onModelChange:function(event,data){
+            var self=this;
+            this.current.model=data||{};
+            this.Data.getModel(this.current.brand?this.current.brand.value:0,function(json){
+
+                self.View.renderModel.call(self,json);
+
+                self.option.onChange.call(self,'model',self.current.model);
+                self.onTrimChange();
+            });
+
+        },
+        onYearChange:function(event,data){
+            if( !this.E.$year.length ) return;
+            var self=this;
+            this.current.year=data||{};
+            this.Data.getYear(this.current.model?this.current.model.value:0,function(json){
+
+                self.View.renderYear.call(self,json);
+                self.option.onChange.call(self,'year',self.current.year);
+            });
+
+        },
+        onTrimChange:function(event,data){
             if( !this.E.$trim.length ) return;
-			var self=this;
-			this.current.trim=data||{};
-			this.Data.getTrim(this.current.model?this.current.model.value:0,function(json){
-				
-				self.View.renderTrim.call(self,json) 
-				self.option.onChange.call(self,'trim',self.current.trim);
-			});
-			
-		},
-		clear:function(){
-			this.E.$brand.find('.menu-name').text( this.option.bText );
-			this.E.$brand.find('ul:first').children().removeClass('current');
-			this.E.$brand.trigger("change",[{name:'',value:''}]);
-		}
-	}
-	return carSelect;
+            var self=this;
+            this.current.trim=data||{};
+            this.Data.getTrim(this.current.year?this.current.year.value:0,function(json){
+
+                self.View.renderTrim.call(self,json);
+                self.option.onChange.call(self,'trim',self.current.trim);
+            });
+
+        },
+        clear:function(){
+            this.E.$brand.find('.menu-name').text( this.option.bText );
+            this.E.$brand.find('ul:first').children().removeClass('current');
+            this.E.$brand.trigger("change",[{name:'',value:''}]);
+        }
+    };
+    return carSelect;
 });
 
 SA.register('DATA.AREA',function(a,$){
@@ -683,103 +694,6 @@ SA.register('DATA.AREA',function(a,$){
 	return areas;
 });
 
-
-/*
-* 
-* 地区选择
-*
-*/
-SA.register('app.areaSelect',function(a,$){
-	var useIndex=0;
-	var areaSelect=function(option){
-		var _default={
-			p:'#province',
-			c:'#city',
-			pid:'-1',
-			cid:'-1',
-			onChange:function(){},
-			pText:'选择地区',
-			cText:'选择城市',
-			areas:a.DATA.AREA
-		};
-		var o=$.extend({},_default,option);
-
-		var $province=$(o.p),
-			$city=$(o.c),
-			onChange=o.onChange||function(){},
-			pTxt=o.pText,
-			cTxt=o.cText,
-			areas=o.areas;
-
-		var $pTxt=$province.find('>span.menu-name');
-		var $pMenuList=$province.find('ul:first');
-
-		var $cTxt=$city.find('>span.menu-name');
-		var $cMenuList=$city.find('ul:first');
-		
-		var cityDataIndex=0;
-		function showProvince(id){
-			var txt=pTxt;
-			var chip=[''];
-			for (var i=areas.length-1,j=0; j<i; j++)
-			{
-				var nt=areas[j][1].split(',');
-				if( id==nt[1] ){
-					txt=areas[j][0];
-					cityDataIndex=j;
-				}
-				chip.push('<li><a class="option" data-index="'+j+'" data-name="'+nt[0]+'" value="'+nt[1]+'" href="javascript:void(0)"><span class="item-text">'+areas[j][0]+'</span></a></li>');
-			}
-			chip[0]='<li><span class="item-sep">'+pTxt+'</span></li>';
-			$pMenuList.html( chip.join("\r\n") );
-			$pTxt.text( txt );
-			
-			id&&id!='-1' && $province.removeClass('novalue');
-			id&&id!='-1' && $city.removeClass('disabled');
-		}
-
-		function showCity(index,id){
-			var txt=cTxt;
-			var chip=[''];
-			for (var i=areas[index]?areas[index].length:0,j=2; j<i; j+=2)
-			{
-				var nt=areas[index][j+1].split(',');
-				if( id==nt[1] )
-					txt=areas[index][j];
-				chip.push('<li><a class="option" data-name="'+nt[0]+'" value="'+nt[1]+'" href="javascript:void(0)"><span class="item-text">'+areas[index][j]+'</span></a></li>');
-			}
-			chip[0]='<li><span class="item-sep">'+cTxt+'</span></li>';
-			$cMenuList.html( chip.join("\r\n") );
-			chip.length==1 ? $city.hide() : $city.show();
-			$cTxt.text( txt );
-			
-			id&&id!='-1' && $province.removeClass('novalue');
-		}
-
-		$province.bind('change',function(e,data){
-			showCity( data.$el.attr('data-index') );
-			data.value=='-1' ? $city.addClass('disabled') : $city.removeClass('disabled');
-			onChange('province',data);
-		});
-
-		$city.bind('change',function(e,data){
-			onChange('city',data);
-		});
-
-		var groupName='areaSelect'+useIndex;
-		
-		new a.ui.menuSelect( $province, groupName, 0 );
-		new a.ui.menuSelect( $city, groupName, 1 );
-		
-		useIndex++;
-
-		showProvince( o.pid );
-		if(o.pid!='-1'){
-			showCity( cityDataIndex, o.cid );
-		}
-	}
-	return areaSelect;
-});
 
 SA.register('util.soip',function(a,$){
 	var url='http://txt.go.sohu.com/ip/soip',
@@ -1300,180 +1214,158 @@ SA.job.add('selectcity',function(a,$){
 	new SA.twosc.selectcity($('#citybox'));
 });
 
-function doBrandSubmit(){
-	var brand = document.getElementById("brand-input").value;
-	var model = document.getElementById("model-input").value;
-	var url = "http://2sc.sohu.com/db/searchModel.jsp";
-	window.open(url + "?cityId=110000" + "&brandId=" + brand + "&modelId=" + model);
-}
-	
-function searchDealer() {
-	var brand = document.getElementById("tjshbvalue").value;
-	var model = document.getElementById("tjshmvalue").value;
-	
-	if (model == null || model == "" || model == "-1") {
-		alert("请选择车型。");
-		return false;
-	}
-	var action = "http://db.auto.sohu.com/model_" + model +  "/news_2.shtml";
-	
-	document.dealerSearch.action = action;
-	document.dealerSearch.submit();
-}
+SA.register("app.dateSelect", function (a, $) {
+    var useIndex=0;
+    function dateSelect( $year, $month, config, onChange )
+    {
+        this.first=true;
+        this.$year=$year;
+        this.$month=$month;
+        this.config=config;
+        this.year=-1;
+        this.month=-1;
+        this.onChange=onChange;
+        this.curMonth = (new Date()).getMonth()+1;
+        this.curYear = config.currentYear;
+        var self=this;
+        $year.on('change',function(event){
+            self.year=self.$year.find("option").not(function(){ return !this.selected }).val();
+            if(self.year.value == '0'){
+                $year.removeClass('novalue');
+                self.$month.hide();
+            }else if(self.year.value=='-1'){
+                //self.$month.hide();
+                self.drawMonth($month,-1);
+                self.$month.addClass('novalue disabled');
+                $year.addClass('novalue');
+            }else{
+                self.drawMonth($month,-1);
+                self.$month.show();
+                self.$month.removeClass('disabled');
+                $year.removeClass('novalue');
+            }
+            self.onChange( 'Year', data );
+        });
+        $month.on('change',function(event){
+            self.month=self.$month.find("option").not(function(){ return !this.selected }).val();
+            self.onChange( 'Month', self.month );
 
+            self.month.value!='-1' ? $month.removeClass('novalue') : $month.addClass('novalue');
+        });
 
-//自动搜索提示
-function doKeyWordSubmit(){  
-	//var key= document.getElementById("serchkey").value;
-	//var url=$("#serchkey").attr("url");
-	//document.keyWordForm.action=url;
-	document.keyWordForm.submit();
-}
-//自动搜索提示
-function KeyDown() 
-{ 
-	if (event.keyCode == 13) 
-	{ 
-	event.returnValue=false; 
-	event.cancel = true; 
-	var key= document.getElementById("serchkey").value;
-	var url="http://www.sogou.com/web?query="+key+"+site%3A%2F%2F2sc.sohu.com";
-	//document.keyWordForm.action=url;
-	document.keyWordForm.submit(); 
-	} 
-} 
+        self.drawYear($year,-1);
+        self.drawMonth($month,-1);
 
-$(function(){
-	var myserch=$("#serchkey");
-	var myrsearch=$("#rsearch ul");			
-    myserch.bind('input propertychange',function(){		
-	var mypichtml="";
-	var status="";
-	var action = "";
-	var  myval=$(this).val(); //输入的字母；
-	var getPricesJsonUrl ="/util/searchSuggest.jsp?keyword=" + myval+"&province="+pp+"&city="+ccc;
-	getPricesJsonUrl = encodeURI(getPricesJsonUrl);
-	getPricesJsonUrl = encodeURI(getPricesJsonUrl);
-	//$.ajax({url:getPricesJsonUrl,
-	//	dataType: "json",
-	//	async: false,
-	//	success: function(data){
-	//		 status = data;
-		
-	//	}
-	//});
-	var isTo2sc = false;
-	var targetUrl = "";
-	$.ajax({url:getPricesJsonUrl, type:"post", success:function (data) {
-		var dataObj = eval("(" + data + ")");
-		status = dataObj;
-		isTo2sc = status.flag;
-		if(status.arr){
-		 var mylen=status.arr.length;
-			if(myval){
-				if(mylen > 0){
-					for(var i=0;i<mylen;i++){
-						mypichtml+= "<li><span style='float:right;font-size: 12px;' class='mynum'>约"+status.arr[i].size+"条车源</span><a target='_blank' href='"+status.arr[i].url+"' >"+status.arr[i].name+"</a></li>";
-					}
-					myrsearch.empty().append(mypichtml);
-					$("#rsearch").show();
-					myserch.unbind('keypress');
-					keySearch(mylen,isTo2sc);
-				}else{
-					isTo2sc = false;
-					myserch.unbind('keypress');
-					keySearch(mylen,isTo2sc);
-				}
-				
-			}else{
-				isTo2sc = false;
-				myserch.unbind('keypress');
-				keySearch(mylen,isTo2sc);
-				$("#rsearch").hide();
-			}
-		}else{
-			isTo2sc = false;
-			myserch.unbind('keypress');
-			keySearch(mylen,isTo2sc);
-			$("#rsearch").hide();
-			
-		}
-		if(isTo2sc){
-			targetUrl = status.targetUrl;
-			document.getElementById("keywordForm").action = targetUrl;
-		}else{
-		 	document.getElementById("keywordForm").action ="http://www.sogou.com/web?query="+myval+"+site%3A%2F%2F2sc.sohu.com";
-		}
-		 $('#rsearch li').hover(function(){
-			$('#rsearch li').removeClass('addbg');
-			$(this).addClass('addbg');
-		});
-		$('#rsearch li').click(function(){
-			myserch.attr('value',$(this).find("a").text()).attr("url",$(this).find("a").attr("value"));
-			//window.open($(this).find("a").attr("href"));
-		    $("#rsearch").hide();
-		});
-	}});
+        var groupName='dateSelect'+useIndex;
 
- //status ={arr:[{name:'奥迪',url:'http://2sc.sohu.com/auto-audi/',size:1779},{name:'阿斯顿马丁',url:'http://2sc.sohu.com/auto-astonmartin/',size:12}]};
-	
-	if(targetUrl == ""){
-		var textValue = document.getElementById("serchkey").value;
-		document.getElementById("keywordForm").action ="http://www.sogou.com/web?query="+textValue+"+site%3A%2F%2F2sc.sohu.com";
-	}
-//键盘监听
+        useIndex++;
+    }
 
-	function keySearch(resultLe,flag){
-		var resultLen = 0;
-		if(resultLen){
-			resultLen = resultLe-1;
-		}
-		var keyNo = 0; //记录键盘上下变量
-		
-		$('#serchkey').bind('keypress',function (e) {
-			var key = e.keyCode; //e.which是按键的值
-			//向下
-			if (key === 40) {
-				$('#rsearch li').removeClass('addbg');
-				var key = $('#rsearch li:eq('+ keyNo +')');
-				key.addClass('addbg');
-				if(keyNo >=resultLen){
-					keyNo = 0;
-				}else{
-					keyNo++;
-				}
-			
-			}
-			//向上
-			if (key === 38) {
-				$('#rsearch li').removeClass('addbg');
-				var key = $('#rsearch li:eq('+ keyNo +')');
-				key.addClass('addbg');
-				if(keyNo <= 0){
-					keyNo = resultLen;
-				}else{
-					keyNo--;
-				}
-			}
-			
-			if(key === 13){
-				var key = document.getElementById("serchkey").value;
-				var resultUrl = "";
-				if(flag){
-					resultUrl = targetUrl;
-				}else{
-					resultUrl ="http://www.sogou.com/web?query="+key+"+site%3A%2F%2F2sc.sohu.com";
-				}
-				window.open(resultUrl);
-				return false;
-			}
-		});
-	}
-	
+    dateSelect.prototype={
+        drawYear:function($el,val){
+            var chip=[],config=this.config,txt='选择年份';
+
+            chip.push('<option value="-1">' + txt + '</option>');
+            for( var m=config.maxYear; m>=config.minYear; m-- ){
+                chip.push('<option value="'+ m +'">' + m + '</option>');
+            }
+
+            $el.html( chip.join("\r\n") );
+        },
+        drawMonth:function($el,val){
+            var chip=[],config=this.config,txt='选择月份';
+            chip.push('<option value="-1">' + txt + '</option>');
+            var max=12;
+            for( var m=1; m<=max; m++ ){
+                chip.push('<option value="'+ m +'">' + m + '</option>');
+            }
+
+            $el.html( chip.join("\r\n") );
+        }
+    };
+    return dateSelect;
 });
 
-$('body').click(function(){
-	$('#rsearch').hide();
-});
+SA.register('app.areaSelect',function(a,$){
+    var useIndex=0;
+    var Area=function(option){
+        var _default={
+            p:'#province',
+            c:'#city',pid:'-1',
+            cid:'-1',
+            onChange:function(){},
+            pText:'选择地区',
+            cText:'选择城市',
+            areas:a.DATA.AREA
+        };
+        var o=$.extend({},_default,option);
 
+        var $province=$(o.p),
+            $city=$(o.c),
+            onChange=o.onChange||function(){},
+            pTxt=o.pText,
+            cTxt=o.cText,
+            areas=o.areas;
+
+
+        var cityDataIndex=0;
+        function showProvince(id){
+            var txt=pTxt;
+            var chip=[''];
+            for (var i=areas.length,j=0; j<i; j++)
+            {
+                var nt=areas[j][1].split(',');
+                if( id==nt[1] ){
+                    txt=areas[j][0];
+                    cityDataIndex=j;
+                }
+                chip.push('<option data-index="' + j + '" value="'+nt[1]+'">'+areas[j][0]+'</option>');
+            }
+            chip[0]='<option value="-1" data-index="-1">'+pTxt+'</option>';
+            $province.html( chip.join("\r\n") );
+
+            id&&id!='-1' && $province.removeClass('novalue');
+            id&&id!='-1' && $city.removeClass('disabled');
+        }
+
+        function showCity(index,id){
+            var txt=cTxt;
+            var chip=[''];
+            for (var i=areas[index]?areas[index].length:0,j=2; j<i; j+=2)
+            {
+                var nt=areas[index][j+1].split(',');
+                if( id==nt[1] )
+                    txt=areas[index][j];
+                chip.push('<option data-index="' + j + '" value="'+nt[1]+'">' + areas[index][j] + '</option>');
+            }
+            chip[0]='<option value="-1" data-index="-1">'+cTxt+'</option>';
+            $city.html( chip.join("\r\n") );
+            chip.length==1 ? $city.hide() : $city.show();
+
+            id&&id!='-1' && $province.removeClass('novalue');
+        }
+
+        $province.bind('change',function(e){
+            showCity( $province.find("option").not(function(){ return !this.selected }).attr('data-index') );
+            $province.find("option").not(function(){ return !this.selected }).val()=='-1' ? $city.addClass('disabled') : $city.removeClass('disabled');
+            onChange('province',$province.find("option").not(function(){ return !this.selected }).val());
+        });
+
+        $city.bind('change',function(e,data){
+            onChange('city',$city.find("option").not(function(){ return !this.selected }).val());
+        });
+
+        var groupName='areaSelect'+useIndex;
+
+        useIndex++;
+        showProvince( o.pid );
+        if(o.pid!='-1'){
+            showCity( cityDataIndex, o.cid );
+        }
+        else
+        {
+            showCity(cityDataIndex)
+        }
+    };
+    return Area;
 });

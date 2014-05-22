@@ -1,7 +1,6 @@
 /**
- * Created by zd on 2014/5/5 0005.
+ * Created by zd on 2014/5/11 0011.
  */
-
 //地图-------------start
 (function (win) {
     var map,
@@ -277,23 +276,39 @@ function initCollect(collectArr, carItem, shopItem)
         });
     });
 }
+
+/* 显示隐藏联系人状态条 */
+function closeLinkInfo(type) {
+    if (type == 1) {
+        $('#LinkInfo').hide();
+        $('#openLinkInfo').show();
+    } else {
+        $('#LinkInfo').show();
+        $('#openLinkInfo').hide();
+    }
+}
+
 $(function() {
 
     var $collectItems = $("#collect-record-list").find('li');
     var carItem = $collectItems[0], shopItem = $collectItems[1];
     //填充历史与收藏数据
-    if (window.localStorage) {
+    if(window.localStorage)
+    {
         initCollect(collectList, carItem, shopItem);
         initHistory(historyList, carItem, shopItem);
         //清空按钮
-        $('#clearBtn').on('tap', function () {
-            if ($('#collect-record-wrap').hasClass('ui-state-active')) {
+        $('#clearBtn').on('tap', function()
+        {
+            if($('#collect-record-wrap').hasClass('ui-state-active'))
+            {
                 collectList = [];
                 window.localStorage.setItem('collectList', collectList);
                 $('#collect-record-list').empty();
                 $("#collect-record").html('<p>暂时无收藏记录</p>');
             }
-            else {
+            else
+            {
                 historyList = [];
                 window.localStorage.setItem('historyList', historyList);
                 $('#history-record-list').empty();
@@ -301,25 +316,28 @@ $(function() {
             }
         });
     }
-    else {
+    else
+    {
         $("#collect-record").html('<p>您的浏览器不支持收藏</p>');
         $("#browsing-record").html('<p>您的浏览器不支持查看历史记录</p>');
     }
 
     //关闭广告栏
-    $('#adBanner').find('.close').on('tap', function () {
+    $('#adBanner').find('.close').on('tap', function()
+    {
         $('#adBanner').hide();
     });
 
     //滑动导航
     $('#nav').navigator();
 
-    $('#nav_arrow').on('tap', function () {
-        $('#nav').iScroll('scrollTo', 100, 0, 400, true);
+    $('#nav_arrow').on('tap', function(){
+        $('#nav').iScroll( 'scrollTo', 100, 0, 400, true );
     });
 
     //展开与关闭
-    $('.readmore').on('tap', function () {
+    $('.readmore').on('tap', function()
+    {
         $(this).toggleClass('closemore').parent().next().toggle();
     });
 
@@ -397,6 +415,9 @@ $(function() {
         }
     });
 
+    //车源tab栏
+    $('#recommend-cars').tabs();
+
     //弹出建议对话框
     $("#suggestion").on('tap', function()
     {
@@ -404,15 +425,34 @@ $(function() {
         return false;
     });
 
-    //弹出留言对话框
+    //弹出举报对话框
     $('.report').on('tap', function()
     {
         $('#report-dialog').dialog('open');
         return false;
     });
-    $(".tab-car").tabs();
-    $("#shop-cars").tabs();
 
+    //留言对话框
+    $("#message-dialog").dialog({
+        autoOpen:false,
+        closeBtn:false,
+        title:"留言",
+        buttons: {
+            "取消": function(){
+                this.close();
+            },
+            "确定": function(){
+                this.close();
+            }
+        }
+    });
+
+    //弹出留言对话框
+    $('.message').on('tap', function()
+    {
+        $('#message-dialog').dialog('open');
+        return false;
+    });
     var $body = $('body');
     if(mapSetting){
         mapFunc.initialize({x:mapSetting.mapX,y:mapSetting.mapY,tit:mapSetting.title});

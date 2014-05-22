@@ -6,663 +6,790 @@
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta content="telephone=no" name="format-detection">
         <link type="text/css" rel="stylesheet" href="style/dealer.css"/>
-        <script type="text/javascript" src="js/zepto.js"></script>
-        <script type="text/javascript" src="js/extend/touch.js"></script>
-        <script type="text/javascript" src="js/extend/iscroll.js"></script>
-        <script type="text/javascript" src="js/extend/matchMedia.js"></script>
-        <script type="text/javascript" src="js/extend/event.ortchange.js"></script>
-        <script type="text/javascript" src="js/extend/highlight.js"></script>
-        <script type="text/javascript" src="js/extend/parseTpl.js"></script>
-        <script type="text/javascript" src="js/core/gmu.js"></script>
-        <script type="text/javascript" src="js/core/event.js"></script>
-        <script type="text/javascript" src="js/core/widget.js"></script>
-        <script type="text/javascript" src="js/widget/navigator/navigator.js"></script>
-        <script type="text/javascript" src="js/widget/navigator/scrolltonext.js"></script>
-        <script type="text/javascript" src="js/widget/navigator/$scrollable.js"></script>
-        <script type="text/javascript" src="js/widget/slider/slider.js"></script>
-        <script type="text/javascript" src="js/widget/slider/dots.js"></script>
-        <script type="text/javascript" src="js/widget/slider/$touch.js"></script>
-        <script type="text/javascript" src="js/widget/slider/$autoplay.js"></script>
-        <script type="text/javascript" src="js/widget/slider/$lazyloadimg.js"></script>
-        <script type="text/javascript" src="js/widget/slider/imgzoom.js"></script>
-        <script type="text/javascript" src="js/widget/dialog/dialog.js"></script>
-        <script type="text/javascript" src="js/widget/dialog/$position.js"></script>
-        <script type="text/javascript" src="js/widget/tabs/tabs.js"></script>
-        <script type="text/javascript" src="js/mobileSohuBase.js"></script>
+        <script type="text/javascript" src="js/gmu.mearge.js"></script>
         <script type="text/javascript" src="http://api.go2map.com/maps/js/api_v2.0.js"></script>
         <script type="text/javascript" src="js/dealer.js"></script>
     </head>
     <body>
-        <!--头-->
-        <header>
-            <span class="logo"></span>
-            <a id="city" href="">
-                北京
+        <!--fixed部分-->
+        <div id="page-head">
+            <!--头-->
+            <header>
+                <span class="logo"></span>
+                <a id="city" href="">
+                    北京
+                </a>
+                <div class="icons">
+                    <a class="icon" id="home" href="">
+
+                    </a>
+                    <a class="icon" id="history">
+                    </a>
+                    <a class="icon" id="search">
+                    </a>
+                    <a class="icon" id="sellCar">
+
+                    </a>
+                </div>
+            </header>
+
+            <!--导航-->
+            <div id="nav_wrap">
+                <div id="nav">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">买车</a></li>
+                        <li><a href="#">卖车</a></li>
+                        <li><a href="#">估车宝</a></li>
+                        <li><a href="#">认证车</a></li>
+                        <li><a href="#">买车2</a></li>
+                        <li><a href="#">卖车2</a></li>
+                        <li><a href="#">估车宝2</a></li>
+                        <li><a href="#">认证车2</a></li>
+                        <li><a href="#">赢在二手车</a></li>
+                        <li><a href="#">买卖攻略</a></li>
+                        <li><a href="#">教育</a></li>
+                        <li><a href="#">财经</a></li>
+                        <li><a href="#">房产</a></li>
+                        <li><a href="#">汽车</a></li>
+                    </ul>
+                </div>
+                <a id="nav_arrow"><span>&gt;</span></a>
+            </div>
+        </div>
+
+        <!--正常部分-->
+        <div id="static-part">
+            <!--广告位-->
+            <a id="adBanner" href="">
+                <span class="tsc-logo"></span>
+                <span class="slogan"></span>
+                <em class="close"></em>
+                <span class="download">免费下载</span>
             </a>
-            <div class="icons">
-                <a class="icon" id="home" href="">
 
-                </a>
-                <a class="icon" id="history">
-                </a>
-                <a class="icon" id="search">
-                </a>
-                <a class="icon" id="sellCar">
+            <!--所在位置-->
+            <h4 class="position"><a href="">首页</a> &gt; <a href="">北京市东方万泉汽车销售有限公司</a></h4>
 
-                </a>
+            <!--商家介绍-->
+            <div class="shopHead">
+                <h3 class="shopName">北京市东方万泉汽车销售有限公司</h3>
+                <p><span class="shopBrand">4S店</span></p>
             </div>
-        </header>
-
-        <!--导航-->
-        <div id="nav_wrap">
-            <div id="nav">
-                <ul>
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">买车</a></li>
-                    <li><a href="#">卖车</a></li>
-                    <li><a href="#">估车宝</a></li>
-                    <li><a href="#">认证车</a></li>
-                    <li><a href="#">买车2</a></li>
-                    <li><a href="#">卖车2</a></li>
-                    <li><a href="#">估车宝2</a></li>
-                    <li><a href="#">认证车2</a></li>
-                    <li><a href="#">赢在二手车</a></li>
-                    <li><a href="#">买卖攻略</a></li>
-                    <li><a href="#">教育</a></li>
-                    <li><a href="#">财经</a></li>
-                    <li><a href="#">房产</a></li>
-                    <li><a href="#">汽车</a></li>
-                </ul>
-            </div>
-            <a id="nav_arrow"><span>&gt;</span></a>
-        </div>
-
-        <!--广告位-->
-        <a id="adBanner" href="">
-            <span class="tsc-logo"></span>
-            <span class="slogan"></span>
-            <em class="close"></em>
-            <span class="download">免费下载</span>
-        </a>
-
-        <!--所在位置-->
-        <h4 class="position"><a href="">首页</a> &gt; <a href="">北京市东方万泉汽车销售有限公司</a></h4>
-
-        <!--商家介绍-->
-        <div class="shopHead">
-            <h3 class="shopName">北京市东方万泉汽车销售有限公司</h3>
-            <p><span class="shopBrand">4S店</span></p>
-        </div>
-        <div id="shopContent">
-            <div class="shop-con1">
-                <div class="shop-con1-left">
-                    <p class="shop-item"><span class="shop-item-left">主营品牌：</span><span class="shop-item-right">综合品牌</span></p>
-                    <p class="shop-item">
-                        <span class="shop-item-left">在售：</span><span class="shop-item-right"><i class="red">11</i>辆</span>
-                        <span class="shop-item-left">已售：</span><span class="shop-item-right"><i class="red">74</i>辆</span>
-                    </p>
-                    <p class="shop-item">
-                        <span class="shop-item-left">认证情况：</span>
-                        <span class="shop-item-right"><span>身份</span><span>执照</span><span>税务</span></span>
-                    </p>
-                    <p class="shop-item"><span class="shop-item-left">营业时间：</span><span class="shop-item-right">上午9:00--下午5:00</span></p>
-                    <p class="shop-item"><span class="shop-item-left">公司地址：</span><span class="shop-item-right">北京市朝阳区姚家园路甲一号15号店东风雪铁龙4S店。</span></p>
-                    <p class="shop-item">
-                        <span class="shop-share">分享</span>
-                    </p>
-                </div>
-                <div class="shop-con1-right">
-                    <div class="shop-pic">
-                        <img src="images/car.png" />
-                        <h4>共12张</h4>
+            <div id="shopContent">
+                <div class="shop-con1">
+                    <div class="shop-con1-left">
+                        <p class="shop-item"><span class="shop-item-left">主营品牌：</span><span class="shop-item-right">综合品牌</span></p>
+                        <p class="shop-item">
+                            <span class="shop-item-left">在售：</span><span class="shop-item-right"><i class="red">11</i>辆</span>
+                            <span class="shop-item-left">已售：</span><span class="shop-item-right"><i class="red">74</i>辆</span>
+                        </p>
+                        <p class="shop-item">
+                            <span class="shop-item-left">认证情况：</span>
+                            <span class="shop-item-right"><span>身份</span><span>执照</span><span>税务</span></span>
+                        </p>
+                        <p class="shop-item"><span class="shop-item-left">营业时间：</span><span class="shop-item-right">上午9:00--下午5:00</span></p>
+                        <p class="shop-item"><span class="shop-item-left">公司地址：</span><span class="shop-item-right">北京市朝阳区姚家园路甲一号15号店东风雪铁龙4S店。</span></p>
+                        <p class="shop-item">
+                            <span class="shop-share">分享</span>
+                        </p>
                     </div>
-                    <div class="shop-represent">
-                        <div class="shop-represent-left">
-                            <h4>销售代表</h4>
-                            <p class="shop-represent-name">利明星</p>
+                    <div class="shop-con1-right">
+                        <a class="shop-pic">
+                            <img src="images/car.png" />
+                            <h4>共12张</h4>
+                        </a>
+                        <div class="shop-represent">
+                            <div class="shop-represent-left">
+                                <h4>销售代表</h4>
+                                <p class="shop-represent-name">利明星</p>
+                            </div>
+                            <div class="shop-represent-right">
+                                <img src="images/represent.png" />
+                            </div>
                         </div>
-                        <div class="shop-represent-right">
-                            <img src="images/represent.png" />
+                        <a class="shop-tel" href="">13910146567</a>
+                    </div>
+                </div>
+                <div class="shop-con2">
+                    <p class="shop-item">
+                        <span class="shop-item-left">公司承诺：</span>
+                        <span class="shop-item-right"><span>无泡水</span><span>无大事故</span><span>无泡水</span></span>
+                        <span class="report"><i>!</i>举报</span>
+                    </p>
+                </div>
+            </div>
+
+            <!--促销活动-->
+            <div class="sales-ac">
+                <div class="head">
+                    <span class="title">促销活动</span>
+                    <span class="more">&gt;</span>
+                </div>
+                <div class="first-ac">
+                    <h4 class="ac-title">愚人节愚价不愚人 优途三周年店庆回馈</h4>
+                    <p class="ac-time">2014-03-27 16:53:20</p>
+                    <p class="ac-content">
+                        恰逢愚人节到来，优途为感恩回馈新老顾客，在2014年3月29日至4月13日店庆期间，多台精选二手车愚价回馈消费者，最高优惠万元，愚价不愚人，愚忠服务一愚到底!
+                    </p>
+                </div>
+                <ul class="ac-list">
+                    <li class="ac-item">
+                        <span class="ac-item-tit">愚人节愚价不愚人 优途三周年店庆回馈</span><span class="ac-item-date">2014-03-27</span>
+                    </li>
+                    <li class="ac-item">
+                        <span class="ac-item-tit">送礼啦! 迎春送福 三大礼包 等你来拿!</span><span class="ac-item-date">2014-03-27</span>
+                    </li>
+                    <li class="ac-item">
+                        <span class="ac-item-tit">刹车六折养护 安心开车回家！</span><span class="ac-item-date">2014-03-27</span>
+                    </li>
+                    <li class="ac-item">
+                        <span class="ac-item-tit">春运来袭，优途“送”您回家过年</span><span class="ac-item-date">2014-03-27</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--公司简介-->
+            <div class="company-intro">
+                <div class="head">
+                    <span class="title">公司简介</span>
+                </div>
+                <div class="intro-content">
+                    <p>
+                        北京优途贸易有限公司 致力于建立中国领先的汽车零售增值服务平台，为客户提供涵盖质量保修、金融服务、保险理赔等全价值链增值服务，公司以透明Transparent、安全Safety、价值Value为核心理念，在全面引入全球最成功的汽车零售运营模式基础上，为客户提供专业的车辆技术评估、透明的价格及流程，打造全新的汽车保值新概念。欢迎关注优途官方微信：uumax2011
+                    </p>
+                </div>
+            </div>
+
+            <!--车源tab-->
+            <div id="shop-cars">
+                <ul class="cars-nav">
+                    <li><a href="#recommendCar">车源推荐</a></li>
+                    <li><a href="#allCar">公司全部车源</a></li>
+                </ul>
+
+                <div id="recommendCar" class="tab-car">
+                    <ul class="tab-nav">
+                        <li><a href="#carList1-1">默认</a></li>
+                        <li><a href="#carList1-2">价格从低到高</a></li>
+                        <li><a href="#carList1-3">里程从低到高</a></li>
+                    </ul>
+
+                    <div id="carList1-1" class="car-list-box">
+                        <ul class="carList">
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="see-more">查看更多</div>
+                    </div>
+
+                    <div id="carList1-2" class="car-list-box">
+                        <ul class="carList">
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="see-more">查看更多</div>
+                    </div>
+
+                    <div id="carList1-3" class="car-list-box">
+                        <ul class="carList">
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="see-more">查看更多</div>
+                    </div>
+
+                </div>
+
+                <div id="allCar" class="tab-car">
+                    <ul class="tab-nav">
+                        <li><a href="#carList2-1">默认</a></li>
+                        <li><a href="#carList2-2">价格从低到高</a></li>
+                        <li><a href="#carList2-3">里程从低到高</a></li>
+                    </ul>
+
+                    <div id="carList2-1" class="car-list-box">
+                        <ul class="carList">
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="see-more">查看更多</div>
+                    </div>
+
+                    <div id="carList2-2" class="car-list-box">
+                        <ul class="carList">
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="see-more">查看更多</div>
+                    </div>
+
+                    <div id="carList2-3" class="car-list-box">
+                        <ul class="carList">
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="car-item">
+                                <a href="" class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</a>
+                                <span class="authentication">认</span>
+                                <div class="description">
+                                    <div class="left-des">
+                                        <p class="promise">优途二手车可质保延期的放心车</p>
+                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
+                                    </div>
+                                    <div class="right-des">
+                                        <p class="car-price">22.8万</p>
+                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="see-more">查看更多</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--看车地址-->
+            <div id="shop-address">
+                <div class="head">
+                    <span class="title">看车地址</span>
+                    <a href="javascript:void(0);" class="readmore"></a>
+                </div>
+                <div id="shop-map">
+                </div>
+            </div>
+
+            <p class="tip">搜狐二手车提示您：车辆过户前请勿轻易给对方押金，订金，交易中请仔细检验车况，避免上当受骗。</p>
+
+            <!--工具-->
+            <div id="util">
+                <div class="head">
+                    <span class="title">工具</span>
+                </div>
+                <div class="util-list">
+                    <a class="util-item" href="">购买流程</a>
+                    <a class="util-item" href="">车险理赔</a>
+                    <a class="util-item" href="">评估询价</a>
+                    <a class="util-item" href="">砍价技巧</a>
+                    <a class="util-item" href="">购车注意</a>
+                    <a class="util-item" href="">购买流程</a>
+                    <a class="util-item" href="">违章查询</a>
+                    <a class="util-item" href="">识别泡水车</a>
+                </div>
+            </div>
+
+            <!--手机下载-->
+            <div id="phone-down">
+                <div class="head">
+                    <span class="title">手机下载</span>
+                </div>
+                <div class="down-content">
+                    <div class="down-left"></div>
+                    <div class="down-right">
+                        <h4>买卖二手车&nbsp;&nbsp;放心有保障</h4>
+                        <div class="down-icon">
+                            <a href="" class="iphone-down"></a>
+                            <a href="" class="android-down"></a>
                         </div>
                     </div>
-                    <a class="shop-tel" href="">13910146567</a>
                 </div>
             </div>
-            <div class="shop-con2">
-                <p class="shop-item">
-                    <span class="shop-item-left">公司承诺：</span>
-                    <span class="shop-item-right"><span>无泡水</span><span>无大事故</span><span>无泡水</span></span>
-                    <span class="report"><i>!</i>举报</span>
-                </p>
-            </div>
-        </div>
 
-        <!--促销活动-->
-        <div class="sales-ac">
-            <div class="head">
-                <span class="title">促销活动</span>
-                <span class="more">&gt;</span>
-            </div>
-            <div class="first-ac">
-                <h4 class="ac-title">愚人节愚价不愚人 优途三周年店庆回馈</h4>
-                <p class="ac-time">2014-03-27 16:53:20</p>
-                <p class="ac-content">
-                    恰逢愚人节到来，优途为感恩回馈新老顾客，在2014年3月29日至4月13日店庆期间，多台精选二手车愚价回馈消费者，最高优惠万元，愚价不愚人，愚忠服务一愚到底!
-                </p>
-            </div>
-            <ul class="ac-list">
-                <li class="ac-item">
-                    <span class="ac-item-tit">愚人节愚价不愚人 优途三周年店庆回馈</span><span class="ac-item-date">2014-03-27</span>
-                </li>
-                <li class="ac-item">
-                    <span class="ac-item-tit">送礼啦! 迎春送福 三大礼包 等你来拿!</span><span class="ac-item-date">2014-03-27</span>
-                </li>
-                <li class="ac-item">
-                    <span class="ac-item-tit">刹车六折养护 安心开车回家！</span><span class="ac-item-date">2014-03-27</span>
-                </li>
-                <li class="ac-item">
-                    <span class="ac-item-tit">春运来袭，优途“送”您回家过年</span><span class="ac-item-date">2014-03-27</span>
-                </li>
-            </ul>
-        </div>
-
-        <!--公司简介-->
-        <div class="company-intro">
-            <div class="head">
-                <span class="title">公司简介</span>
-            </div>
-            <div class="intro-content">
-                <p>
-                    北京优途贸易有限公司 致力于建立中国领先的汽车零售增值服务平台，为客户提供涵盖质量保修、金融服务、保险理赔等全价值链增值服务，公司以透明Transparent、安全Safety、价值Value为核心理念，在全面引入全球最成功的汽车零售运营模式基础上，为客户提供专业的车辆技术评估、透明的价格及流程，打造全新的汽车保值新概念。欢迎关注优途官方微信：uumax2011
-                </p>
-            </div>
-        </div>
-
-        <!--车源tab栏-->
-        <div id="shop-cars">
-            <ul class="cars-nav">
-                <li class="current-nav">车源推荐</li>
-                <li>公司全部车源</li>
-            </ul>
-
-            <div id="tab-car">
-                <ul class="tab-nav">
-                    <li><a href="#carList1">默认</a></li>
-                    <li><a href="#carList2">价格从低到高</a></li>
-                    <li><a href="#carList3">里程从低到高</a></li>
-                    <li><a href="#carList4">人气度</a></li>
-                </ul>
-
-                <div id="carList1" class="car-list-box">
-                    <ul class="carList">
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a>
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+            <!--底部-->
+            <div id="footer">
+                <div class="bottom">
+                    <a href="">首页-二手车</a>
+                    <span id="suggestion">^-^提提意见哦！</span>
+                </div>
+                <div class="menu">
+                    <ul class="clearfix">
+                        <li class="current">触版</li>
+                        <li><a id="2scweb" href="http://2sc.sohu.com/">PC版</a></li>
+                        <li><a href="http://mobile.auto.sohu.com/mobile/download/getDetail.at?loadType=ershou">客户端</a></li>
                     </ul>
-                    <div class="see-more">查看更多</div>
                 </div>
+                <p>Copyright 2014 Sohu.com</p>
+            </div>
 
-                <div id="carList2" class="car-list-box">
-                    <ul class="carList">
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a>
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="see-more">查看更多</div>
-                </div>
-
-                <div id="carList3" class="car-list-box">
-                    <ul class="carList">
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a>
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="see-more">查看更多</div>
-                </div>
-
-                <div id="carList4" class="car-list-box">
-                    <ul class="carList">
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a>
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="car-item">
-                            <a href="javascript:void(0);">
-                                <h3 class="car-tit">雪佛兰科帕奇2008款2.4L 手自一体 豪华型</h3>
-                                <span class="authentication">认</span>
-                                <div class="description">
-                                    <div class="left-des">
-                                        <p class="promise">优途二手车可质保延期的放心车</p>
-                                        <p class="car-info">2008年购买&nbsp;&nbsp;16.00万公里</p>
-                                    </div>
-                                    <div class="right-des">
-                                        <p class="car-price">22.8万</p>
-                                        <p class="release-date">商家&nbsp;&nbsp;5-20</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="see-more">查看更多</div>
-                </div>
-            </div>
-        </div>
-
-        <!--看车地址-->
-        <div id="shop-address">
-            <div class="head">
-                <span class="title">看车地址</span>
-                <a class="readmore"></a>
-            </div>
-            <div id="shop-map">
-            </div>
-        </div>
-
-        <p class="tip">搜狐二手车提示您：车辆过户前请勿轻易给对方押金，订金，交易中请仔细检验车况，避免上当受骗。</p>
-
-        <!--工具-->
-        <div id="util">
-            <div class="head">
-                <span class="title">工具</span>
-            </div>
-            <div class="util-list">
-                <a class="util-item" href="">购买流程</a>
-                <a class="util-item" href="">车险理赔</a>
-                <a class="util-item" href="">评估询价</a>
-                <a class="util-item" href="">砍价技巧</a>
-                <a class="util-item" href="">购车注意</a>
-                <a class="util-item" href="">购买流程</a>
-                <a class="util-item" href="">违章查询</a>
-                <a class="util-item" href="">识别泡水车</a>
-            </div>
-        </div>
-
-        <!--手机下载-->
-        <div id="phone-down">
-            <div class="head">
-                <span class="title">手机下载</span>
-            </div>
-            <div class="down-content">
-                <div class="down-left"></div>
-                <div class="down-right">
-                    <h4>买卖二手车&nbsp;&nbsp;放心有保障</h4>
-                    <div class="down-icon">
-                        <a href="" class="iphone-down"></a>
-                        <a href="" class="android-down"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--底部-->
-        <div id="footer">
-            <div class="bottom">
-                <a href="">首页-二手车</a>
-                <span id="suggestion">^-^提提意见哦！</span>
-            </div>
-            <div class="menu">
-                <ul class="clearfix">
-                    <li class="current">触版</li>
-                    <li><a id="2scweb" href="http://2sc.sohu.com/">PC版</a></li>
-                    <li><a href="http://mobile.auto.sohu.com/mobile/download/getDetail.at?loadType=ershou">客户端</a></li>
-                </ul>
-            </div>
-            <p>Copyright 2014 Sohu.com</p>
         </div>
 
         <!--意见弹出对话框-->
@@ -670,15 +797,31 @@
             <textarea id="suggest-content" placeholder="请输入您的建议"></textarea>
         </div>
 
+        <!--举报对话框-->
+        <div id="report-dialog" title="举报">
+            <select id="accuSel" name="accusationSel" autocomplete="off">
+                <option value="-1">-请选择-</option>
+                <option value="0">车型不符</option>
+                <option value="1">此车已售</option>
+                <option value="2">商家承诺不实</option>
+                <option value="3">价格过低  </option>
+                <option value="4">无法过户</option>
+                <option value="5">需要定金</option>
+                <option value="6">联系不上</option>
+                <option value="7">其他</option>
+            </select>
+            <textarea id="report-content" placeholder="请输入您的举报说明"></textarea>
+        </div>
+
         <!--搜索框-->
         <div class="search-wrap">
             <div class="search-box">
-                <form id="keyWordForm" name="keyWordForm" method="post">
+                <div id="search-con">
                     <p class="input-box">
                         <input id="search-key" name="suggest" type="text" class="search-text" placeholder="请输入车型名称" autocomplete="off">
                     </p>
-                    <input type="button" class="search-btn" value="搜索" onclick="doKeyWordSubmit()">
-                </form>
+                    <a href="javascript:void(0);" class="search-btn">搜索</a>
+                </div>
                 <div class="search-tips">
                     <a target="_blank" href="">奥迪A6L</a>
                     <a target="_blank" href="">宝马3系</a>
@@ -694,42 +837,44 @@
         <div class="history-wrap">
             <div class="history-tabs">
                 <ul class="tabs-nav">
-                    <li><a href="#collect-record">收藏记录</a></li>
-                    <li><a href="#browsing-record">浏览记录</a></li>
+                    <li><a href="#collect-record-wrap">收藏记录</a></li>
+                    <li><a href="#browsing-record-wrap">浏览记录</a></li>
                 </ul>
-                <a class="clearBtn"></a>
+                <span id="clearBtn"></span>
+                <span id="closeBtn"></span>
                 <div class="clear"></div>
-                <ul id="collect-record">
-                    <li>
-                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
-                    </li>
-                    <li>
-                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
-                    </li>
-                    <li>
-                        <a class="shopItem" href="">北京优图连锁经营中心</a><span class="shopPhone">400-809-3333转<i>333</i></span><span class="deleteBtn"></span>
-                    </li>
-                    <li class="lastItem">
-                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
-                    </li>
-                </ul>
-                <ul id="browsing-record">
-                    <li>
-                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
-                    </li>
-                    <li>
-                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
-                    </li>
-                    <li>
-                        <a class="shopItem" href="">北京优图连锁经营中心</a><span class="shopPhone">400-809-3333转<i>333</i></span><span class="deleteBtn"></span>
-                    </li>
-                    <li class="lastItem">
-                        <a class="carItem" href="">奥迪A4XXXXXXXXXX</a><span class="carPrice"><i>22.5</i>万</span><span class="deleteBtn"></span>
-                    </li>
-                </ul>
+                <div id="collect-record-wrap">
+                    <div id="collect-record">
+                        <ul id="collect-record-list">
+                            <li>
+                                <a class="carItem" href=""></a><span class="carPrice"><i></i>万</span><span class="deleteBtn"></span>
+                            </li>
+                            <li>
+                                <a class="shopItem" href=""></a><span class="shopPhone"></span><span class="deleteBtn"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="browsing-record-wrap">
+                    <div id="browsing-record">
+                        <ul id="browsing-record-list">
+                        </ul>
+                    </div>
+                </div>
             </div>
             <span class="history-ui-arrow"></span>
         </div>
+
+        <script type="text/javascript">
+
+
+            var mapSetting = {
+                'mapX' : '12963036',
+                'mapY' : '4835191',
+                'city' : '北京',
+                'title' : '北京德奥达奥迪'
+            };
+        </script>
 
     </body>
 </html>

@@ -5,7 +5,8 @@
  * @module GMU
  */
 
-(function( gmu, $, undefined ) {
+(function( gmu, $, undefined )
+{
     var _uid = 1,
         uid = function(){
             return _uid++;
@@ -154,7 +155,7 @@
         },
 
         _findElement:function (selector, el) {
-            var ret = $(el || this.$el).find(selector);
+            var ret = $(el || this.$el).children(selector);
             return ret.length ? ret : null;
         },
 

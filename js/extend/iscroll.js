@@ -195,7 +195,7 @@
             setTimeout(function () { that.refresh(); }, isAndroid ? 200 : 0);
         },
 
-        _pos: function (x, y) {
+        _pos: function (x, y) {//¿ØÖÆÎ»ÒÆ
             x = this.hScroll ? x : 0;
             y = this.vScroll ? y : 0;
 
