@@ -1590,16 +1590,3 @@ window.Zepto = Zepto
 
   testEl = null
 })(Zepto);
-
-if(window.localStorage)
-{
-    var collectList = [], historyList =[];
-    if(localStorage.getItem("collectList"))
-    {
-        collectList = JSON.parse(localStorage.getItem("collectList"));
-    }
-    if(localStorage.getItem("historyList"))
-    {
-        historyList = JSON.parse(localStorage.getItem("historyList"));
-    }
-}

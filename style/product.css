@@ -304,14 +304,17 @@ header{ padding: 10px; border-bottom: 4px solid #000; overflow: hidden; }
     background-color: #fff2ed; color: #ff4400; border: 1px solid #ff4400; line-height: 24px;
 }
 .car-product-con1-right{ position: absolute; width: 80px; right: 0; top:0;}
-.car-product-price{border-top: 5px solid #f40; padding: 1px 0 5px;}
+.car-product-price{border-top: 5px solid #f40; padding: 0 0 5px;}
 .car-price-tit{ text-align: left; line-height: 24px; font-size: 14px; margin-left: 5px;}
 .car-price-con{ text-align: center; line-height: 32px; font-size: 18px; color: #f40;}
 .car-price-con .right{ font-size: 14px;}
 .car-price-unit{ text-align: right; line-height: 24px; font-size: 14px; margin-right: 5px;}
 
 .car-product-btn{ border-top: 1px solid #cecece;}
-.car-product-btn .btn{ display: block; width: 70px; margin: 5px auto; text-align: center; color: #fff; line-height: 24px;}
+.car-product-btn .btn{ display: block; width: 70px; margin: 5px auto; text-align: center; color: #fff; line-height: 24px; background-color: #aaa;}
+.car-product-btn .active{ background-color: #f40;}
+.jiathis_style_24x24{ overflow: hidden;}
+.jiathis_style_24x24 a{ display: block; float: left; margin:3px 0 3px 9px;}
 .collectBtn{ background-color: #b6b6b6;}
 .copyBtn{ background-color: #b6b6b6;}
 .shareBtn{background-color: #b6b6b6;}

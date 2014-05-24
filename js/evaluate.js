@@ -6,8 +6,8 @@ var CarMasterSelect = {
     masterName: "",
     key: false,
     outclick: null,
-    data: {}, //ä¿å­˜è¯·æ±‚è¿‡çš„ä¸»å“ç‰Œæ•°æ®
-    //ç»‘å®šä¸»å“ç‰Œç‚¹å‡»äº‹ä»¶
+    data: {}, //±£´æÇëÇó¹ıµÄÖ÷Æ·ÅÆÊı¾İ
+    //°ó¶¨Ö÷Æ·ÅÆµã»÷ÊÂ¼ş
     BindMasterTap: function () {
         var mbLogo = document.getElementById("m-car-logo");
         var liList = mbLogo.getElementsByTagName("li");
@@ -21,7 +21,7 @@ var CarMasterSelect = {
             }
         }
     },
-    //æ»šåŠ¨åŠ¨ç”»æ•ˆæœ
+    //¹ö¶¯¶¯»­Ğ§¹û
     scrollAnimate: function (currentY, scrollY) {
         var begin = +new Date();
         var from = scrollY;
@@ -48,7 +48,7 @@ var CarMasterSelect = {
             }
         }, 20);
     },
-    //è·å–å½“å‰å…ƒç´ è·é¡¶é«˜åº¦
+    //»ñÈ¡µ±Ç°ÔªËØ¾à¶¥¸ß¶È
     getNodeTop: function (curNode) {
         var top = 0;
         if (!curNode)
@@ -59,11 +59,11 @@ var CarMasterSelect = {
         }
         return top;
     },
-    //è®¾ç½®æ»šåŠ¨é«˜åº¦
+    //ÉèÖÃ¹ö¶¯¸ß¶È
     setPosition: function (currNode) {
         var top = document.body.scrollTop || document.documentElement.scrollTop;
         var height = document.body.scrollHeight || document.documentElement.scrollHeight;
-        var currNodeTop = parseInt(this.getNodeTop(currNode)) - 10; //10 æ˜¯li paddingTopå€¼
+        var currNodeTop = parseInt(this.getNodeTop(currNode)) - 10; //10 ÊÇli paddingTopÖµ
         if (top == currNodeTop) return;
         this.scrollAnimate(currNodeTop, top);
         //		if (document.body.scrollTop) {
@@ -72,13 +72,13 @@ var CarMasterSelect = {
         //			document.documentElement.scrollTop = currNodeTop;
         //		}
     },
-    //ä¸»å“ç‰Œç‚¹å‡»äº‹ä»¶
+    //Ö÷Æ·ÅÆµã»÷ÊÂ¼ş
     MasterTapEvent: function (node) {
         var currNode = node;
         var self = CarMasterSelect;
         var mbId = currNode.id.replace("mb_", "");
         var popupItem = document.getElementById("popupitem" + mbId);
-        //äºŒæ¬¡ç‚¹å‡»æ‰“å¼€å…³é—­
+        //¶ş´Îµã»÷´ò¿ª¹Ø±Õ
         if (popupItem) {
             var b = currNode.getElementsByTagName("b");
             if (!self.key) {
@@ -103,15 +103,15 @@ var CarMasterSelect = {
             self.outclick();
             return;
         }
-        //å¦‚æœæ­¤ä¸»å“ç‰Œæœ‰æ•°æ®ç›´æ¥åŠ è½½
+        //Èç¹û´ËÖ÷Æ·ÅÆÓĞÊı¾İÖ±½Ó¼ÓÔØ
         if (self.data[self.masterId]) {
             self.setCallBack(self.data[self.masterId]);
             return;
         }
     },
-    //åˆ›å»ºå¼¹å‡ºå±‚èŠ‚ç‚¹å…ƒç´ 
+    //´´½¨µ¯³ö²ã½ÚµãÔªËØ
     CreateElementNode: function (loadInfo) {
-        //åˆ›å»ºå…ƒç´ 
+        //´´½¨ÔªËØ
         var popupItem = document.createElement("li");
         popupItem.className = "m-popup-item";
         popupItem.id = "popupitem" + this.masterId;
@@ -123,16 +123,16 @@ var CarMasterSelect = {
         popupItem.appendChild(popupBox);
         return popupItem;
     },
-    //æ”¹å˜ä¸»å“ç‰Œå¼¹å‡ºå±‚ä½ç½®
+    //¸Ä±äÖ÷Æ·ÅÆµ¯³ö²ãÎ»ÖÃ
     ChangeMaster: function (currNode, isorientationchange) {
-        var loadInfo = "æ­£åœ¨åŠ è½½...";
+        var loadInfo = "ÕıÔÚ¼ÓÔØ...";
         var tempCurrNode = currNode;
         if (isorientationchange) {
             if (this.masterId <= 0) return;
             var tempPopupBoxObj = document.getElementById("popupbox" + this.masterId);
             loadInfo = tempPopupBoxObj.innerHTML;
         }
-        //åˆ é™¤ä¹‹å‰å¼¹å‡ºèŠ‚ç‚¹
+        //É¾³ıÖ®Ç°µ¯³ö½Úµã
         if (this.masterId > 0) {
             var popupItem = document.getElementById("popupitem" + this.masterId);
             if (popupItem) {
@@ -141,14 +141,14 @@ var CarMasterSelect = {
                 masterLi.removeChild(masterLi.getElementsByTagName("b")[0]);
             }
         }
-        this.setPosition(tempCurrNode); //å®šä½
+        this.setPosition(tempCurrNode); //¶¨Î»
         this.masterId = tempCurrNode.id.replace("mb_", "");
         this.masterName = tempCurrNode.childNodes[1].innerHTML;
         var popupItem = this.CreateElementNode(loadInfo);
 
         var b = document.createElement("b");
         tempCurrNode.appendChild(b);
-        //è½¬å±æ˜¾ç¤ºåˆ¤æ–­
+        //×ªÆÁÏÔÊ¾ÅĞ¶Ï
         if (this.key) {
             popupItem.style.display = "block";
             tempCurrNode.getElementsByTagName("b")[0].style.display = "block";
@@ -174,7 +174,7 @@ var CarMasterSelect = {
             }
         }
     },
-    //è·å–ä¸»å“ç‰Œå±…å·¦è·ç¦»
+    //»ñÈ¡Ö÷Æ·ÅÆ¾Ó×ó¾àÀë
     getMasterLeft: function (curNode) {
         var left = 0;
         if (!curNode)
@@ -185,7 +185,7 @@ var CarMasterSelect = {
         }
         return left;
     },
-    //è®¾ç½®å›è°ƒæ•°æ®
+    //ÉèÖÃ»Øµ÷Êı¾İ
     setCallBack: function (strHtml) {
         var popupBoxObj = document.getElementById("popupbox" + this.masterId);
         if (popupBoxObj) {
@@ -222,7 +222,7 @@ var CarMasterSelect = {
                             for(var j = 0; j < trimLen; ++j)
                             {
                                 yearHtml += '<li data-year="' + year.y +
-                                    '" data-trim="' + trims[j].i + '" data-name="' + year.y + 'æ¬¾ ' + trims[j].n + '">' + trims[j].n + '</li>';
+                                    '" data-trim="' + trims[j].i + '" data-name="' + year.y + '¿î ' + trims[j].n + '">' + trims[j].n + '</li>';
                             }
                             yearHtml += '</ul></div>';
                             $container.append(yearHtml);
@@ -275,7 +275,7 @@ function SetJsonToData(bsid, data) {
     return popupBox;
 }
 
-//å±å¹•æ—‹è½¬äº‹ä»¶
+//ÆÁÄ»Ğı×ªÊÂ¼ş
 function orientationChange() {
     var master = document.getElementById("mb_" + CarMasterSelect.masterId);
     switch (window.orientation) {
@@ -329,96 +329,6 @@ function getWinWidth() {
     return winW;
 }
 
-function createCarItem(itemExample ,itemData)
-{
-    var $item = $(itemExample.cloneNode(true));
-    $item.find(".carItem").text(itemData.name);
-    $item.find(".carPrice").find('i').text(itemData.price);
-    return $item;
-}
-
-function createShopItem(itemExample ,itemData)
-{
-    var $item = $(itemExample.cloneNode(true));
-    $item.find(".shopItem").text(itemData.name);
-    $item.find(".shopPhone").text(itemData.phone);
-    return $item;
-}
-
-function initHistory(historyArr, carItem, shopItem)
-{
-    var len = historyArr.length;
-    if(len === 0)
-    {
-        $("#browsing-record").html('<p>æš‚æ—¶æ— æµè§ˆè®°å½•</p>');
-        return;
-    }
-    var $container = $('#browsing-record-list').empty();
-    for(var i = 0; i < len; ++i)
-    {
-        var $item;
-        if(historyArr[i].type == "car")
-        {
-            $item = createCarItem(carItem, historyArr[i]);
-        }
-        else
-        {
-            $item = createShopItem(shopItem, historyArr[i]);
-        }
-        $container.append($item);
-    }
-    $container.find(".deleteBtn").each(function(i, item)
-    {
-        $(this).on("tap", function()
-        {
-            $container.find('li').eq(i).remove();
-            historyList.splice(i, 1);
-            window.localStorage.setItem('historyList', JSON.stringify(historyList));
-            if(historyList.length === 0)
-            {
-                $("#browsing-record").html('<p>æš‚æ—¶æ— æµè§ˆè®°å½•</p>');
-            }
-        });
-    });
-}
-
-function initCollect(collectArr, carItem, shopItem)
-{
-    var len = collectArr.length;
-    if(len === 0)
-    {
-        $("#collect-record").html('<p>æš‚æ—¶æ— æ”¶è—è®°å½•</p>');
-        return;
-    }
-    var $container = $('#collect-record-list').empty();
-    for(var i = 0; i < len; ++i)
-    {
-        var $item;
-        if(collectArr[i].type == "car")
-        {
-            $item = createCarItem(carItem, collectArr[i]);
-        }
-        else
-        {
-            $item = createShopItem(shopItem, collectArr[i]);
-        }
-        $container.append($item);
-    }
-    $container.find(".deleteBtn").each(function(i, item)
-    {
-        $(this).on("tap", function()
-        {
-            $container.find('li').eq(i).remove();
-            collectList.splice(i, 1);
-            window.localStorage.setItem('collectList', JSON.stringify(collectList));
-            if(collectList.length === 0)
-            {
-                $("#collect-record").html('<p>æš‚æ—¶æ— æ”¶è—è®°å½•</p>');
-            }
-        });
-    });
-}
-
 $(function()
 {
     CarMasterSelect.BindMasterTap();
@@ -433,53 +343,54 @@ $(function()
     catch (err) { }
     var $collectItems = $("#collect-record-list").find('li');
     var carItem = $collectItems[0], shopItem = $collectItems[1];
-    //å¡«å……å†å²ä¸æ”¶è—æ•°æ®
+    //Ìî³äÀúÊ·ÓëÊÕ²ØÊı¾İ
     if(window.localStorage)
     {
-        initCollect(collectList, carItem, shopItem);
-        initHistory(historyList, carItem, shopItem);
-        //æ¸…ç©ºæŒ‰é’®
+        initCollect(collectObj, carItem, shopItem);
+        initHistory(historyObj, carItem, shopItem);
+        //Çå¿Õ°´Å¥
         $('#clearBtn').on('tap', function()
         {
             if($('#collect-record-wrap').hasClass('ui-state-active'))
             {
-                collectList = [];
-                window.localStorage.setItem('collectList', collectList);
+                collectObj = {length:0};
+                localStorage.setItem('collectObj', JSON.stringify(collectObj));
                 $('#collect-record-list').empty();
-                $("#collect-record").html('<p>æš‚æ—¶æ— æ”¶è—è®°å½•</p>');
+                $("#collect-record").html('<p>ÔİÊ±ÎŞÊÕ²Ø¼ÇÂ¼</p>');
             }
             else
             {
-                historyList = [];
-                window.localStorage.setItem('historyList', historyList);
+                historyObj = {length:0};
+                localStorage.setItem('historyObj', JSON.stringify(historyObj));
                 $('#history-record-list').empty();
-                $("#history-record").html('<p>æš‚æ—¶æ— æµè§ˆè®°å½•</p>');
+                $("#history-record").html('<p>ÔİÊ±ÎŞä¯ÀÀ¼ÇÂ¼</p>');
             }
         });
     }
     else
     {
-        $("#collect-record").html('<p>æ‚¨çš„æµè§ˆå™¨ä¸æ”¯æŒæ”¶è—</p>');
-        $("#browsing-record").html('<p>æ‚¨çš„æµè§ˆå™¨ä¸æ”¯æŒæŸ¥çœ‹å†å²è®°å½•</p>');
+        $("#collect-record").html('<p>ÄúµÄä¯ÀÀÆ÷²»Ö§³ÖÊÕ²Ø</p>');
+        $("#browsing-record").html('<p>ÄúµÄä¯ÀÀÆ÷²»Ö§³Ö²é¿´ÀúÊ·¼ÇÂ¼</p>');
     }
 
-    //å…³é—­å¹¿å‘Šæ 
+    //¹Ø±Õ¹ã¸æÀ¸
     $('#adBanner').find('.close').on('tap', function()
     {
         $('#adBanner').hide();
+        return false;
     });
 
-    //æ»‘åŠ¨å¯¼èˆª
+    //»¬¶¯µ¼º½
     $('#nav').navigator();
 
     $('#nav_arrow').on('tap', function(){
         $('#nav').iScroll( 'scrollTo', 100, 0, 400, true );
     });
 
-    //tabsåˆ‡æ¢
+    //tabsÇĞ»»
     $(".history-tabs").tabs();
 
-    //å†å²ä¸æ”¶è—
+    //ÀúÊ·ÓëÊÕ²Ø
     $("#history").on("tap", function()
     {
         $('.search-wrap').css('visibility', 'hidden');
@@ -487,6 +398,8 @@ $(function()
         var $history_wrap = $('.history-wrap');
         if($history_wrap.css('visibility') == 'hidden')
         {
+            initHistory(historyObj, carItem, shopItem);
+            initCollect(collectObj, carItem, shopItem);
             $history_wrap.css('visibility', 'visible');
             $("#static-part").hide();
         }
@@ -504,7 +417,7 @@ $(function()
 
 
 
-    //æœç´¢æ¡†
+    //ËÑË÷¿ò
     $("#search").on("tap", function()
     {
         $('.history-wrap').css('visibility', 'hidden');
@@ -521,20 +434,20 @@ $(function()
         }
     });
 
-    //å»ºè®®å¯¹è¯æ¡†
+    //½¨Òé¶Ô»°¿ò
     $("#suggest-dialog").dialog({
         autoOpen:false,
         closeBtn:false,
         buttons: {
-            "å–æ¶ˆ": function(){
+            "È¡Ïû": function(){
                 this.close();
             },
-            "ç¡®å®š": function(){
+            "È·¶¨": function(){
                 this.close();
             }
         }
     });
-    //å¼¹å‡ºå»ºè®®å¯¹è¯æ¡†
+    //µ¯³ö½¨Òé¶Ô»°¿ò
     $("#suggestion").on('tap', function()
     {
         $('#suggest-dialog').dialog('open');

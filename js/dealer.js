@@ -188,120 +188,43 @@
 
 })(window);
 
-function createCarItem(itemExample ,itemData)
-{
-    var $item = $(itemExample.cloneNode(true));
-    $item.find(".carItem").text(itemData.name);
-    $item.find(".carPrice").find('i').text(itemData.price);
-    return $item;
-}
-
-function createShopItem(itemExample ,itemData)
-{
-    var $item = $(itemExample.cloneNode(true));
-    $item.find(".shopItem").text(itemData.name);
-    $item.find(".shopPhone").text(itemData.phone);
-    return $item;
-}
-
-function initHistory(historyArr, carItem, shopItem)
-{
-    var len = historyArr.length;
-    if(len === 0)
-    {
-        $("#browsing-record").html('<p>暂时无浏览记录</p>');
-        return;
-    }
-    var $container = $('#browsing-record-list').empty();
-    for(var i = 0; i < len; ++i)
-    {
-        var $item;
-        if(historyArr[i].type == "car")
-        {
-            $item = createCarItem(carItem, historyArr[i]);
-        }
-        else
-        {
-            $item = createShopItem(shopItem, historyArr[i]);
-        }
-        $container.append($item);
-    }
-    $container.find(".deleteBtn").each(function(i, item)
-    {
-        $(this).on("tap", function()
-        {
-            $container.find('li').eq(i).remove();
-            historyList.splice(i, 1);
-            window.localStorage.setItem('historyList', JSON.stringify(historyList));
-            if(historyList.length === 0)
-            {
-                $("#browsing-record").html('<p>暂时无浏览记录</p>');
-            }
-        });
-    });
-}
-
-function initCollect(collectArr, carItem, shopItem)
-{
-    var len = collectArr.length;
-    if(len === 0)
-    {
-        $("#collect-record").html('<p>暂时无收藏记录</p>');
-        return;
-    }
-    var $container = $('#collect-record-list').empty();
-    for(var i = 0; i < len; ++i)
-    {
-        var $item;
-        if(collectArr[i].type == "car")
-        {
-            $item = createCarItem(carItem, collectArr[i]);
-        }
-        else
-        {
-            $item = createShopItem(shopItem, collectArr[i]);
-        }
-        $container.append($item);
-    }
-    $container.find(".deleteBtn").each(function(i, item)
-    {
-        $(this).on("tap", function()
-        {
-            $container.find('li').eq(i).remove();
-            collectList.splice(i, 1);
-            window.localStorage.setItem('collectList', JSON.stringify(collectList));
-            if(collectList.length === 0)
-            {
-                $("#collect-record").html('<p>暂时无收藏记录</p>');
-            }
-        });
-    });
-}
 $(function() {
-
     var $collectItems = $("#collect-record-list").find('li');
     var carItem = $collectItems[0], shopItem = $collectItems[1];
     //填充历史与收藏数据
-    if (window.localStorage) {
-        initCollect(collectList, carItem, shopItem);
-        initHistory(historyList, carItem, shopItem);
+    if(window.localStorage)
+    {
+        historyObj[location.href] =
+        {
+            'type':'shop',
+            'phone':$('.shop-tel').text(),
+            'name':$('.shopName').text()
+        };
+        historyObj.length++;
+        localStorage.setItem('historyObj', JSON.stringify(historyObj));
+        initCollect(collectObj, carItem, shopItem);
+        initHistory(historyObj, carItem, shopItem);
         //清空按钮
-        $('#clearBtn').on('tap', function () {
-            if ($('#collect-record-wrap').hasClass('ui-state-active')) {
-                collectList = [];
-                window.localStorage.setItem('collectList', collectList);
+        $('#clearBtn').on('tap', function()
+        {
+            if($('#collect-record-wrap').hasClass('ui-state-active'))
+            {
+                collectObj = {length:0};
+                localStorage.setItem('collectObj', JSON.stringify(collectObj));
                 $('#collect-record-list').empty();
                 $("#collect-record").html('<p>暂时无收藏记录</p>');
             }
-            else {
-                historyList = [];
-                window.localStorage.setItem('historyList', historyList);
+            else
+            {
+                historyObj = {length:0};
+                localStorage.setItem('historyObj', JSON.stringify(historyObj));
                 $('#history-record-list').empty();
                 $("#history-record").html('<p>暂时无浏览记录</p>');
             }
         });
     }
-    else {
+    else
+    {
         $("#collect-record").html('<p>您的浏览器不支持收藏</p>');
         $("#browsing-record").html('<p>您的浏览器不支持查看历史记录</p>');
     }
@@ -309,6 +232,7 @@ $(function() {
     //关闭广告栏
     $('#adBanner').find('.close').on('tap', function () {
         $('#adBanner').hide();
+        return false;
     });
 
     //滑动导航
@@ -334,6 +258,8 @@ $(function() {
         var $history_wrap = $('.history-wrap');
         if($history_wrap.css('visibility') == 'hidden')
         {
+            initHistory(historyObj, carItem, shopItem);
+            initCollect(collectObj, carItem, shopItem);
             $history_wrap.css('visibility', 'visible');
             $("#static-part").hide();
         }
@@ -413,6 +339,15 @@ $(function() {
     $(".tab-car").tabs();
     $("#shop-cars").tabs();
 
+    /*分享对话框
+
+    //分享
+    $('#shop-share').on('tap', function()
+    {
+
+    });*/
+
+    //地图
     var $body = $('body');
     if(mapSetting){
         mapFunc.initialize({x:mapSetting.mapX,y:mapSetting.mapY,tit:mapSetting.title});

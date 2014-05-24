@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/js/core/gmu.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/core/widget.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/dealer.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/js/evaluate.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/extend/detect.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/extend/event.ortchange.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/extend/event.scrollStop.js" charset="GBK" />
