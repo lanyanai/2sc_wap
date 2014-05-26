@@ -25,6 +25,7 @@
     <file url="file://$PROJECT_DIR$/js/mobileSohuBase.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/new_model.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/product.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/js/result.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/sell.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/widget/add2desktop/add2desktop.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/js/widget/button/$input.js" charset="GBK" />
@@ -80,6 +81,7 @@
     <file url="file://$PROJECT_DIR$/style/dealer.css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/style/main.css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/style/product.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/style/result.css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/style/sell.css" charset="GBK" />
   </component>
 </project>
