@@ -10,7 +10,7 @@ $(function()
     if(window.localStorage)
     {
         initCollect(collectObj, carItem, shopItem);
-        initHistory(historyObj, carItem, shopItem);
+        initHistory(historyCarArr, historyShopArr, carItem, shopItem);
         //清空按钮
         $('#clearBtn').on('tap', function()
         {
@@ -23,10 +23,11 @@ $(function()
             }
             else
             {
-                historyObj = {length:0};
-                localStorage.setItem('historyObj', JSON.stringify(historyObj));
+                historyCarArr = historyShopArr = [];
+                localStorage.setItem('historyCarArr', JSON.stringify(historyCarArr));
+                localStorage.setItem('historyShopArr', JSON.stringify(historyShopArr));
                 $('#history-record-list').empty();
-                $("#history-record").html('<p>暂时无浏览记录</p>');
+                $("#history-record-list").html('<p>暂时无浏览记录</p>');
             }
         });
     }
@@ -37,7 +38,7 @@ $(function()
     }
 
     //关闭广告栏
-    $('#adBanner').find('.close').on('tap', function()
+    $('#adBanner').find('.close').on('click', function()
     {
         $('#adBanner').hide();
         return false;

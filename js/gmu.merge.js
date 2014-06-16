@@ -1595,7 +1595,7 @@ window.Zepto = Zepto
 })(Zepto);
 
 /**
- * @file æ¥è‡ªzepto/touch.js, zeptoè‡ª1.0åï¼Œå·²ä¸é»˜è®¤æ‰“åŒ…æ­¤æ–‡ä»¶ã€‚
+ * @file À´×Ôzepto/touch.js, zepto×Ô1.0ºó£¬ÒÑ²»Ä¬ÈÏ´ò°ü´ËÎÄ¼ş¡£
  * @import zepto.js
  */
 //     Zepto.js
@@ -1911,7 +1911,7 @@ window.Zepto = Zepto
             setTimeout(function () { that.refresh(); }, isAndroid ? 200 : 0);
         },
 
-        _pos: function (x, y) {//æ§åˆ¶ä½ç§»
+        _pos: function (x, y) {//¿ØÖÆÎ»ÒÆ
             x = this.hScroll ? x : 0;
             y = this.vScroll ? y : 0;
 
@@ -2306,7 +2306,7 @@ window.Zepto = Zepto
 
             if (that.options.onDestroy) that.options.onDestroy.call(that);
 
-            //æ¸…é™¤æ‰€æœ‰ç»‘å®šçš„äº‹ä»¶
+            //Çå³ıËùÓĞ°ó¶¨µÄÊÂ¼ş
             for (var i = 0, l = _bindArr.length; i < l;) {
                 _bindArr[i].removeEventListener(_bindArr[i + 1], _bindArr[i + 2]);
                 _bindArr[i] = null;
@@ -2314,7 +2314,7 @@ window.Zepto = Zepto
             }
             _bindArr = [];
 
-            //å¹²æ‰å¤–è¾¹çš„å®¹å™¨å†…å®¹
+            //¸ÉµôÍâ±ßµÄÈİÆ÷ÄÚÈİ
             /*var div = doc.createElement('div');
              div.appendChild(this.wrapper);
              div.innerHTML = '';
@@ -2443,7 +2443,7 @@ window.Zepto = Zepto
     if (typeof exports !== 'undefined') exports.iScroll = iScroll;
     else window.iScroll = iScroll;
 
-    // ç»™$.fnä¸ŠæŒ‚iScrollæ–¹æ³•
+    // ¸ø$.fnÉÏ¹ÒiScroll·½·¨
     (function( $, ns, undefined ){
         if(!$)return;
 
@@ -2486,29 +2486,29 @@ window.Zepto = Zepto
 
             $.each( this, function( i, el ) {
 
-                // ä»ç¼“å­˜ä¸­å–ï¼Œæ²¡æœ‰åˆ™åˆ›å»ºä¸€ä¸ª
+                // ´Ó»º´æÖĞÈ¡£¬Ã»ÓĞÔò´´½¨Ò»¸ö
                 obj = record( el ) || iScroll( el, $.isPlainObject( opts ) ?
                     opts : undefined );
 
-                // å–å®ä¾‹
+                // È¡ÊµÀı
                 if ( method === 'this' ) {
                     ret = obj;
-                    return false;    // æ–­å¼€eachå¾ªç¯
+                    return false;    // ¶Ï¿ªeachÑ­»·
                 } else if ( method ) {
 
-                    // å½“å–çš„æ–¹æ³•ä¸å­˜åœ¨æ—¶ï¼ŒæŠ›å‡ºé”™è¯¯ä¿¡æ¯
+                    // µ±È¡µÄ·½·¨²»´æÔÚÊ±£¬Å×³ö´íÎóĞÅÏ¢
                     if ( !$.isFunction( obj[ method ] ) ) {
-                        throw new Error( 'iScrollæ²¡æœ‰æ­¤æ–¹æ³•ï¼š' + method );
+                        throw new Error( 'iScrollÃ»ÓĞ´Ë·½·¨£º' + method );
                     }
 
                     ret = obj[ method ].apply( obj, args );
 
-                    // æ–­å®šå®ƒæ˜¯getteræ€§è´¨çš„æ–¹æ³•ï¼Œæ‰€ä»¥éœ€è¦æ–­å¼€eachå¾ªç¯ï¼ŒæŠŠç»“æœè¿”å›
+                    // ¶Ï¶¨ËüÊÇgetterĞÔÖÊµÄ·½·¨£¬ËùÒÔĞèÒª¶Ï¿ªeachÑ­»·£¬°Ñ½á¹û·µ»Ø
                     if ( ret !== undefined && ret !== obj ) {
                         return false;
                     }
 
-                    // retä¸ºobjæ—¶ä¸ºæ— æ•ˆå€¼ï¼Œä¸ºäº†ä¸å½±å“åé¢çš„è¿”å›
+                    // retÎªobjÊ±ÎªÎŞĞ§Öµ£¬ÎªÁË²»Ó°ÏìºóÃæµÄ·µ»Ø
                     ret = undefined;
                 }
             } );
@@ -2520,126 +2520,126 @@ window.Zepto = Zepto
 })(window, document);
 /**
  * Change list
- * ä¿®æ”¹è®°å½•
+ * ĞŞ¸Ä¼ÇÂ¼
  *
- * 1. 2012-08-14 è§£å†³æ»‘åŠ¨ä¸­æŒ‰ä½åœæ­¢æ»šåŠ¨ï¼Œæ¾å¼€åè¢«ç‚¹å…ƒç´ è§¦å‘ç‚¹å‡»äº‹ä»¶ã€‚
+ * 1. 2012-08-14 ½â¾ö»¬¶¯ÖĞ°´×¡Í£Ö¹¹ö¶¯£¬ËÉ¿ªºó±»µãÔªËØ´¥·¢µã»÷ÊÂ¼ş¡£
  *
- * å…·ä½“ä¿®æ”¹:
- * a. 202è¡Œ æ·»åŠ isStopScrollAction: false ç»™iScrollçš„åŸå‹ä¸Šæ·»åŠ å˜é‡
- * b. 365è¡Œ _startæ–¹æ³•é‡Œé¢æ·»åŠ that.isStopScrollAction = false; é»˜è®¤è®©è¿™ä¸ªå€¼ä¸ºfalse
- * c. 390è¡Œ if (x != that.x || y != that.y)æ¡ä»¶è¯­å¥é‡Œé¢ æ·»åŠ äº†  that.isStopScrollAction = true; å½“ç›®æ ‡å€¼ä¸å®é™…å€¼ä¸ä¸€è‡´ï¼Œè¯´æ˜è¿˜åœ¨æ»šåŠ¨åŠ¨ç”»ä¸­
- * d. 554è¡Œ that.isStopScrollAction || (that.doubleTapTimer = setTimeout(function () {
+ * ¾ßÌåĞŞ¸Ä:
+ * a. 202ĞĞ Ìí¼ÓisStopScrollAction: false ¸øiScrollµÄÔ­ĞÍÉÏÌí¼Ó±äÁ¿
+ * b. 365ĞĞ _start·½·¨ÀïÃæÌí¼Óthat.isStopScrollAction = false; Ä¬ÈÏÈÃÕâ¸öÖµÎªfalse
+ * c. 390ĞĞ if (x != that.x || y != that.y)Ìõ¼şÓï¾äÀïÃæ Ìí¼ÓÁË  that.isStopScrollAction = true; µ±Ä¿±êÖµÓëÊµ¼ÊÖµ²»Ò»ÖÂ£¬ËµÃ÷»¹ÔÚ¹ö¶¯¶¯»­ÖĞ
+ * d. 554ĞĞ that.isStopScrollAction || (that.doubleTapTimer = setTimeout(function () {
  *          ......
  *          ......
  *          }, that.options.zoom ? 250 : 0));
- *   å¦‚æœisStopScrollActionä¸ºtrueå°±ä¸æ´¾é€clickäº‹ä»¶
+ *   Èç¹ûisStopScrollActionÎªtrue¾Í²»ÅÉËÍclickÊÂ¼ş
  *
  *
- * 2. 2012-08-14 ç»™optionsé‡Œé¢æ·»åŠ speedScaleå±æ€§ï¼Œæä¾›å¤–éƒ¨æ§åˆ¶å†²é‡æ»šåŠ¨é€Ÿåº¦
+ * 2. 2012-08-14 ¸øoptionsÀïÃæÌí¼ÓspeedScaleÊôĞÔ£¬Ìá¹©Íâ²¿¿ØÖÆ³åÁ¿¹ö¶¯ËÙ¶È
  *
- * å…·ä½“ä¿®æ”¹
- * a. 108è¡Œ æ·»åŠ speedScale: 1, ç»™optionsé‡Œé¢æ·»åŠ speedScaleå±æ€§ï¼Œé»˜è®¤ä¸º1
- * b. 798è¡Œ speed = m.abs(dist) * this.options.speedScale / time, åœ¨åŸæ¥é€Ÿåº¦çš„åŸºç¡€ä¸Š*speedScaleæ¥æ”¹å˜é€Ÿåº¦
+ * ¾ßÌåĞŞ¸Ä
+ * a. 108ĞĞ Ìí¼ÓspeedScale: 1, ¸øoptionsÀïÃæÌí¼ÓspeedScaleÊôĞÔ£¬Ä¬ÈÏÎª1
+ * b. 798ĞĞ speed = m.abs(dist) * this.options.speedScale / time, ÔÚÔ­À´ËÙ¶ÈµÄ»ù´¡ÉÏ*speedScaleÀ´¸Ä±äËÙ¶È
  *
- * 3. 2012-08-21 ä¿®æ”¹éƒ¨åˆ†ä»£ç ï¼Œç»™iscroll_pluginå¢™ç”¨çš„
+ * 3. 2012-08-21 ĞŞ¸Ä²¿·Ö´úÂë£¬¸øiscroll_pluginÇ½ÓÃµÄ
  *
- * å…·ä½“ä¿®æ”¹
- * a. 517è¡Œ  åœ¨_posä¹‹å‰ï¼Œè°ƒç”¨_beforePos,å¦‚æœé‡Œé¢ä¸è¿”å›true,  å°†ä¸ä¼šè°ƒç”¨_pos
+ * ¾ßÌåĞŞ¸Ä
+ * a. 517ĞĞ  ÔÚ_posÖ®Ç°£¬µ÷ÓÃ_beforePos,Èç¹ûÀïÃæ²»·µ»Øtrue,  ½«²»»áµ÷ÓÃ_pos
  *  // internal for header scroll
  *  if (that._beforePos)
  *      that._beforePos(newY, deltaY) && that._pos(newX, newY);
  *  else
  *      that._pos(newX, newY);
  *
- * b. 680è¡Œ åœ¨æ»šåŠ¨ç»“æŸåè°ƒç”¨ _afterPos.
+ * b. 680ĞĞ ÔÚ¹ö¶¯½áÊøºóµ÷ÓÃ _afterPos.
  * // internal for header scroll
  * if (that._afterPos) that._afterPos();
  *
- * c. 106è¡Œæ„é€ å™¨é‡Œé¢æ·»åŠ ä»¥ä¸‹ä»£ç 
+ * c. 106ĞĞ¹¹ÔìÆ÷ÀïÃæÌí¼ÓÒÔÏÂ´úÂë
  * // add var to this for header scroll
  * that.translateZ = translateZ;
  *
- * ä¸ºå¤„ç†æº¢å‡º
- * _bind æ–¹æ³•
- * destroy æ–¹æ³•
- * æœ€å¼€å¤´çš„ _bindArr = []
+ * Îª´¦ÀíÒç³ö
+ * _bind ·½·¨
+ * destroy ·½·¨
+ * ×î¿ªÍ·µÄ _bindArr = []
  *
  */
 /**
- * @file GMUå®šåˆ¶ç‰ˆiscrollï¼ŒåŸºäº[iScroll 4.2.2](http://cubiq.org/iscroll-4), å»é™¤zoom, pcå…¼å®¹ï¼Œsnap, scrollbarç­‰åŠŸèƒ½ã€‚åŒæ—¶æŠŠiscrollæ‰©å±•åˆ°äº†Zeptoçš„åŸå‹ä¸­ã€‚
+ * @file GMU¶¨ÖÆ°æiscroll£¬»ùÓÚ[iScroll 4.2.2](http://cubiq.org/iscroll-4), È¥³ızoom, pc¼æÈİ£¬snap, scrollbarµÈ¹¦ÄÜ¡£Í¬Ê±°ÑiscrollÀ©Õ¹µ½ÁËZeptoµÄÔ­ĞÍÖĞ¡£
  * @name iScroll
  * @import zepto.js
- * @desc GMUå®šåˆ¶ç‰ˆiscrollï¼ŒåŸºäº{@link[http://cubiq.org/iscroll-4] iScroll 4.2.2}, å»é™¤zoom, pcå…¼å®¹ï¼Œsnap, scrollbarç­‰åŠŸèƒ½ã€‚åŒæ—¶æŠŠiscrollæ‰©å±•åˆ°äº†***Zepto***çš„åŸå‹ä¸­ã€‚
+ * @desc GMU¶¨ÖÆ°æiscroll£¬»ùÓÚ{@link[http://cubiq.org/iscroll-4] iScroll 4.2.2}, È¥³ızoom, pc¼æÈİ£¬snap, scrollbarµÈ¹¦ÄÜ¡£Í¬Ê±°ÑiscrollÀ©Õ¹µ½ÁË***Zepto***µÄÔ­ĞÍÖĞ¡£
  */
 
 /**
  * @name iScroll
  * @grammar new iScroll(el,[options])  => self
- * @grammar $('selecotr').iScroll([options])  => zeptoå®ä¾‹
- * @desc å°†iScrollåŠ å…¥åˆ°äº†***$.fn***ä¸­ï¼Œæ–¹ä¾¿ç”¨Zeptoçš„æ–¹å¼è°ƒç”¨iScrollã€‚
+ * @grammar $('selecotr').iScroll([options])  => zeptoÊµÀı
+ * @desc ½«iScroll¼ÓÈëµ½ÁË***$.fn***ÖĞ£¬·½±ãÓÃZeptoµÄ·½Ê½µ÷ÓÃiScroll¡£
  * **el**
- * - ***el {String/ElementNode}*** iscrollå®¹å™¨èŠ‚ç‚¹
+ * - ***el {String/ElementNode}*** iscrollÈİÆ÷½Úµã
  *
  * **Options**
- * - ***hScroll*** {Boolean}: (å¯é€‰, é»˜è®¤: true)æ¨ªå‘æ˜¯å¦å¯ä»¥æ»šåŠ¨
- * - ***vScroll*** {Boolean}: (å¯é€‰, é»˜è®¤: true)ç«–å‘æ˜¯å¦å¯ä»¥æ»šåŠ¨
- * - ***momentum*** {Boolean}: (å¯é€‰, é»˜è®¤: true)æ˜¯å¦å¸¦æœ‰æ»šåŠ¨æ•ˆæœ
- * - ***checkDOMChanges*** {Boolean, é»˜è®¤: false}: (å¯é€‰)æ¯ä¸ª500æ¯«ç§’åˆ¤æ–­ä¸€ä¸‹æ»šåŠ¨åŒºåŸŸçš„å®¹å™¨æ˜¯å¦æœ‰æ–°è¿½åŠ çš„å†…å®¹ï¼Œå¦‚æœæœ‰å°±è°ƒç”¨refreshé‡æ–°æ¸²æŸ“ä¸€æ¬¡
- * - ***useTransition*** {Boolean, é»˜è®¤: false}: (å¯é€‰)æ˜¯å¦ä½¿ç”¨css3æ¥æ¥å®ç°åŠ¨ç”»ï¼Œé»˜è®¤æ˜¯false,å»ºè®®å¼€å¯
- * - ***topOffset*** {Number}: (å¯é€‰, é»˜è®¤: 0)å¯æ»šåŠ¨åŒºåŸŸå¤´éƒ¨ç¼©ç´§å¤šå°‘é«˜åº¦ï¼Œé»˜è®¤æ˜¯0ï¼Œ ***ä¸»è¦ç”¨äºå¤´éƒ¨ä¸‹æ‹‰åŠ è½½æ›´å¤šæ—¶ï¼Œæ”¶èµ·å¤´éƒ¨çš„æç¤ºæŒ‰é’®***
+ * - ***hScroll*** {Boolean}: (¿ÉÑ¡, Ä¬ÈÏ: true)ºáÏòÊÇ·ñ¿ÉÒÔ¹ö¶¯
+ * - ***vScroll*** {Boolean}: (¿ÉÑ¡, Ä¬ÈÏ: true)ÊúÏòÊÇ·ñ¿ÉÒÔ¹ö¶¯
+ * - ***momentum*** {Boolean}: (¿ÉÑ¡, Ä¬ÈÏ: true)ÊÇ·ñ´øÓĞ¹ö¶¯Ğ§¹û
+ * - ***checkDOMChanges*** {Boolean, Ä¬ÈÏ: false}: (¿ÉÑ¡)Ã¿¸ö500ºÁÃëÅĞ¶ÏÒ»ÏÂ¹ö¶¯ÇøÓòµÄÈİÆ÷ÊÇ·ñÓĞĞÂ×·¼ÓµÄÄÚÈİ£¬Èç¹ûÓĞ¾Íµ÷ÓÃrefreshÖØĞÂäÖÈ¾Ò»´Î
+ * - ***useTransition*** {Boolean, Ä¬ÈÏ: false}: (¿ÉÑ¡)ÊÇ·ñÊ¹ÓÃcss3À´À´ÊµÏÖ¶¯»­£¬Ä¬ÈÏÊÇfalse,½¨Òé¿ªÆô
+ * - ***topOffset*** {Number}: (¿ÉÑ¡, Ä¬ÈÏ: 0)¿É¹ö¶¯ÇøÓòÍ·²¿Ëõ½ô¶àÉÙ¸ß¶È£¬Ä¬ÈÏÊÇ0£¬ ***Ö÷ÒªÓÃÓÚÍ·²¿ÏÂÀ­¼ÓÔØ¸ü¶àÊ±£¬ÊÕÆğÍ·²¿µÄÌáÊ¾°´Å¥***
  * @example
- * $('div').iscroll().find('selector').atrr({'name':'aaa'}) //ä¿æŒé“¾å¼è°ƒç”¨
- * $('div').iScroll('refresh');//è°ƒç”¨iScrollçš„æ–¹æ³•
- * $('div').iScroll('scrollTo', 0, 0, 200);//è°ƒç”¨iScrollçš„æ–¹æ³•, 200mså†…æ»šåŠ¨åˆ°é¡¶éƒ¨
+ * $('div').iscroll().find('selector').atrr({'name':'aaa'}) //±£³ÖÁ´Ê½µ÷ÓÃ
+ * $('div').iScroll('refresh');//µ÷ÓÃiScrollµÄ·½·¨
+ * $('div').iScroll('scrollTo', 0, 0, 200);//µ÷ÓÃiScrollµÄ·½·¨, 200msÄÚ¹ö¶¯µ½¶¥²¿
  */
 
 
 /**
  * @name destroy
- * @desc é”€æ¯iScrollå®ä¾‹ï¼Œåœ¨åŸiScrollçš„destroyçš„åŸºç¡€ä¸Šå¯¹åˆ›å»ºçš„domå…ƒç´ è¿›è¡Œäº†é”€æ¯
+ * @desc Ïú»ÙiScrollÊµÀı£¬ÔÚÔ­iScrollµÄdestroyµÄ»ù´¡ÉÏ¶Ô´´½¨µÄdomÔªËØ½øĞĞÁËÏú»Ù
  * @grammar destroy()  => undefined
  */
 
 /**
  * @name refresh
- * @desc æ›´æ–°iScrollå®ä¾‹ï¼Œåœ¨æ»šåŠ¨çš„å†…å®¹å¢å‡æ—¶ï¼Œæˆ–è€…å¯æ»šåŠ¨åŒºåŸŸå‘ç”Ÿå˜åŒ–æ—¶éœ€è¦è°ƒç”¨***refresh***æ–¹æ³•æ¥çº æ­£ã€‚
+ * @desc ¸üĞÂiScrollÊµÀı£¬ÔÚ¹ö¶¯µÄÄÚÈİÔö¼õÊ±£¬»òÕß¿É¹ö¶¯ÇøÓò·¢Éú±ä»¯Ê±ĞèÒªµ÷ÓÃ***refresh***·½·¨À´¾ÀÕı¡£
  * @grammar refresh()  => undefined
  */
 
 /**
  * @name scrollTo
- * @desc ä½¿iScrollå®ä¾‹ï¼Œåœ¨æŒ‡å®šæ—¶é—´å†…æ»šåŠ¨åˆ°æŒ‡å®šçš„ä½ç½®ï¼Œ å¦‚æœrelativeä¸ºtrue, è¯´æ˜x, yçš„å€¼æ˜¯ç›¸å¯¹ä¸å½“å‰ä½ç½®çš„ã€‚
+ * @desc Ê¹iScrollÊµÀı£¬ÔÚÖ¸¶¨Ê±¼äÄÚ¹ö¶¯µ½Ö¸¶¨µÄÎ»ÖÃ£¬ Èç¹ûrelativeÎªtrue, ËµÃ÷x, yµÄÖµÊÇÏà¶ÔÓëµ±Ç°Î»ÖÃµÄ¡£
  * @grammar scrollTo(x, y, time, relative)  => undefined
  */
 /**
  * @name scrollToElement
- * @desc æ»šåŠ¨åˆ°æŒ‡å®šå†…éƒ¨å…ƒç´ 
+ * @desc ¹ö¶¯µ½Ö¸¶¨ÄÚ²¿ÔªËØ
  * @grammar scrollToElement(element, time)  => undefined
  * @grammar scrollToElement(selector, time)  => undefined
  */
 /**
  * @name scrollToPage
- * @desc è·ŸscrollToå¾ˆåƒï¼Œè¿™é‡Œä¼ å…¥çš„æ˜¯ç™¾åˆ†æ¯”ã€‚
+ * @desc ¸úscrollToºÜÏñ£¬ÕâÀï´«ÈëµÄÊÇ°Ù·Ö±È¡£
  * @grammar scrollToPage(pageX, pageY, time)  => undefined
  */
 /**
  * @name disable
- * @desc ç¦ç”¨iScroll
+ * @desc ½ûÓÃiScroll
  * @grammar disable()  => undefined
  */
 /**
  * @name enable
- * @desc å¯ç”¨iScroll
+ * @desc ÆôÓÃiScroll
  * @grammar enable()  => undefined
  */
 /**
  * @name stop
- * @desc å®šåˆ¶iscrollæ»šåŠ¨
+ * @desc ¶¨ÖÆiscroll¹ö¶¯
  * @grammar stop()  => undefined
  */
 
 /**
- * @file åª’ä½“æŸ¥è¯¢
+ * @file Ã½Ìå²éÑ¯
  * @import zepto.js
  * @module GMU
  */
@@ -2647,22 +2647,22 @@ window.Zepto = Zepto
 (function ($) {
 
     /**
-     * æ˜¯åŸç”Ÿçš„window.matchMediaæ–¹æ³•çš„polyfillï¼Œå¯¹äºä¸æ”¯æŒmatchMediaçš„æ–¹æ³•ç³»ç»Ÿå’Œæµè§ˆå™¨ï¼ŒæŒ‰ç…§[w3c window.matchMedia](http://www.w3.org/TR/cssom-view/#dom-window-matchmedia)çš„æ¥å£
-     * å®šä¹‰ï¼Œå¯¹matchMediaæ–¹æ³•è¿›è¡Œäº†å°è£…ã€‚åŸç†æ˜¯ç”¨css media queryåŠtransitionEndäº‹ä»¶æ¥å®Œæˆçš„ã€‚åœ¨é¡µé¢ä¸­æ’å…¥media queryæ ·å¼åŠå…ƒç´ ï¼Œå½“queryæ¡ä»¶æ»¡è¶³æ—¶æ”¹å˜è¯¥å…ƒç´ æ ·å¼ï¼ŒåŒæ—¶è¿™ä¸ªæ ·å¼æ˜¯transitionä½œç”¨çš„å±æ€§ï¼Œ
-     * æ»¡è¶³æ¡ä»¶åå³ä¼šè§¦å‘transitionEndï¼Œç”±æ­¤åˆ›å»ºMediaQueryListçš„äº‹ä»¶ç›‘å¬ã€‚ç”±äºtransitionçš„duration timeä¸º0.001msï¼Œæ•…è‹¥ç›´æ¥ä½¿ç”¨MediaQueryListå¯¹è±¡çš„matcheså»åˆ¤æ–­å½“å‰æ˜¯å¦ä¸queryåŒ¹é…ï¼Œä¼šæœ‰éƒ¨åˆ†å»¶è¿Ÿï¼Œ
-     * å»ºè®®æ³¨å†ŒaddListenerçš„æ–¹å¼å»ç›‘å¬queryçš„æ”¹å˜ã€‚$.matchMediaçš„è¯¦ç»†å®ç°åŸç†åŠé‡‡ç”¨è¯¥æ–¹æ³•å®ç°çš„è½¬å±ç»Ÿä¸€è§£å†³æ–¹æ¡ˆè¯¦è§
-     * [GMU Pages: è½¬å±è§£å†³æ–¹æ¡ˆ($.matchMedia)](https://github.com/gmuteam/GMU/wiki/%E8%BD%AC%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88$.matchMedia)
+     * ÊÇÔ­ÉúµÄwindow.matchMedia·½·¨µÄpolyfill£¬¶ÔÓÚ²»Ö§³ÖmatchMediaµÄ·½·¨ÏµÍ³ºÍä¯ÀÀÆ÷£¬°´ÕÕ[w3c window.matchMedia](http://www.w3.org/TR/cssom-view/#dom-window-matchmedia)µÄ½Ó¿Ú
+     * ¶¨Òå£¬¶ÔmatchMedia·½·¨½øĞĞÁË·â×°¡£Ô­ÀíÊÇÓÃcss media query¼°transitionEndÊÂ¼şÀ´Íê³ÉµÄ¡£ÔÚÒ³ÃæÖĞ²åÈëmedia queryÑùÊ½¼°ÔªËØ£¬µ±queryÌõ¼şÂú×ãÊ±¸Ä±ä¸ÃÔªËØÑùÊ½£¬Í¬Ê±Õâ¸öÑùÊ½ÊÇtransition×÷ÓÃµÄÊôĞÔ£¬
+     * Âú×ãÌõ¼şºó¼´»á´¥·¢transitionEnd£¬ÓÉ´Ë´´½¨MediaQueryListµÄÊÂ¼ş¼àÌı¡£ÓÉÓÚtransitionµÄduration timeÎª0.001ms£¬¹ÊÈôÖ±½ÓÊ¹ÓÃMediaQueryList¶ÔÏóµÄmatchesÈ¥ÅĞ¶Ïµ±Ç°ÊÇ·ñÓëqueryÆ¥Åä£¬»áÓĞ²¿·ÖÑÓ³Ù£¬
+     * ½¨Òé×¢²áaddListenerµÄ·½Ê½È¥¼àÌıqueryµÄ¸Ä±ä¡£$.matchMediaµÄÏêÏ¸ÊµÏÖÔ­Àí¼°²ÉÓÃ¸Ã·½·¨ÊµÏÖµÄ×ªÆÁÍ³Ò»½â¾ö·½°¸Ïê¼û
+     * [GMU Pages: ×ªÆÁ½â¾ö·½°¸($.matchMedia)](https://github.com/gmuteam/GMU/wiki/%E8%BD%AC%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88$.matchMedia)
      *
-     * è¿”å›å€¼MediaQueryListå¯¹è±¡åŒ…å«çš„å±æ€§<br />
-     * - ***matches*** æ˜¯å¦æ»¡è¶³query<br />
-     * - ***query*** æŸ¥è¯¢çš„css queryï¼Œç±»ä¼¼\'screen and (orientation: portrait)\'<br />
-     * - ***addListener*** æ·»åŠ MediaQueryListå¯¹è±¡ç›‘å¬å™¨ï¼Œæ¥æ”¶å›è°ƒå‡½æ•°ï¼Œå›è°ƒå‚æ•°ä¸ºMediaQueryListå¯¹è±¡<br />
-     * - ***removeListener*** ç§»é™¤MediaQueryListå¯¹è±¡ç›‘å¬å™¨<br />
+     * ·µ»ØÖµMediaQueryList¶ÔÏó°üº¬µÄÊôĞÔ<br />
+     * - ***matches*** ÊÇ·ñÂú×ãquery<br />
+     * - ***query*** ²éÑ¯µÄcss query£¬ÀàËÆ\'screen and (orientation: portrait)\'<br />
+     * - ***addListener*** Ìí¼ÓMediaQueryList¶ÔÏó¼àÌıÆ÷£¬½ÓÊÕ»Øµ÷º¯Êı£¬»Øµ÷²ÎÊıÎªMediaQueryList¶ÔÏó<br />
+     * - ***removeListener*** ÒÆ³ıMediaQueryList¶ÔÏó¼àÌıÆ÷<br />
      *
      *
      * @method $.matchMedia
      * @grammar $.matchMedia(query)  ? MediaQueryList
-     * @param {String} query æŸ¥è¯¢çš„css queryï¼Œç±»ä¼¼\'screen and (orientation: portrait)\'
+     * @param {String} query ²éÑ¯µÄcss query£¬ÀàËÆ\'screen and (orientation: portrait)\'
      * @return {Object} MediaQueryList
      * @example
      * $.matchMedia('screen and (orientation: portrait)').addListener(fn);
@@ -2680,9 +2680,9 @@ window.Zepto = Zepto
                 listeners = [],
                 ret;
 
-            $style.append('@media ' + query + ' { #' + id + ' { width: 1px; } }\n') ;   //åŸç”ŸmatchMediaä¹Ÿéœ€è¦æ·»åŠ å¯¹åº”çš„@mediaæ‰èƒ½ç”Ÿæ•ˆ
+            $style.append('@media ' + query + ' { #' + id + ' { width: 1px; } }\n') ;   //Ô­ÉúmatchMediaÒ²ĞèÒªÌí¼Ó¶ÔÓ¦µÄ@media²ÅÄÜÉúĞ§
 
-            // ç»Ÿä¸€ç”¨æ¨¡æ‹Ÿçš„ï¼Œæ—¶æœºæ›´å¥½ã€‚
+            // Í³Ò»ÓÃÄ£ÄâµÄ£¬Ê±»ú¸üºÃ¡£
             // if ('matchMedia' in window) {
             //     return window.matchMedia(query);
             // }
@@ -2716,44 +2716,44 @@ window.Zepto = Zepto
 })(Zepto);
 
 /**
- * @file æ‰©å±•è½¬å±äº‹ä»¶
+ * @file À©Õ¹×ªÆÁÊÂ¼ş
  * @name ortchange
  * @short ortchange
- * @desc æ‰©å±•è½¬å±äº‹ä»¶orientationï¼Œè§£å†³åŸç”Ÿè½¬å±äº‹ä»¶çš„å…¼å®¹æ€§é—®é¢˜
+ * @desc À©Õ¹×ªÆÁÊÂ¼şorientation£¬½â¾öÔ­Éú×ªÆÁÊÂ¼şµÄ¼æÈİĞÔÎÊÌâ
  * @import zepto.js, extend/matchMedia.js
  */
 
 $(function () {
     /**
      * @name ortchange
-     * @desc æ‰©å±•è½¬å±äº‹ä»¶orientationï¼Œè§£å†³åŸç”Ÿè½¬å±äº‹ä»¶çš„å…¼å®¹æ€§é—®é¢˜
-     * - ***ortchange*** : å½“è½¬å±çš„æ—¶å€™è§¦å‘ï¼Œå…¼å®¹ucå’Œå…¶ä»–ä¸æ”¯æŒorientationchangeçš„è®¾å¤‡ï¼Œåˆ©ç”¨css media queryå®ç°ï¼Œè§£å†³äº†è½¬å±å»¶æ—¶åŠorientationäº‹ä»¶çš„å…¼å®¹æ€§é—®é¢˜
-     * $(window).on('ortchange', function () {        //å½“è½¬å±çš„æ—¶å€™è§¦å‘
+     * @desc À©Õ¹×ªÆÁÊÂ¼şorientation£¬½â¾öÔ­Éú×ªÆÁÊÂ¼şµÄ¼æÈİĞÔÎÊÌâ
+     * - ***ortchange*** : µ±×ªÆÁµÄÊ±ºò´¥·¢£¬¼æÈİucºÍÆäËû²»Ö§³ÖorientationchangeµÄÉè±¸£¬ÀûÓÃcss media queryÊµÏÖ£¬½â¾öÁË×ªÆÁÑÓÊ±¼°orientationÊÂ¼şµÄ¼æÈİĞÔÎÊÌâ
+     * $(window).on('ortchange', function () {        //µ±×ªÆÁµÄÊ±ºò´¥·¢
      *     console.log('ortchange');
      * });
      */
-        //æ‰©å±•å¸¸ç”¨media query
+        //À©Õ¹³£ÓÃmedia query
     $.mediaQuery = {
         ortchange: 'screen and (width: ' + window.innerWidth + 'px)'
     };
-    //é€šè¿‡matchMediaæ´¾ç”Ÿè½¬å±äº‹ä»¶
+    //Í¨¹ımatchMediaÅÉÉú×ªÆÁÊÂ¼ş
     $.matchMedia($.mediaQuery.ortchange).addListener(function () {
         $(window).trigger('ortchange');
     });
 });
 
 /**
- *  @file å®ç°äº†é€šç”¨highlightæ–¹æ³•ã€‚
+ *  @file ÊµÏÖÁËÍ¨ÓÃhighlight·½·¨¡£
  *  @name Highlight
- *  @desc ç‚¹å‡»é«˜äº®æ•ˆæœ
+ *  @desc µã»÷¸ßÁÁĞ§¹û
  *  @import zepto.js
  */
 (function( $ ) {
     var $doc = $( document ),
-        $el,    // å½“å‰æŒ‰ä¸‹çš„å…ƒç´ 
-        timer;    // è€ƒè™‘åˆ°æ»šåŠ¨æ“ä½œæ—¶ä¸èƒ½é«˜äº®ï¼Œæ‰€ä»¥ç”¨åˆ°äº†100mså»¶æ—¶
+        $el,    // µ±Ç°°´ÏÂµÄÔªËØ
+        timer;    // ¿¼ÂÇµ½¹ö¶¯²Ù×÷Ê±²»ÄÜ¸ßÁÁ£¬ËùÒÔÓÃµ½ÁË100msÑÓÊ±
 
-    // è´Ÿè´£ç§»é™¤className.
+    // ¸ºÔğÒÆ³ıclassName.
     function dismiss() {
         var cls = $el.attr( 'hl-cls' );
 
@@ -2765,17 +2765,17 @@ $(function () {
 
     /**
      * @name highlight
-     * @desc ç¦ç”¨æ‰ç³»ç»Ÿçš„é«˜äº®ï¼Œå½“æ‰‹æŒ‡ç§»åŠ¨åˆ°å…ƒç´ ä¸Šæ—¶æ·»åŠ æŒ‡å®šclassï¼Œæ‰‹æŒ‡ç§»å¼€æ—¶ï¼Œç§»é™¤è¯¥class.
-     * å½“ä¸ä¼ å…¥classNameæ˜¯ï¼Œæ­¤æ“ä½œå°†è§£é™¤äº‹ä»¶ç»‘å®šã€‚
+     * @desc ½ûÓÃµôÏµÍ³µÄ¸ßÁÁ£¬µ±ÊÖÖ¸ÒÆ¶¯µ½ÔªËØÉÏÊ±Ìí¼ÓÖ¸¶¨class£¬ÊÖÖ¸ÒÆ¿ªÊ±£¬ÒÆ³ı¸Ãclass.
+     * µ±²»´«ÈëclassNameÊÇ£¬´Ë²Ù×÷½«½â³ıÊÂ¼ş°ó¶¨¡£
      *
-     * æ­¤æ–¹æ³•æ”¯æŒä¼ å…¥selector, æ­¤æ–¹å¼å°†ç”¨åˆ°äº‹ä»¶ä»£ç†ï¼Œå…è®¸domååŠ è½½ã€‚
+     * ´Ë·½·¨Ö§³Ö´«Èëselector, ´Ë·½Ê½½«ÓÃµ½ÊÂ¼ş´úÀí£¬ÔÊĞídomºó¼ÓÔØ¡£
      * @grammar  highlight(className, selector )   => self
      * @grammar  highlight(className )   => self
      * @grammar  highlight()   => self
      * @example var div = $('div');
      * div.highlight('div-hover');
      *
-     * $('a').highlight();// æŠŠæ‰€æœ‰açš„è‡ªå¸¦çš„é«˜äº®æ•ˆæœå»æ‰ã€‚
+     * $('a').highlight();// °ÑËùÓĞaµÄ×Ô´øµÄ¸ßÁÁĞ§¹ûÈ¥µô¡£
      */
     $.fn.highlight = function( className, selector ) {
         return this.each(function() {
@@ -2790,7 +2790,7 @@ $(function () {
                 $el = selector ? (match = $( e.target ).closest( selector,
                     this )) && match.length && match : $this;
 
-                // selctorå¯èƒ½æ‰¾ä¸åˆ°å…ƒç´ ã€‚
+                // selctor¿ÉÄÜÕÒ²»µ½ÔªËØ¡£
                 if ( $el ) {
                     $el.attr( 'hl-cls', className );
                     timer = setTimeout( function() {
@@ -2804,20 +2804,20 @@ $(function () {
 })( Zepto );
 
 /**
- * @file æ¨¡æ¿è§£æ
+ * @file Ä£°å½âÎö
  * @import zepto.js
  * @module GMU
  */
 (function( $, undefined ) {
 
     /**
-     * è§£ææ¨¡ç‰ˆtplã€‚å½“dataæœªä¼ å…¥æ—¶è¿”å›ç¼–è¯‘ç»“æœå‡½æ•°ï¼›å½“æŸä¸ªtemplateéœ€è¦å¤šæ¬¡è§£ææ—¶ï¼Œå»ºè®®ä¿å­˜ç¼–è¯‘ç»“æœå‡½æ•°ï¼Œç„¶åè°ƒç”¨æ­¤å‡½æ•°æ¥å¾—åˆ°ç»“æœã€‚
+     * ½âÎöÄ£°ætpl¡£µ±dataÎ´´«ÈëÊ±·µ»Ø±àÒë½á¹ûº¯Êı£»µ±Ä³¸ötemplateĞèÒª¶à´Î½âÎöÊ±£¬½¨Òé±£´æ±àÒë½á¹ûº¯Êı£¬È»ºóµ÷ÓÃ´Ëº¯ÊıÀ´µÃµ½½á¹û¡£
      *
      * @method $.parseTpl
      * @grammar $.parseTpl(str, data)  => string
      * @grammar $.parseTpl(str)  => Function
-     * @param {String} str æ¨¡æ¿
-     * @param {Object} data æ•°æ®
+     * @param {String} str Ä£°å
+     * @param {Object} data Êı¾İ
      * @example var str = "<p><%=name%></p>",
      * obj = {name: 'ajean'};
      * console.log($.parseTpl(str, data)); // => <p>ajean</p>
@@ -2860,43 +2860,43 @@ $(function () {
 // limitations under the License.
 
 /**
- * @file å£°æ˜gmuå‘½åç©ºé—´
+ * @file ÉùÃ÷gmuÃüÃû¿Õ¼ä
  * @namespace gmu
  * @import zepto.js
  */
 
 /**
- * GMUæ˜¯åŸºäºzeptoçš„è½»é‡çº§mobile UIç»„ä»¶åº“ï¼Œç¬¦åˆjquery uiä½¿ç”¨è§„èŒƒï¼Œæä¾›webappã€padç«¯ç®€å•æ˜“ç”¨çš„UIç»„ä»¶ã€‚ä¸ºäº†å‡å°ä»£ç é‡ï¼Œæé«˜æ€§èƒ½ï¼Œç»„ä»¶å†æ’ä»¶åŒ–ï¼Œå…¼å®¹iOS3+ / android2.1+ï¼Œæ”¯æŒå›½å†…ä¸»æµç§»åŠ¨ç«¯æµè§ˆå™¨ï¼Œå¦‚safari, chrome, UC, qqç­‰ã€‚
- * GMUç”±ç™¾åº¦GMUå°ç»„å¼€å‘ï¼ŒåŸºäºå¼€æºBSDåè®®ï¼Œæ”¯æŒå•†ä¸šå’Œéå•†ä¸šç”¨æˆ·çš„å…è´¹ä½¿ç”¨å’Œä»»æ„ä¿®æ”¹ï¼Œæ‚¨å¯ä»¥é€šè¿‡[get started](http://gmu.baidu.com/getstarted)å¿«é€Ÿäº†è§£ã€‚
+ * GMUÊÇ»ùÓÚzeptoµÄÇáÁ¿¼¶mobile UI×é¼ş¿â£¬·ûºÏjquery uiÊ¹ÓÃ¹æ·¶£¬Ìá¹©webapp¡¢pad¶Ë¼òµ¥Ò×ÓÃµÄUI×é¼ş¡£ÎªÁË¼õĞ¡´úÂëÁ¿£¬Ìá¸ßĞÔÄÜ£¬×é¼şÔÙ²å¼ş»¯£¬¼æÈİiOS3+ / android2.1+£¬Ö§³Ö¹úÄÚÖ÷Á÷ÒÆ¶¯¶Ëä¯ÀÀÆ÷£¬Èçsafari, chrome, UC, qqµÈ¡£
+ * GMUÓÉ°Ù¶ÈGMUĞ¡×é¿ª·¢£¬»ùÓÚ¿ªÔ´BSDĞ­Òé£¬Ö§³ÖÉÌÒµºÍ·ÇÉÌÒµÓÃ»§µÄÃâ·ÑÊ¹ÓÃºÍÈÎÒâĞŞ¸Ä£¬Äú¿ÉÒÔÍ¨¹ı[get started](http://gmu.baidu.com/getstarted)¿ìËÙÁË½â¡£
  *
  * ###Quick Start###
- * + **å®˜ç½‘ï¼š**http://gmu.baidu.com/
- * + **APIï¼š**http://gmu.baidu.com/doc
+ * + **¹ÙÍø£º**http://gmu.baidu.com/
+ * + **API£º**http://gmu.baidu.com/doc
  *
- * ###å†å²ç‰ˆæœ¬###
+ * ###ÀúÊ·°æ±¾###
  *
  * ### 2.0.5 ###
  * + **DEMO: ** http://gmu.baidu.com/demo/2.0.5
- * + **APIï¼š** http://gmu.baidu.com/doc/2.0.5
- * + **ä¸‹è½½ï¼š** http://gmu.baidu.com/download/2.0.5
+ * + **API£º** http://gmu.baidu.com/doc/2.0.5
+ * + **ÏÂÔØ£º** http://gmu.baidu.com/download/2.0.5
  *
  * @module GMU
- * @title GMU API æ–‡æ¡£
+ * @title GMU API ÎÄµµ
  */
 var gmu = gmu || {
     version: '@version',
     $: window.Zepto,
 
     /**
-     * è°ƒç”¨æ­¤æ–¹æ³•ï¼Œå¯ä»¥å‡å°é‡å¤å®ä¾‹åŒ–Zeptoçš„å¼€é”€ã€‚æ‰€æœ‰é€šè¿‡æ­¤æ–¹æ³•è°ƒç”¨çš„ï¼Œéƒ½å°†å…¬ç”¨ä¸€ä¸ªZeptoå®ä¾‹ï¼Œ
-     * å¦‚æœæƒ³å‡å°‘Zeptoå®ä¾‹åˆ›å»ºçš„å¼€é”€ï¼Œå°±ç”¨æ­¤æ–¹æ³•ã€‚
+     * µ÷ÓÃ´Ë·½·¨£¬¿ÉÒÔ¼õĞ¡ÖØ¸´ÊµÀı»¯ZeptoµÄ¿ªÏú¡£ËùÓĞÍ¨¹ı´Ë·½·¨µ÷ÓÃµÄ£¬¶¼½«¹«ÓÃÒ»¸öZeptoÊµÀı£¬
+     * Èç¹ûÏë¼õÉÙZeptoÊµÀı´´½¨µÄ¿ªÏú£¬¾ÍÓÃ´Ë·½·¨¡£
      * @method staticCall
      * @grammar gmu.staticCall( dom, fnName, args... )
-     * @param  {DOM} elem Domå¯¹è±¡
-     * @param  {String} fn Zeptoæ–¹æ³•åã€‚
-     * @param {*} * zeptoä¸­å¯¹åº”çš„æ–¹æ³•å‚æ•°ã€‚
+     * @param  {DOM} elem Dom¶ÔÏó
+     * @param  {String} fn Zepto·½·¨Ãû¡£
+     * @param {*} * zeptoÖĞ¶ÔÓ¦µÄ·½·¨²ÎÊı¡£
      * @example
-     * // å¤åˆ¶domçš„classNameç»™dom2, è°ƒç”¨çš„æ˜¯zeptoçš„æ–¹æ³•ï¼Œä½†æ˜¯åªä¼šå®ä¾‹åŒ–ä¸€æ¬¡Zeptoç±»ã€‚
+     * // ¸´ÖÆdomµÄclassName¸ødom2, µ÷ÓÃµÄÊÇzeptoµÄ·½·¨£¬µ«ÊÇÖ»»áÊµÀı»¯Ò»´ÎZeptoÀà¡£
      * var dom = document.getElementById( '#test' );
      *
      * var className = gmu.staticCall( dom, 'attr', 'class' );
@@ -2909,7 +2909,7 @@ var gmu = gmu || {
         var proto = $.fn,
             slice = [].slice,
 
-        // å…¬ç”¨æ­¤zeptoå®ä¾‹
+        // ¹«ÓÃ´ËzeptoÊµÀı
             instance = $();
 
         instance.length = 1;
@@ -2922,7 +2922,7 @@ var gmu = gmu || {
 };
 
 /**
- * @file Eventç›¸å…³, ç»™widgetæä¾›äº‹ä»¶è¡Œä¸ºã€‚ä¹Ÿå¯ä»¥ç»™å…¶ä»–å¯¹è±¡æä¾›äº‹ä»¶è¡Œä¸ºã€‚
+ * @file EventÏà¹Ø, ¸øwidgetÌá¹©ÊÂ¼şĞĞÎª¡£Ò²¿ÉÒÔ¸øÆäËû¶ÔÏóÌá¹©ÊÂ¼şĞĞÎª¡£
  * @import core/gmu.js
  * @module GMU
  */
@@ -2940,18 +2940,18 @@ var gmu = gmu || {
 
     function eachEvent( events, callback, iterator ) {
 
-        // ä¸æ”¯æŒå¯¹è±¡ï¼Œåªæ”¯æŒå¤šä¸ªeventç”¨ç©ºæ ¼éš”å¼€
+        // ²»Ö§³Ö¶ÔÏó£¬Ö»Ö§³Ö¶à¸öeventÓÃ¿Õ¸ñ¸ô¿ª
         (events || '').split( separator ).forEach(function( type ) {
             iterator( type, callback );
         });
     }
 
-    // ç”ŸæˆåŒ¹é…namespaceæ­£åˆ™
+    // Éú³ÉÆ¥ÅänamespaceÕıÔò
     function matcherFor( ns ) {
         return new RegExp( '(?:^| )' + ns.replace( ' ', ' .* ?' ) + '(?: |$)' );
     }
 
-    // åˆ†ç¦»event nameå’Œevent namespace
+    // ·ÖÀëevent nameºÍevent namespace
     function parse( name ) {
         var parts = ('' + name).split( '.' );
 
@@ -2978,9 +2978,9 @@ var gmu = gmu || {
     }
 
     /**
-     * Eventç±»ï¼Œç»“åˆgmu.eventä¸€èµ·ä½¿ç”¨, å¯ä»¥ä½¿ä»»ä½•å¯¹è±¡å…·æœ‰äº‹ä»¶è¡Œä¸ºã€‚åŒ…å«åŸºæœ¬`preventDefault()`, `stopPropagation()`æ–¹æ³•ã€‚
-     * è€ƒè™‘åˆ°æ­¤äº‹ä»¶æ²¡æœ‰Domå†’æ³¡æ¦‚å¿µï¼Œæ‰€ä»¥æ²¡æœ‰`stopImmediatePropagation()`æ–¹æ³•ã€‚è€Œ`stopProgapation()`çš„ä½œç”¨å°±æ˜¯
-     * è®©ä¹‹åçš„handleréƒ½ä¸æ‰§è¡Œã€‚
+     * EventÀà£¬½áºÏgmu.eventÒ»ÆğÊ¹ÓÃ, ¿ÉÒÔÊ¹ÈÎºÎ¶ÔÏó¾ßÓĞÊÂ¼şĞĞÎª¡£°üº¬»ù±¾`preventDefault()`, `stopPropagation()`·½·¨¡£
+     * ¿¼ÂÇµ½´ËÊÂ¼şÃ»ÓĞDomÃ°Åİ¸ÅÄî£¬ËùÒÔÃ»ÓĞ`stopImmediatePropagation()`·½·¨¡£¶ø`stopProgapation()`µÄ×÷ÓÃ¾ÍÊÇ
+     * ÈÃÖ®ºóµÄhandler¶¼²»Ö´ĞĞ¡£
      *
      * @class Event
      * @constructor
@@ -2997,8 +2997,8 @@ var gmu = gmu || {
      * }
      * ```
      * @grammar new gmu.Event( name[, props]) => instance
-     * @param {String} type äº‹ä»¶åå­—
-     * @param {Object} [props] å±æ€§å¯¹è±¡ï¼Œå°†è¢«å¤åˆ¶è¿›eventå¯¹è±¡ã€‚
+     * @param {String} type ÊÂ¼şÃû×Ö
+     * @param {Object} [props] ÊôĞÔ¶ÔÏó£¬½«±»¸´ÖÆ½øevent¶ÔÏó¡£
      */
     function Event( type, props ) {
         if ( !(this instanceof Event) ) {
@@ -3016,21 +3016,21 @@ var gmu = gmu || {
         /**
          * @method isDefaultPrevented
          * @grammar e.isDefaultPrevented() => Boolean
-         * @desc åˆ¤æ–­æ­¤äº‹ä»¶æ˜¯å¦è¢«é˜»æ­¢
+         * @desc ÅĞ¶Ï´ËÊÂ¼şÊÇ·ñ±»×èÖ¹
          */
         isDefaultPrevented: returnFalse,
 
         /**
          * @method isPropagationStopped
          * @grammar e.isPropagationStopped() => Boolean
-         * @desc åˆ¤æ–­æ­¤äº‹ä»¶æ˜¯å¦è¢«åœæ­¢è”“å»¶
+         * @desc ÅĞ¶Ï´ËÊÂ¼şÊÇ·ñ±»Í£Ö¹ÂûÑÓ
          */
         isPropagationStopped: returnFalse,
 
         /**
          * @method preventDefault
          * @grammar e.preventDefault() => undefined
-         * @desc é˜»æ­¢äº‹ä»¶é»˜è®¤è¡Œä¸º
+         * @desc ×èÖ¹ÊÂ¼şÄ¬ÈÏĞĞÎª
          */
         preventDefault: function() {
             this.isDefaultPrevented = returnTrue;
@@ -3039,7 +3039,7 @@ var gmu = gmu || {
         /**
          * @method stopPropagation
          * @grammar e.stopPropagation() => undefined
-         * @desc é˜»æ­¢äº‹ä»¶è”“å»¶
+         * @desc ×èÖ¹ÊÂ¼şÂûÑÓ
          */
         stopPropagation: function() {
             this.isPropagationStopped = returnTrue;
@@ -3049,7 +3049,7 @@ var gmu = gmu || {
     /**
      * @class event
      * @static
-     * @description eventå¯¹è±¡ï¼ŒåŒ…å«ä¸€å¥—eventæ“ä½œæ–¹æ³•ã€‚å¯ä»¥å°†æ­¤å¯¹è±¡æ‰©å¼ åˆ°ä»»æ„å¯¹è±¡ï¼Œæ¥å¢åŠ äº‹ä»¶è¡Œä¸ºã€‚
+     * @description event¶ÔÏó£¬°üº¬Ò»Ì×event²Ù×÷·½·¨¡£¿ÉÒÔ½«´Ë¶ÔÏóÀ©ÕÅµ½ÈÎÒâ¶ÔÏó£¬À´Ôö¼ÓÊÂ¼şĞĞÎª¡£
      *
      * ```javascript
      * var myobj = {};
@@ -3067,13 +3067,13 @@ var gmu = gmu || {
     gmu.event = {
 
         /**
-         * ç»‘å®šäº‹ä»¶ã€‚
+         * °ó¶¨ÊÂ¼ş¡£
          * @method on
          * @grammar on( name, fn[, context] ) => self
-         * @param  {String}   name     äº‹ä»¶å
-         * @param  {Function} callback äº‹ä»¶å¤„ç†å™¨
-         * @param  {Object}   context  äº‹ä»¶å¤„ç†å™¨çš„ä¸Šä¸‹æ–‡ã€‚
-         * @return {self} è¿”å›è‡ªèº«ï¼Œæ–¹ä¾¿é“¾å¼
+         * @param  {String}   name     ÊÂ¼şÃû
+         * @param  {Function} callback ÊÂ¼ş´¦ÀíÆ÷
+         * @param  {Object}   context  ÊÂ¼ş´¦ÀíÆ÷µÄÉÏÏÂÎÄ¡£
+         * @return {self} ·µ»Ø×ÔÉí£¬·½±ãÁ´Ê½
          * @chainable
          */
         on: function( name, callback, context ) {
@@ -3100,13 +3100,13 @@ var gmu = gmu || {
         },
 
         /**
-         * ç»‘å®šäº‹ä»¶ï¼Œä¸”å½“handleræ‰§è¡Œå®Œåï¼Œè‡ªåŠ¨è§£é™¤ç»‘å®šã€‚
+         * °ó¶¨ÊÂ¼ş£¬ÇÒµ±handlerÖ´ĞĞÍêºó£¬×Ô¶¯½â³ı°ó¶¨¡£
          * @method one
          * @grammar one( name, fn[, context] ) => self
-         * @param  {String}   name     äº‹ä»¶å
-         * @param  {Function} callback äº‹ä»¶å¤„ç†å™¨
-         * @param  {Object}   context  äº‹ä»¶å¤„ç†å™¨çš„ä¸Šä¸‹æ–‡ã€‚
-         * @return {self} è¿”å›è‡ªèº«ï¼Œæ–¹ä¾¿é“¾å¼
+         * @param  {String}   name     ÊÂ¼şÃû
+         * @param  {Function} callback ÊÂ¼ş´¦ÀíÆ÷
+         * @param  {Object}   context  ÊÂ¼ş´¦ÀíÆ÷µÄÉÏÏÂÎÄ¡£
+         * @return {self} ·µ»Ø×ÔÉí£¬·½±ãÁ´Ê½
          * @chainable
          */
         one: function( name, callback, context ) {
@@ -3130,13 +3130,13 @@ var gmu = gmu || {
         },
 
         /**
-         * è§£é™¤äº‹ä»¶ç»‘å®š
+         * ½â³ıÊÂ¼ş°ó¶¨
          * @method off
          * @grammar off( name[, fn[, context] ] ) => self
-         * @param  {String}   name     äº‹ä»¶å
-         * @param  {Function} callback äº‹ä»¶å¤„ç†å™¨
-         * @param  {Object}   context  äº‹ä»¶å¤„ç†å™¨çš„ä¸Šä¸‹æ–‡ã€‚
-         * @return {self} è¿”å›è‡ªèº«ï¼Œæ–¹ä¾¿é“¾å¼
+         * @param  {String}   name     ÊÂ¼şÃû
+         * @param  {Function} callback ÊÂ¼ş´¦ÀíÆ÷
+         * @param  {Object}   context  ÊÂ¼ş´¦ÀíÆ÷µÄÉÏÏÂÎÄ¡£
+         * @return {self} ·µ»Ø×ÔÉí£¬·½±ãÁ´Ê½
          * @chainable
          */
         off: function( name, callback, context ) {
@@ -3162,12 +3162,12 @@ var gmu = gmu || {
         },
 
         /**
-         * è§¦å‘äº‹ä»¶
+         * ´¥·¢ÊÂ¼ş
          * @method trigger
          * @grammar trigger( name[, ...] ) => self
-         * @param  {String | Event }   evt     äº‹ä»¶åæˆ–gmu.Eventå¯¹è±¡å®ä¾‹
-         * @param  {*} * ä»»æ„å‚æ•°
-         * @return {self} è¿”å›è‡ªèº«ï¼Œæ–¹ä¾¿é“¾å¼
+         * @param  {String | Event }   evt     ÊÂ¼şÃû»ògmu.Event¶ÔÏóÊµÀı
+         * @param  {*} * ÈÎÒâ²ÎÊı
+         * @return {self} ·µ»Ø×ÔÉí£¬·½±ãÁ´Ê½
          * @chainable
          */
         trigger: function( evt ) {
@@ -3185,7 +3185,7 @@ var gmu = gmu || {
             typeof evt === 'string' && (evt = new Event( evt ));
 
             args = slice.call( arguments, 1 );
-            evt.args = args;    // handlerä¸­å¯ä»¥ç›´æ¥é€šè¿‡e.argsè·å–triggeræ•°æ®
+            evt.args = args;    // handlerÖĞ¿ÉÒÔÖ±½ÓÍ¨¹ıe.args»ñÈ¡triggerÊı¾İ
             args.unshift( evt );
 
             events = findHandlers( this._events, evt.type );
@@ -3198,7 +3198,7 @@ var gmu = gmu || {
                         (ev = events[ i ]).cb.apply( ev.ctx2, args )
                         ) {
 
-                        // å¦‚æœreturn falseåˆ™ç›¸å½“äºstopPropagation()å’ŒpreventDefault();
+                        // Èç¹ûreturn falseÔòÏàµ±ÓÚstopPropagation()ºÍpreventDefault();
                         stoped || (evt.stopPropagation(), evt.preventDefault());
                         break;
                     }
@@ -3214,7 +3214,7 @@ var gmu = gmu || {
 })( gmu, gmu.$ );
 
 /**
- * @file gmuåº•å±‚ï¼Œå®šä¹‰äº†åˆ›å»ºgmuç»„ä»¶çš„æ–¹æ³•
+ * @file gmuµ×²ã£¬¶¨ÒåÁË´´½¨gmu×é¼şµÄ·½·¨
  * @import core/gmu.js, core/event.js, extend/parseTpl.js
  * @module GMU
  */
@@ -3224,14 +3224,14 @@ var gmu = gmu || {
         toString = Object.prototype.toString,
         blankFn = function() {},
 
-    // æŒ‚åˆ°ç»„ä»¶ç±»ä¸Šçš„å±æ€§ã€æ–¹æ³•
+    // ¹Òµ½×é¼şÀàÉÏµÄÊôĞÔ¡¢·½·¨
         staticlist = [ 'options', 'template', 'tpl2html' ],
 
-    // å­˜å‚¨å’Œè¯»å–æ•°æ®åˆ°æŒ‡å®šå¯¹è±¡ï¼Œä»»ä½•å¯¹è±¡åŒ…æ‹¬domå¯¹è±¡
-    // æ³¨æ„ï¼šæ•°æ®ä¸ç›´æ¥å­˜å‚¨åœ¨objectä¸Šï¼Œè€Œæ˜¯å­˜åœ¨å†…éƒ¨é—­åŒ…ä¸­ï¼Œé€šè¿‡_gidå…³è”
-    // record( object, key ) è·å–objectå¯¹åº”çš„keyå€¼
-    // record( object, key, value ) è®¾ç½®objectå¯¹åº”çš„keyå€¼
-    // record( object, key, null ) åˆ é™¤æ•°æ®
+    // ´æ´¢ºÍ¶ÁÈ¡Êı¾İµ½Ö¸¶¨¶ÔÏó£¬ÈÎºÎ¶ÔÏó°üÀ¨dom¶ÔÏó
+    // ×¢Òâ£ºÊı¾İ²»Ö±½Ó´æ´¢ÔÚobjectÉÏ£¬¶øÊÇ´æÔÚÄÚ²¿±Õ°üÖĞ£¬Í¨¹ı_gid¹ØÁª
+    // record( object, key ) »ñÈ¡object¶ÔÓ¦µÄkeyÖµ
+    // record( object, key, value ) ÉèÖÃobject¶ÔÓ¦µÄkeyÖµ
+    // record( object, key, null ) É¾³ıÊı¾İ
         record = (function() {
             var data = {},
                 id = 0,
@@ -3254,22 +3254,22 @@ var gmu = gmu || {
         return toString.call( obj ) === '[object Object]';
     }
 
-    // éå†å¯¹è±¡
+    // ±éÀú¶ÔÏó
     function eachObject( obj, iterator ) {
         obj && Object.keys( obj ).forEach(function( key ) {
             iterator( key, obj[ key ] );
         });
     }
 
-    // ä»æŸä¸ªå…ƒç´ ä¸Šè¯»å–æŸä¸ªå±æ€§ã€‚
+    // ´ÓÄ³¸öÔªËØÉÏ¶ÁÈ¡Ä³¸öÊôĞÔ¡£
     function parseData( data ) {
-        try {    // JSON.parseå¯èƒ½æŠ¥é”™
+        try {    // JSON.parse¿ÉÄÜ±¨´í
 
-            // å½“data===nullè¡¨ç¤ºï¼Œæ²¡æœ‰æ­¤å±æ€§
+            // µ±data===null±íÊ¾£¬Ã»ÓĞ´ËÊôĞÔ
             data = data === 'true' ? true :
                     data === 'false' ? false : data === 'null' ? null :
 
-                // å¦‚æœæ˜¯æ•°å­—ç±»å‹ï¼Œåˆ™å°†å­—ç¬¦ä¸²ç±»å‹è½¬æˆæ•°å­—ç±»å‹
+                // Èç¹ûÊÇÊı×ÖÀàĞÍ£¬Ôò½«×Ö·û´®ÀàĞÍ×ª³ÉÊı×ÖÀàĞÍ
                     +data + '' === data ? +data :
                 /(?:\{[\s\S]*\}|\[[\s\S]*\])$/.test( data ) ?
                     JSON.parse( data ) : data;
@@ -3280,7 +3280,7 @@ var gmu = gmu || {
         return data;
     }
 
-    // ä»DOMèŠ‚ç‚¹ä¸Šè·å–é…ç½®é¡¹
+    // ´ÓDOM½ÚµãÉÏ»ñÈ¡ÅäÖÃÏî
     function getDomOptions( el ) {
         var ret = {},
             attrs = el && el.attributes,
@@ -3305,11 +3305,11 @@ var gmu = gmu || {
         return ret;
     }
 
-    // åœ¨$.fnä¸ŠæŒ‚å¯¹åº”çš„ç»„ä»¶æ–¹æ³•å‘¢
-    // $('#btn').button( options );å®ä¾‹åŒ–ç»„ä»¶
-    // $('#btn').button( 'select' ); è°ƒç”¨å®ä¾‹æ–¹æ³•
-    // $('#btn').button( 'this' ); å–ç»„ä»¶å®ä¾‹
-    // æ­¤æ–¹æ³•éµå¾ªget first set allåŸåˆ™
+    // ÔÚ$.fnÉÏ¹Ò¶ÔÓ¦µÄ×é¼ş·½·¨ÄØ
+    // $('#btn').button( options );ÊµÀı»¯×é¼ş
+    // $('#btn').button( 'select' ); µ÷ÓÃÊµÀı·½·¨
+    // $('#btn').button( 'this' ); È¡×é¼şÊµÀı
+    // ´Ë·½·¨×ñÑ­get first set allÔ­Ôò
     function zeptolize( name ) {
         var key = name.substring( 0, 1 ).toLowerCase() + name.substring( 1 ),
             old = $.fn[ key ];
@@ -3322,29 +3322,29 @@ var gmu = gmu || {
 
             $.each( this, function( i, el ) {
 
-                // ä»ç¼“å­˜ä¸­å–ï¼Œæ²¡æœ‰åˆ™åˆ›å»ºä¸€ä¸ª
+                // ´Ó»º´æÖĞÈ¡£¬Ã»ÓĞÔò´´½¨Ò»¸ö
                 obj = record( el, name ) || new gmu[ name ]( el,
                     isPlainObject( opts ) ? opts : undefined );
 
-                // å–å®ä¾‹
+                // È¡ÊµÀı
                 if ( method === 'this' ) {
                     ret = obj;
-                    return false;    // æ–­å¼€eachå¾ªç¯
+                    return false;    // ¶Ï¿ªeachÑ­»·
                 } else if ( method ) {
 
-                    // å½“å–çš„æ–¹æ³•ä¸å­˜åœ¨æ—¶ï¼ŒæŠ›å‡ºé”™è¯¯ä¿¡æ¯
+                    // µ±È¡µÄ·½·¨²»´æÔÚÊ±£¬Å×³ö´íÎóĞÅÏ¢
                     if ( !$.isFunction( obj[ method ] ) ) {
-                        throw new Error( 'ç»„ä»¶æ²¡æœ‰æ­¤æ–¹æ³•ï¼š' + method );
+                        throw new Error( '×é¼şÃ»ÓĞ´Ë·½·¨£º' + method );
                     }
 
                     ret = obj[ method ].apply( obj, args );
 
-                    // æ–­å®šå®ƒæ˜¯getteræ€§è´¨çš„æ–¹æ³•ï¼Œæ‰€ä»¥éœ€è¦æ–­å¼€eachå¾ªç¯ï¼ŒæŠŠç»“æœè¿”å›
+                    // ¶Ï¶¨ËüÊÇgetterĞÔÖÊµÄ·½·¨£¬ËùÒÔĞèÒª¶Ï¿ªeachÑ­»·£¬°Ñ½á¹û·µ»Ø
                     if ( ret !== undefined && ret !== obj ) {
                         return false;
                     }
 
-                    // retä¸ºobjæ—¶ä¸ºæ— æ•ˆå€¼ï¼Œä¸ºäº†ä¸å½±å“åé¢çš„è¿”å›
+                    // retÎªobjÊ±ÎªÎŞĞ§Öµ£¬ÎªÁË²»Ó°ÏìºóÃæµÄ·µ»Ø
                     ret = undefined;
                 }
             } );
@@ -3363,11 +3363,11 @@ var gmu = gmu || {
         };
     }
 
-    // åŠ è½½æ³¨å†Œçš„option
+    // ¼ÓÔØ×¢²áµÄoption
     function loadOption( klass, opts ) {
         var me = this;
 
-        // å…ˆåŠ è½½çˆ¶çº§çš„
+        // ÏÈ¼ÓÔØ¸¸¼¶µÄ
         if ( klass.superClass ) {
             loadOption.call( me, klass.superClass, opts );
         }
@@ -3388,18 +3388,18 @@ var gmu = gmu || {
         } );
     }
 
-    // åŠ è½½æ³¨å†Œçš„æ’ä»¶
+    // ¼ÓÔØ×¢²áµÄ²å¼ş
     function loadPlugins( klass, opts ) {
         var me = this;
 
-        // å…ˆåŠ è½½çˆ¶çº§çš„
+        // ÏÈ¼ÓÔØ¸¸¼¶µÄ
         if ( klass.superClass ) {
             loadPlugins.call( me, klass.superClass, opts );
         }
 
         eachObject( record( klass, 'plugins' ), function( opt, plugin ) {
 
-            // å¦‚æœé…ç½®é¡¹å…³é—­äº†ï¼Œåˆ™ä¸å¯ç”¨æ­¤æ’ä»¶
+            // Èç¹ûÅäÖÃÏî¹Ø±ÕÁË£¬Ôò²»ÆôÓÃ´Ë²å¼ş
             if ( opts[ opt ] === false ) {
                 return;
             }
@@ -3428,7 +3428,7 @@ var gmu = gmu || {
         } );
     }
 
-    // åˆå¹¶å¯¹è±¡
+    // ºÏ²¢¶ÔÏó
     function mergeObj() {
         var args = slice.call( arguments ),
             i = args.length,
@@ -3440,11 +3440,11 @@ var gmu = gmu || {
         }
 
         return args.length ?
-            $.extend.apply( null, [ true, {} ].concat( args ) ) : last; // æ·±æ‹·è´ï¼Œoptionsä¸­æŸé¡¹ä¸ºobjectæ—¶ï¼Œç”¨ä¾‹ä¸­ä¸èƒ½ç”¨==åˆ¤æ–­
+            $.extend.apply( null, [ true, {} ].concat( args ) ) : last; // Éî¿½±´£¬optionsÖĞÄ³ÏîÎªobjectÊ±£¬ÓÃÀıÖĞ²»ÄÜÓÃ==ÅĞ¶Ï
     }
 
-    // åˆå§‹åŒ–widget. éšè—å…·ä½“ç»†èŠ‚ï¼Œå› ä¸ºå¦‚æœæ”¾åœ¨æ„é€ å™¨ä¸­çš„è¯ï¼Œæ˜¯å¯ä»¥çœ‹åˆ°æ–¹æ³•ä½“å†…å®¹çš„
-    // åŒæ—¶æ­¤æ–¹æ³•å¯ä»¥å…¬ç”¨ã€‚
+    // ³õÊ¼»¯widget. Òş²Ø¾ßÌåÏ¸½Ú£¬ÒòÎªÈç¹û·ÅÔÚ¹¹ÔìÆ÷ÖĞµÄ»°£¬ÊÇ¿ÉÒÔ¿´µ½·½·¨ÌåÄÚÈİµÄ
+    // Í¬Ê±´Ë·½·¨¿ÉÒÔ¹«ÓÃ¡£
     function bootstrap( name, klass, uid, el, options ) {
         var me = this,
             opts;
@@ -3454,7 +3454,7 @@ var gmu = gmu || {
             el = undefined;
         }
 
-        // optionsä¸­å­˜åœ¨elæ—¶ï¼Œè¦†ç›–el
+        // optionsÖĞ´æÔÚelÊ±£¬¸²¸Çel
         options && options.el && (el = $( options.el ));
         el && (me.$el = $( el ), el = me.$el[ 0 ]);
 
@@ -3465,19 +3465,19 @@ var gmu = gmu || {
 
         me.tpl2html = mergeObj( klass.tpl2html, opts.tpl2html );
 
-        // ç”ŸæˆeventNs widgetName
+        // Éú³ÉeventNs widgetName
         me.widgetName = name.toLowerCase();
         me.eventNs = '.' + me.widgetName + uid;
 
         me._init( opts );
 
-        // è®¾ç½®setupå‚æ•°ï¼Œåªæœ‰ä¼ å…¥çš„$elåœ¨DOMä¸­ï¼Œæ‰è®¤ä¸ºæ˜¯setupæ¨¡å¼
+        // ÉèÖÃsetup²ÎÊı£¬Ö»ÓĞ´«ÈëµÄ$elÔÚDOMÖĞ£¬²ÅÈÏÎªÊÇsetupÄ£Ê½
         me._options.setup = (me.$el && me.$el.parent()[ 0 ]) ? true: false;
 
         loadOption.call( me, klass, opts );
         loadPlugins.call( me, klass, opts );
 
-        // è¿›è¡Œåˆ›å»ºDOMç­‰æ“ä½œ
+        // ½øĞĞ´´½¨DOMµÈ²Ù×÷
         me._create();
         me.trigger( 'ready' );
 
@@ -3489,7 +3489,7 @@ var gmu = gmu || {
     }
 
     /**
-     * @desc åˆ›å»ºä¸€ä¸ªç±»ï¼Œæ„é€ å‡½æ•°é»˜è®¤ä¸ºinitæ–¹æ³•, superClassé»˜è®¤ä¸ºBase
+     * @desc ´´½¨Ò»¸öÀà£¬¹¹Ôìº¯ÊıÄ¬ÈÏÎªinit·½·¨, superClassÄ¬ÈÏÎªBase
      * @name createClass
      * @grammar createClass(object[, superClass]) => fn
      */
@@ -3503,7 +3503,7 @@ var gmu = gmu || {
 
         function klass( el, options ) {
             if ( name === 'Base' ) {
-                throw new Error( 'Baseç±»ä¸èƒ½ç›´æ¥å®ä¾‹åŒ–' );
+                throw new Error( 'BaseÀà²»ÄÜÖ±½ÓÊµÀı»¯' );
             }
 
             if ( !(this instanceof klass) ) {
@@ -3518,7 +3518,7 @@ var gmu = gmu || {
             /**
              * @name register
              * @grammar klass.register({})
-             * @desc æ³¨å†Œæ’ä»¶
+             * @desc ×¢²á²å¼ş
              */
             register: function( name, obj ) {
                 var plugins = record( klass, 'plugins' ) ||
@@ -3533,7 +3533,7 @@ var gmu = gmu || {
             /**
              * @name option
              * @grammar klass.option(option, value, method)
-             * @desc æ‰©å……ç»„ä»¶çš„é…ç½®é¡¹
+             * @desc À©³ä×é¼şµÄÅäÖÃÏî
              */
             option: function( option, value, method ) {
                 var options = record( klass, 'options' ) ||
@@ -3548,18 +3548,18 @@ var gmu = gmu || {
             /**
              * @name inherits
              * @grammar klass.inherits({})
-             * @desc ä»è¯¥ç±»ç»§æ‰¿å‡ºä¸€ä¸ªå­ç±»ï¼Œä¸ä¼šè¢«æŒ‚åˆ°gmuå‘½åç©ºé—´
+             * @desc ´Ó¸ÃÀà¼Ì³Ğ³öÒ»¸ö×ÓÀà£¬²»»á±»¹Òµ½gmuÃüÃû¿Õ¼ä
              */
             inherits: function( obj ) {
 
-                // ç”Ÿæˆ Sub class
+                // Éú³É Sub class
                 return createClass( name + 'Sub' + suid++, obj, klass );
             },
 
             /**
              * @name extend
              * @grammar klass.extend({})
-             * @desc æ‰©å……ç°æœ‰ç»„ä»¶
+             * @desc À©³äÏÖÓĞ×é¼ş
              */
             extend: function( obj ) {
                 var proto = klass.prototype,
@@ -3571,14 +3571,14 @@ var gmu = gmu || {
                     delete obj[ item ];
                 });
 
-                // todo è·Ÿpluginçš„originé€»è¾‘ï¼Œå…¬ç”¨ä¸€ä¸‹
+                // todo ¸úpluginµÄoriginÂß¼­£¬¹«ÓÃÒ»ÏÂ
                 eachObject( obj, function( key, val ) {
                     if ( typeof val === 'function' && superProto[ key ] ) {
                         proto[ key ] = function() {
                             var $super = this.$super,
                                 ret;
 
-                            // todo ç›´æ¥è®©this.$super = superProto[ key ];
+                            // todo Ö±½ÓÈÃthis.$super = superProto[ key ];
                             this.$super = function() {
                                 var args = slice.call( arguments, 1 );
                                 return superProto[ key ].apply( this, args );
@@ -3601,7 +3601,7 @@ var gmu = gmu || {
         klass.prototype = Object.create( superClass.prototype );
 
 
-        /*// å¯ä»¥åœ¨æ–¹æ³•ä¸­é€šè¿‡this.$super(name)æ–¹æ³•è°ƒç”¨çˆ¶çº§æ–¹æ³•ã€‚å¦‚ï¼šthis.$super('enable');
+        /*// ¿ÉÒÔÔÚ·½·¨ÖĞÍ¨¹ıthis.$super(name)·½·¨µ÷ÓÃ¸¸¼¶·½·¨¡£Èç£ºthis.$super('enable');
          object.$super = function( name ) {
          var fn = superClass.prototype[ name ];
          return $.isFunction( fn ) && fn.apply( this,
@@ -3617,11 +3617,11 @@ var gmu = gmu || {
      * @method define
      * @grammar gmu.define( name, object[, superClass] )
      * @class
-     * @param {String} name ç»„ä»¶åå­—æ ‡è¯†ç¬¦ã€‚
+     * @param {String} name ×é¼şÃû×Ö±êÊ¶·û¡£
      * @param {Object} object
-     * @desc å®šä¹‰ä¸€ä¸ªgmuç»„ä»¶
+     * @desc ¶¨ÒåÒ»¸ögmu×é¼ş
      * @example
-     * ####ç»„ä»¶å®šä¹‰
+     * ####×é¼ş¶¨Òå
      * ```javascript
      * gmu.define( 'Button', {
      *     _create: function() {
@@ -3636,13 +3636,13 @@ var gmu = gmu || {
      * } );
      * ```
      *
-     * ####ç»„ä»¶ä½¿ç”¨
-     * htmléƒ¨åˆ†
+     * ####×é¼şÊ¹ÓÃ
+     * html²¿·Ö
      * ```html
-     * <a id='btn'>æŒ‰é’®</a>
+     * <a id='btn'>°´Å¥</a>
      * ```
      *
-     * javascriptéƒ¨åˆ†
+     * javascript²¿·Ö
      * ```javascript
      * var btn = $('#btn').button();
      *
@@ -3656,11 +3656,11 @@ var gmu = gmu || {
     };
 
     /**
-     * @desc åˆ¤æ–­objectæ˜¯ä¸æ˜¯ widgetå®ä¾‹, klassä¸ä¼ æ—¶ï¼Œé»˜è®¤ä¸ºBaseåŸºç±»
+     * @desc ÅĞ¶ÏobjectÊÇ²»ÊÇ widgetÊµÀı, klass²»´«Ê±£¬Ä¬ÈÏÎªBase»ùÀà
      * @method isWidget
      * @grammar gmu.isWidget( anything[, klass] ) => Boolean
-     * @param {*} anything éœ€è¦åˆ¤æ–­çš„å¯¹è±¡
-     * @param {String|Class} klass å­—ç¬¦ä¸²æˆ–è€…ç±»ã€‚
+     * @param {*} anything ĞèÒªÅĞ¶ÏµÄ¶ÔÏó
+     * @param {String|Class} klass ×Ö·û´®»òÕßÀà¡£
      * @example
      * var a = new gmu.Button();
      *
@@ -3669,7 +3669,7 @@ var gmu = gmu || {
      */
     gmu.isWidget = function( obj, klass ) {
 
-        // å¤„ç†å­—ç¬¦ä¸²çš„case
+        // ´¦Àí×Ö·û´®µÄcase
         klass = typeof klass === 'string' ? gmu[ klass ] || blankFn : klass;
         klass = klass || gmu.Base;
         return obj instanceof klass;
@@ -3677,14 +3677,14 @@ var gmu = gmu || {
 
     /**
      * @class Base
-     * @description widgetåŸºç±»ã€‚ä¸èƒ½ç›´æ¥ä½¿ç”¨ã€‚
+     * @description widget»ùÀà¡£²»ÄÜÖ±½ÓÊ¹ÓÃ¡£
      */
     gmu.Base = createClass( 'Base', {
 
         /**
          * @method _init
          * @grammar instance._init() => instance
-         * @desc ç»„ä»¶çš„åˆå§‹åŒ–æ–¹æ³•ï¼Œå­ç±»éœ€è¦é‡å†™è¯¥æ–¹æ³•
+         * @desc ×é¼şµÄ³õÊ¼»¯·½·¨£¬×ÓÀàĞèÒªÖØĞ´¸Ã·½·¨
          */
         _init: blankFn,
 
@@ -3692,7 +3692,7 @@ var gmu = gmu || {
          * @override
          * @method _create
          * @grammar instance._create() => instance
-         * @desc ç»„ä»¶åˆ›å»ºDOMçš„æ–¹æ³•ï¼Œå­ç±»éœ€è¦é‡å†™è¯¥æ–¹æ³•
+         * @desc ×é¼ş´´½¨DOMµÄ·½·¨£¬×ÓÀàĞèÒªÖØĞ´¸Ã·½·¨
          */
         _create: blankFn,
 
@@ -3700,7 +3700,7 @@ var gmu = gmu || {
         /**
          * @method getEl
          * @grammar instance.getEl() => $el
-         * @desc è¿”å›ç»„ä»¶çš„$el
+         * @desc ·µ»Ø×é¼şµÄ$el
          */
         getEl: function() {
             return this.$el;
@@ -3709,49 +3709,49 @@ var gmu = gmu || {
         /**
          * @method on
          * @grammar instance.on(name, callback, context) => self
-         * @desc è®¢é˜…äº‹ä»¶
+         * @desc ¶©ÔÄÊÂ¼ş
          */
         on: event.on,
 
         /**
          * @method one
          * @grammar instance.one(name, callback, context) => self
-         * @desc è®¢é˜…äº‹ä»¶ï¼ˆåªæ‰§è¡Œä¸€æ¬¡ï¼‰
+         * @desc ¶©ÔÄÊÂ¼ş£¨Ö»Ö´ĞĞÒ»´Î£©
          */
         one: event.one,
 
         /**
          * @method off
          * @grammar instance.off(name, callback, context) => self
-         * @desc è§£é™¤è®¢é˜…äº‹ä»¶
+         * @desc ½â³ı¶©ÔÄÊÂ¼ş
          */
         off: event.off,
 
         /**
          * @method trigger
          * @grammar instance.trigger( name ) => self
-         * @desc æ´¾å‘äº‹ä»¶, æ­¤triggerä¼šä¼˜å…ˆæŠŠoptionsä¸Šçš„äº‹ä»¶å›è°ƒå‡½æ•°å…ˆæ‰§è¡Œ
-         * optionsä¸Šå›è°ƒå‡½æ•°å¯ä»¥é€šè¿‡è°ƒç”¨event.stopPropagation()æ¥é˜»æ­¢äº‹ä»¶ç³»ç»Ÿç»§ç»­æ´¾å‘,
-         * æˆ–è€…è°ƒç”¨event.preventDefault()é˜»æ­¢åç»­äº‹ä»¶æ‰§è¡Œ
+         * @desc ÅÉ·¢ÊÂ¼ş, ´Ëtrigger»áÓÅÏÈ°ÑoptionsÉÏµÄÊÂ¼ş»Øµ÷º¯ÊıÏÈÖ´ĞĞ
+         * optionsÉÏ»Øµ÷º¯Êı¿ÉÒÔÍ¨¹ıµ÷ÓÃevent.stopPropagation()À´×èÖ¹ÊÂ¼şÏµÍ³¼ÌĞøÅÉ·¢,
+         * »òÕßµ÷ÓÃevent.preventDefault()×èÖ¹ºóĞøÊÂ¼şÖ´ĞĞ
          */
         trigger: function( name ) {
             var evt = typeof name === 'string' ? new gmu.Event( name ) : name,
                 args = [ evt ].concat( slice.call( arguments, 1 ) ),
                 opEvent = this._options[ evt.type ],
 
-            // å…ˆå­˜èµ·æ¥ï¼Œå¦åˆ™åœ¨ä¸‹é¢ä½¿ç”¨çš„æ—¶å€™ï¼Œå¯èƒ½å·²ç»è¢«destoryç»™åˆ é™¤äº†ã€‚
+            // ÏÈ´æÆğÀ´£¬·ñÔòÔÚÏÂÃæÊ¹ÓÃµÄÊ±ºò£¬¿ÉÄÜÒÑ¾­±»destory¸øÉ¾³ıÁË¡£
                 $el = this.getEl();
 
             if ( opEvent && $.isFunction( opEvent ) ) {
 
-                // å¦‚æœè¿”å›å€¼æ˜¯false,ç›¸å½“äºæ‰§è¡ŒstopPropagation()å’ŒpreventDefault();
+                // Èç¹û·µ»ØÖµÊÇfalse,Ïàµ±ÓÚÖ´ĞĞstopPropagation()ºÍpreventDefault();
                 false === opEvent.apply( this, args ) &&
                 (evt.stopPropagation(), evt.preventDefault());
             }
 
             event.trigger.apply( this, args );
 
-            // triggerHandlerä¸å†’æ³¡
+            // triggerHandler²»Ã°Åİ
             $el && $el.triggerHandler( evt, (args.shift(), args) );
 
             return this;
@@ -3762,9 +3762,9 @@ var gmu = gmu || {
          * @grammar instance.tpl2html() => String
          * @grammar instance.tpl2html( data ) => String
          * @grammar instance.tpl2html( subpart, data ) => String
-         * @desc å°†templateè¾“å‡ºæˆhtmlå­—ç¬¦ä¸²ï¼Œå½“ä¼ å…¥ data æ—¶ï¼Œhtmlå°†é€šè¿‡$.parseTplæ¸²æŸ“ã€‚
-         * templateæ”¯æŒæŒ‡å®šsubpart, å½“æ— subpartæ—¶ï¼Œtemplateæœ¬èº«å°†ä¸ºæ¨¡æ¿ï¼Œå½“æœ‰subpartæ—¶ï¼Œ
-         * template[subpart]å°†ä½œä¸ºæ¨¡æ¿è¾“å‡ºã€‚
+         * @desc ½«templateÊä³ö³Éhtml×Ö·û´®£¬µ±´«Èë data Ê±£¬html½«Í¨¹ı$.parseTpläÖÈ¾¡£
+         * templateÖ§³ÖÖ¸¶¨subpart, µ±ÎŞsubpartÊ±£¬template±¾Éí½«ÎªÄ£°å£¬µ±ÓĞsubpartÊ±£¬
+         * template[subpart]½«×÷ÎªÄ£°åÊä³ö¡£
          */
         tpl2html: function( subpart, data ) {
             var tpl = this.template;
@@ -3778,15 +3778,15 @@ var gmu = gmu || {
         /**
          * @method destroy
          * @grammar instance.destroy()
-         * @desc æ³¨é”€ç»„ä»¶
+         * @desc ×¢Ïú×é¼ş
          */
         destroy: function() {
 
-            // è§£ç»‘elementä¸Šçš„äº‹ä»¶
+            // ½â°óelementÉÏµÄÊÂ¼ş
             this.$el && this.$el.off( this.eventNs );
 
             this.trigger( 'destroy' );
-            // è§£ç»‘æ‰€æœ‰è‡ªå®šä¹‰äº‹ä»¶
+            // ½â°óËùÓĞ×Ô¶¨ÒåÊÂ¼ş
             this.off();
 
 
@@ -3795,32 +3795,32 @@ var gmu = gmu || {
 
     }, Object );
 
-    // å‘ä¸‹å…¼å®¹
+    // ÏòÏÂ¼æÈİ
     $.ui = gmu;
 })( gmu, gmu.$ );
 
 /**
- * @file å¯¼èˆªæ ç»„ä»¶
+ * @file µ¼º½À¸×é¼ş
  * @import core/widget.js, extend/highlight.js
  * @module GMU
  */
 (function( gmu, $, undefined ) {
 
     /**
-     * å¯¼èˆªæ ç»„ä»¶
+     * µ¼º½À¸×é¼ş
      *
      * @class Navigator
-     * @constructor Htmléƒ¨åˆ†
+     * @constructor Html²¿·Ö
      * ```html
      *
      * ```
      *
-     * javascriptéƒ¨åˆ†
+     * javascript²¿·Ö
      * ```javascript
      *
      * ```
-     * @param {dom | zepto | selector} [el] ç”¨æ¥åˆå§‹åŒ–å¯¼èˆªæ çš„å…ƒç´ 
-     * @param {Object} [options] ç»„ä»¶é…ç½®é¡¹ã€‚å…·ä½“å‚æ•°è¯·æŸ¥çœ‹[Options](#GMU:Navigator:options)
+     * @param {dom | zepto | selector} [el] ÓÃÀ´³õÊ¼»¯µ¼º½À¸µÄÔªËØ
+     * @param {Object} [options] ×é¼şÅäÖÃÏî¡£¾ßÌå²ÎÊıÇë²é¿´[Options](#GMU:Navigator:options)
      * @grammar $( el ).navigator( options ) => zepto
      * @grammar new gmu.Navigator( el, options ) => instance
      */
@@ -3828,13 +3828,13 @@ var gmu = gmu || {
         options: {
 
             /**
-             * @property {Array} [content=null] èœå•æ•°ç»„
+             * @property {Array} [content=null] ²Ëµ¥Êı×é
              * @namespace options
              */
             content: null,
 
             /**
-             * @property {String} [event='click'] äº¤äº’äº‹ä»¶å
+             * @property {String} [event='click'] ½»»¥ÊÂ¼şÃû
              * @namespace options
              */
             event: 'click'
@@ -3855,8 +3855,8 @@ var gmu = gmu || {
                 renderer,
                 html;
 
-            // å¦‚æœæ²¡æœ‰åŒ…å«ulèŠ‚ç‚¹ï¼Œåˆ™è¯´æ˜é€šè¿‡æŒ‡å®šcontentæ¥create
-            // å»ºè®®æŠŠcreateæ¨¡å¼ç»™æ‹†å‡ºå»ã€‚å¾ˆå¤šæ—¶å€™éƒ½æ˜¯å…ˆå†™å¥½åœ¨domä¸­äº†ã€‚
+            // Èç¹ûÃ»ÓĞ°üº¬ul½Úµã£¬ÔòËµÃ÷Í¨¹ıÖ¸¶¨contentÀ´create
+            // ½¨Òé°ÑcreateÄ£Ê½¸ø²ğ³öÈ¥¡£ºÜ¶àÊ±ºò¶¼ÊÇÏÈĞ´ºÃÔÚdomÖĞÁË¡£
             if ( !$list.length && opts.content ) {
                 $list = $( me.tpl2html( 'list' ) );
                 renderer = me.tpl2html( 'item' );
@@ -3864,7 +3864,7 @@ var gmu = gmu || {
                 html = '';
                 opts.content.forEach(function( item ) {
 
-                    // å¦‚æœä¸æä¾›é»˜è®¤å€¼ï¼Œç„¶ååŒæ—¶æŸäº›keyæ²¡æœ‰ä¼ å€¼ï¼ŒparseTplä¼šæŠ¥é”™
+                    // Èç¹û²»Ìá¹©Ä¬ÈÏÖµ£¬È»ºóÍ¬Ê±Ä³Ğ©keyÃ»ÓĞ´«Öµ£¬parseTpl»á±¨´í
                     item = $.extend( {
                         href: '',
                         text: ''
@@ -3878,7 +3878,7 @@ var gmu = gmu || {
                 $list.append( html ).appendTo( $el );
             } else {
 
-                // å¤„ç†ç›´æ¥é€šè¿‡ulåˆå§‹åŒ–çš„æƒ…å†µ
+                // ´¦ÀíÖ±½ÓÍ¨¹ıul³õÊ¼»¯µÄÇé¿ö
                 if ( $el.is( 'ul, ol' ) ) {
                     $list = $el.wrap( '<div>' );
                     $el = $el.parent();
@@ -3886,10 +3886,10 @@ var gmu = gmu || {
 
                 if ( opts.index === undefined ) {
 
-                    // å¦‚æœoptsä¸­æ²¡æœ‰æŒ‡å®šindex, åˆ™å°è¯•ä»domä¸­æŸ¥çœ‹æ˜¯å¦æœ‰æ¯”è¾ƒä¸ºui-state-activeçš„
+                    // Èç¹ûoptsÖĞÃ»ÓĞÖ¸¶¨index, Ôò³¢ÊÔ´ÓdomÖĞ²é¿´ÊÇ·ñÓĞ±È½ÏÎªui-state-activeµÄ
                     opts.index = $list.find( '.ui-state-active' ).index();
 
-                    // æ²¡æ‰¾åˆ°è¿˜æ˜¯èµ‹å€¼ä¸º0
+                    // Ã»ÕÒµ½»¹ÊÇ¸³ÖµÎª0
                     ~opts.index || (opts.index = 0);
                 }
             }
@@ -3933,8 +3933,8 @@ var gmu = gmu || {
         },
 
         /**
-         * åˆ‡æ¢åˆ°å¯¼èˆªæ çš„æŸä¸€é¡¹
-         * @param {Number} to åºå·
+         * ÇĞ»»µ½µ¼º½À¸µÄÄ³Ò»Ïî
+         * @param {Number} to ĞòºÅ
          * @method switchTo
          */
         switchTo: function( to ) {
@@ -3942,7 +3942,7 @@ var gmu = gmu || {
         },
 
         /**
-         * å–æ¶ˆé€‰æ‹©
+         * È¡ÏûÑ¡Ôñ
          * @method unselect
          */
         unselect: function() {
@@ -3951,7 +3951,7 @@ var gmu = gmu || {
         },
 
         /**
-         * è·å–å½“å‰é€‰ä¸­çš„åºå·
+         * »ñÈ¡µ±Ç°Ñ¡ÖĞµÄĞòºÅ
          * @method getIndex
          */
         getIndex: function() {
@@ -3960,42 +3960,42 @@ var gmu = gmu || {
 
         /**
          * @event ready
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description å½“ç»„ä»¶åˆå§‹åŒ–å®Œåè§¦å‘ã€‚
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description µ±×é¼ş³õÊ¼»¯Íêºó´¥·¢¡£
          */
 
         /**
          * @event beforeselect
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @param {Element} ç›®æ ‡å…ƒç´ 
-         * @description å½“é€‰æ‹©çš„åºå·å‘ç”Ÿåˆ‡æ¢å‰è§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Element} Ä¿±êÔªËØ
+         * @description µ±Ñ¡ÔñµÄĞòºÅ·¢ÉúÇĞ»»Ç°´¥·¢
          */
 
         /**
          * @event select
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @param {Event} å½“å‰é€‰æ‹©çš„åºå·
-         * @param {Element} ä¸Šä¸€æ¬¡é€‰æ‹©çš„å…ƒç´ 
-         * @description å½“é€‰æ‹©çš„åºå·å‘ç”Ÿåˆ‡æ¢åè§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Event} µ±Ç°Ñ¡ÔñµÄĞòºÅ
+         * @param {Element} ÉÏÒ»´ÎÑ¡ÔñµÄÔªËØ
+         * @description µ±Ñ¡ÔñµÄĞòºÅ·¢ÉúÇĞ»»ºó´¥·¢
          */
 
         /**
          * @event destroy
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description ç»„ä»¶åœ¨é”€æ¯çš„æ—¶å€™è§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description ×é¼şÔÚÏú»ÙµÄÊ±ºò´¥·¢
          */
     } );
 })( gmu, gmu.$ );
 
 /**
- * @file å½“æ»šåŠ¨åˆ°è¾¹ç¼˜çš„æ—¶å€™ï¼Œè‡ªåŠ¨æŠŠä¸‹ä¸€ä¸ªæ»šå‡ºæ¥
+ * @file µ±¹ö¶¯µ½±ßÔµµÄÊ±ºò£¬×Ô¶¯°ÑÏÂÒ»¸ö¹ö³öÀ´
  * @import widget/navigator/navigator.js, widget/navigator/$scrollable.js
  */
 (function( gmu, $, undefined ) {
     gmu.Navigator.options.isScrollToNext = true;
 
     /**
-     * å½“æ»šåŠ¨åˆ°è¾¹ç¼˜çš„æ—¶å€™ï¼Œè‡ªåŠ¨æŠŠä¸‹ä¸€ä¸ªæ»šå‡ºæ¥
+     * µ±¹ö¶¯µ½±ßÔµµÄÊ±ºò£¬×Ô¶¯°ÑÏÂÒ»¸ö¹ö³öÀ´
      * @class isScrollToNext
      * @namespace Navigator
      * @pluginfor Navigator
@@ -4006,18 +4006,18 @@ var gmu = gmu || {
 
         me.on( 'select', function( e, to, el ) {
 
-            // ç¬¬ä¸€è°ƒç”¨çš„æ—¶å€™æ²¡æœ‰prevIndex, å›ºæ ¹æ®this.indexæ¥æ§åˆ¶æ–¹å‘ã€‚
+            // µÚÒ»µ÷ÓÃµÄÊ±ºòÃ»ÓĞprevIndex, ¹Ì¸ù¾İthis.indexÀ´¿ØÖÆ·½Ïò¡£
             if ( prevIndex === undefined ) {
                 prevIndex = me.index ? 0 : 1;
             }
 
             var dir = to > prevIndex,
 
-            // å¦‚æœæ˜¯æƒ³å·¦åˆ™æ‰¾prevå¦åˆ™æ‰¾next
+            // Èç¹ûÊÇÏë×óÔòÕÒprev·ñÔòÕÒnext
                 target = $( el )[ dir ? 'next' : 'prev' ](),
 
-            // å¦‚æœæ²¡æœ‰ç›¸é‚»çš„ï¼Œè‡ªå·±çš„ä½ç½®ä¹Ÿéœ€è¦æ£€æµ‹ã€‚å­˜åœ¨è¿™ç§æƒ…å†µ
-            // è¢«ç‚¹å‡»çš„æŒ‰é’®ï¼Œåªæ˜¾ç¤ºäº†ä¸€åŠ
+            // Èç¹ûÃ»ÓĞÏàÁÚµÄ£¬×Ô¼ºµÄÎ»ÖÃÒ²ĞèÒª¼ì²â¡£´æÔÚÕâÖÖÇé¿ö
+            // ±»µã»÷µÄ°´Å¥£¬Ö»ÏÔÊ¾ÁËÒ»°ë
                 offset = target.offset() || $( el ).offset(),
                 within = me.$el.offset(),
                 listOffset;
@@ -4037,14 +4037,14 @@ var gmu = gmu || {
 })( gmu, gmu.$ );
 
 /**
- * @file Navigatorçš„å¯æ»šæ’ä»¶ï¼Œ é‡‡ç”¨iScrollæ¥å®ç°ã€‚
+ * @file NavigatorµÄ¿É¹ö²å¼ş£¬ ²ÉÓÃiScrollÀ´ÊµÏÖ¡£
  * @module GMU
  * @import widget/navigator/navigator.js, extend/iscroll.js, extend/event.ortchange.js
  */
 (function( gmu, $, undefined ) {
 
     /**
-     * @property {Object} [iScroll={}] iScrollé…ç½®
+     * @property {Object} [iScroll={}] iScrollÅäÖÃ
      * @namespace options
      * @for Navigator
      * @uses Navigator.scrollable
@@ -4057,7 +4057,7 @@ var gmu = gmu || {
     };
 
     /**
-     * Navigatorçš„å¯æ»šæ’ä»¶ï¼Œ é‡‡ç”¨iScrollæ¥å®ç°ã€‚
+     * NavigatorµÄ¿É¹ö²å¼ş£¬ ²ÉÓÃiScrollÀ´ÊµÏÖ¡£
      *
      * @class scrollable
      * @namespace Navigator
@@ -4086,7 +4086,7 @@ var gmu = gmu || {
         },
 
         /**
-         * åˆ·æ–°iscroll
+         * Ë¢ĞÂiscroll
          * @method refresh
          * @for Navigator
          * @uses Navigator.scrollable
@@ -4097,14 +4097,14 @@ var gmu = gmu || {
 
         /**
          * @event refresh.iScroll
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description iscrollåˆ·æ–°å‰è§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description iscrollË¢ĞÂÇ°´¥·¢
          */
     } );
 })( gmu, gmu.$ );
 
 /**
- * @file å›¾ç‰‡è½®æ’­ç»„ä»¶
+ * @file Í¼Æ¬ÂÖ²¥×é¼ş
  * @import extend/touch.js, extend/event.ortchange.js, core/widget.js
  * @module GMU
  */
@@ -4112,41 +4112,41 @@ var gmu = gmu || {
     var cssPrefix = $.fx.cssPrefix,
         transitionEnd = $.fx.transitionEnd,
 
-    // todo æ£€æµ‹3dæ˜¯å¦æ”¯æŒã€‚
+    // todo ¼ì²â3dÊÇ·ñÖ§³Ö¡£
         translateZ = ' translateZ(0)';
 
     /**
-     * å›¾ç‰‡è½®æ’­ç»„ä»¶
+     * Í¼Æ¬ÂÖ²¥×é¼ş
      *
      * @class Slider
-     * @constructor Htmléƒ¨åˆ†
+     * @constructor Html²¿·Ö
      * ```html
      * <div id="slider">
      *   <div>
      *       <a href="http://www.baidu.com/"><img lazyload="image1.png"></a>
-     *       <p>1,è®©Coronçš„å¤ªé˜³æŠŠè‡ªå·±æ™’é»‘â€”å°å¤©</p>
+     *       <p>1,ÈÃCoronµÄÌ«Ñô°Ñ×Ô¼ºÉ¹ºÚ¡ªĞ¡Ìì</p>
      *   </div>
      *   <div>
      *       <a href="http://www.baidu.com/"><img lazyload="image2.png"></a>
-     *       <p>2,è®©Coronçš„å¤ªé˜³æŠŠè‡ªå·±æ™’é»‘â€”å°å¤©</p>
+     *       <p>2,ÈÃCoronµÄÌ«Ñô°Ñ×Ô¼ºÉ¹ºÚ¡ªĞ¡Ìì</p>
      *   </div>
      *   <div>
      *       <a href="http://www.baidu.com/"><img lazyload="image3.png"></a>
-     *       <p>3,è®©Coronçš„å¤ªé˜³æŠŠè‡ªå·±æ™’é»‘â€”å°å¤©</p>
+     *       <p>3,ÈÃCoronµÄÌ«Ñô°Ñ×Ô¼ºÉ¹ºÚ¡ªĞ¡Ìì</p>
      *   </div>
      *   <div>
      *       <a href="http://www.baidu.com/"><img lazyload="image4.png"></a>
-     *       <p>4,è®©Coronçš„å¤ªé˜³æŠŠè‡ªå·±æ™’é»‘â€”å°å¤©</p>
+     *       <p>4,ÈÃCoronµÄÌ«Ñô°Ñ×Ô¼ºÉ¹ºÚ¡ªĞ¡Ìì</p>
      *   </div>
      * </div>
      * ```
      *
-     * javascriptéƒ¨åˆ†
+     * javascript²¿·Ö
      * ```javascript
      * $('#slider').slider();
      * ```
-     * @param {dom | zepto | selector} [el] ç”¨æ¥åˆå§‹åŒ–Sliderçš„å…ƒç´ 
-     * @param {Object} [options] ç»„ä»¶é…ç½®é¡¹ã€‚å…·ä½“å‚æ•°è¯·æŸ¥çœ‹[Options](#GMU:Slider:options)
+     * @param {dom | zepto | selector} [el] ÓÃÀ´³õÊ¼»¯SliderµÄÔªËØ
+     * @param {Object} [options] ×é¼şÅäÖÃÏî¡£¾ßÌå²ÎÊıÇë²é¿´[Options](#GMU:Slider:options)
      * @grammar $( el ).slider( options ) => zepto
      * @grammar new gmu.Slider( el, options ) => instance
      */
@@ -4155,29 +4155,29 @@ var gmu = gmu || {
         options: {
 
             /**
-             * @property {Boolean} [loop=false] æ˜¯å¦è¿ç»­æ»‘åŠ¨
+             * @property {Boolean} [loop=false] ÊÇ·ñÁ¬Ğø»¬¶¯
              * @namespace options
              */
             loop: false,
 
             /**
-             * @property {Number} [speed=400] åŠ¨ç”»æ‰§è¡Œé€Ÿåº¦
+             * @property {Number} [speed=400] ¶¯»­Ö´ĞĞËÙ¶È
              * @namespace options
              */
             speed: 400,
 
             /**
-             * @property {Number} [index=0] åˆå§‹ä½ç½®
+             * @property {Number} [index=0] ³õÊ¼Î»ÖÃ
              * @namespace options
              */
             index: 0,
 
             /**
-             * @property {Object} [selector={container:'.ui-slider-group'}] å†…éƒ¨ç»“æ„é€‰æ‹©å™¨å®šä¹‰
+             * @property {Object} [selector={container:'.ui-slider-group'}] ÄÚ²¿½á¹¹Ñ¡ÔñÆ÷¶¨Òå
              * @namespace options
              */
             selector: {
-                container: '.ui-slider-group'    // å®¹å™¨çš„é€‰æ‹©å™¨
+                container: '.ui-slider-group'    // ÈİÆ÷µÄÑ¡ÔñÆ÷
             }
         },
 
@@ -4195,15 +4195,15 @@ var gmu = gmu || {
 
             me.index = opts.index;
 
-            // åˆå§‹domç»“æ„
+            // ³õÊ¼dom½á¹¹
             me._initDom( $el, opts );
 
-            // æ›´æ–°width
+            // ¸üĞÂwidth
             me._initWidth( $el, me.index );
             me._container.on( transitionEnd + me.eventNs,
                 $.proxy( me._tansitionEnd, me ) );
 
-            // è½¬å±äº‹ä»¶æ£€æµ‹
+            // ×ªÆÁÊÂ¼ş¼ì²â
             $( window ).on( 'ortchange' + me.eventNs, function() {
                 me._initWidth( $el, me.index );
             } );
@@ -4215,17 +4215,17 @@ var gmu = gmu || {
                 items,
                 container;
 
-            // æ£€æµ‹å®¹å™¨èŠ‚ç‚¹æ˜¯å¦æŒ‡å®š
+            // ¼ì²âÈİÆ÷½ÚµãÊÇ·ñÖ¸¶¨
             container = $el.find( selector.container );
 
-            // æ²¡æœ‰æŒ‡å®šå®¹å™¨åˆ™åˆ›å»ºå®¹å™¨
+            // Ã»ÓĞÖ¸¶¨ÈİÆ÷Ôò´´½¨ÈİÆ÷
             if ( !container.length ) {
                 container = $( '<div></div>' );
 
-                // å¦‚æœæ²¡æœ‰ä¼ å…¥content, åˆ™å°†rootçš„å­©å­ä½œä¸ºå¯æ»šåŠ¨item
+                // Èç¹ûÃ»ÓĞ´«Èëcontent, Ôò½«rootµÄº¢×Ó×÷Îª¿É¹ö¶¯item
                 if ( !opts.content ) {
 
-                    // ç‰¹æ®Šå¤„ç†ç›´æ¥ç”¨ulåˆå§‹åŒ–sliderçš„case
+                    // ÌØÊâ´¦ÀíÖ±½ÓÓÃul³õÊ¼»¯sliderµÄcase
                     if ( $el.is( 'ul' ) ) {
                         this.$el = container.insertAfter( $el );
                         container = $el;
@@ -4240,12 +4240,12 @@ var gmu = gmu || {
                 container.appendTo( $el );
             }
 
-            // æ£€æµ‹æ˜¯å¦æ„æˆå¾ªç¯æ¡ä»¶
+            // ¼ì²âÊÇ·ñ¹¹³ÉÑ­»·Ìõ¼ş
             if ( (items = container.children()).length < viewNum + 1 ) {
                 opts.loop = false;
             }
 
-            // å¦‚æœèŠ‚ç‚¹å°‘äº†ï¼Œéœ€è¦å¤åˆ¶å‡ ä»½
+            // Èç¹û½ÚµãÉÙÁË£¬ĞèÒª¸´ÖÆ¼¸·İ
             while ( opts.loop && container.children().length < 3 * viewNum ) {
                 container.append( items.clone() );
             }
@@ -4261,7 +4261,7 @@ var gmu = gmu || {
             this.trigger( 'done.dom', $el.addClass( 'ui-slider' ), opts );
         },
 
-        // æ ¹æ®itemsé‡Œé¢çš„æ•°æ®æŒ¨ä¸ªrenderæ’å…¥åˆ°containerä¸­
+        // ¸ù¾İitemsÀïÃæµÄÊı¾İ°¤¸örender²åÈëµ½containerÖĞ
         _createItems: function( container, items ) {
             var i = 0,
                 len = items.length;
@@ -4275,7 +4275,7 @@ var gmu = gmu || {
             var me = this,
                 width;
 
-            // widthæ²¡æœ‰å˜åŒ–ä¸éœ€è¦é‡æ’
+            // widthÃ»ÓĞ±ä»¯²»ĞèÒªÖØÅÅ
             if ( !force && (width = $el.width()) === me.width ) {
                 return;
             }
@@ -4286,7 +4286,7 @@ var gmu = gmu || {
             me.trigger( 'width.change');
         },
 
-        // é‡æ’items
+        // ÖØÅÅitems
         _arrange: function( width, index ) {
             var items = this._items,
                 i = 0,
@@ -4317,9 +4317,9 @@ var gmu = gmu || {
             }
 
             this._translate( index, dist, speed );
-            slidePos[ index ] = dist;    // è®°å½•ç›®æ ‡ä½ç½®
+            slidePos[ index ] = dist;    // ¼ÇÂ¼Ä¿±êÎ»ÖÃ
 
-            // å¼ºåˆ¶ä¸€ä¸ªreflow
+            // Ç¿ÖÆÒ»¸öreflow
             immediate && items[ index ].clientLeft;
         },
 
@@ -4347,7 +4347,7 @@ var gmu = gmu || {
 
         _tansitionEnd: function( e ) {
 
-            // ~~ç”¨æ¥ç±»å‹è½¬æ¢ï¼Œç­‰ä»·äºparseInt( str, 10 );
+            // ~~ÓÃÀ´ÀàĞÍ×ª»»£¬µÈ¼ÛÓÚparseInt( str, 10 );
             if ( ~~e.target.getAttribute( 'data-index' ) !== this.index ) {
                 return;
             }
@@ -4361,12 +4361,12 @@ var gmu = gmu || {
 
             to = me._circle( from - dir * diff );
 
-            // å¦‚æœä¸æ˜¯loopæ¨¡å¼ï¼Œä»¥å®é™…ä½ç½®çš„æ–¹å‘ä¸ºå‡†
+            // Èç¹û²»ÊÇloopÄ£Ê½£¬ÒÔÊµ¼ÊÎ»ÖÃµÄ·½ÏòÎª×¼
             if ( !opts.loop ) {
                 dir = Math.abs( from - to ) / (from - to);
             }
 
-            // è°ƒæ•´åˆå§‹ä½ç½®ï¼Œå¦‚æœå·²ç»åœ¨ä½ç½®ä¸Šä¸ä¼šé‡å¤å¤„ç†
+            // µ÷Õû³õÊ¼Î»ÖÃ£¬Èç¹ûÒÑ¾­ÔÚÎ»ÖÃÉÏ²»»áÖØ¸´´¦Àí
             this._move( to, -dir * width, 0, true );
 
             this._move( from, width * dir, speed );
@@ -4377,12 +4377,12 @@ var gmu = gmu || {
         },
 
         /**
-         * åˆ‡æ¢åˆ°ç¬¬å‡ ä¸ªslide
+         * ÇĞ»»µ½µÚ¼¸¸öslide
          * @method slideTo
          * @chainable
-         * @param {Number} to ç›®æ ‡slideçš„åºå·
-         * @param {Number} [speed] åˆ‡æ¢çš„é€Ÿåº¦
-         * @return {self} è¿”å›æœ¬èº«
+         * @param {Number} to Ä¿±êslideµÄĞòºÅ
+         * @param {Number} [speed] ÇĞ»»µÄËÙ¶È
+         * @return {self} ·µ»Ø±¾Éí
          */
         slideTo: function( to, speed ) {
             if ( this.index === to || this.index === this._circle( to ) ) {
@@ -4393,7 +4393,7 @@ var gmu = gmu || {
                 index = this.index,
                 diff = Math.abs( index - to ),
 
-            // 1å‘å·¦ï¼Œ-1å‘å³
+            // 1Ïò×ó£¬-1ÏòÓÒ
                 dir = diff / (index - to),
                 width = this.width;
 
@@ -4403,10 +4403,10 @@ var gmu = gmu || {
         },
 
         /**
-         * åˆ‡æ¢åˆ°ä¸Šä¸€ä¸ªslide
+         * ÇĞ»»µ½ÉÏÒ»¸öslide
          * @method prev
          * @chainable
-         * @return {self} è¿”å›æœ¬èº«
+         * @return {self} ·µ»Ø±¾Éí
          */
         prev: function() {
 
@@ -4418,10 +4418,10 @@ var gmu = gmu || {
         },
 
         /**
-         * åˆ‡æ¢åˆ°ä¸‹ä¸€ä¸ªslide
+         * ÇĞ»»µ½ÏÂÒ»¸öslide
          * @method next
          * @chainable
-         * @return {self} è¿”å›æœ¬èº«
+         * @return {self} ·µ»Ø±¾Éí
          */
         next: function() {
 
@@ -4433,17 +4433,17 @@ var gmu = gmu || {
         },
 
         /**
-         * è¿”å›å½“å‰æ˜¾ç¤ºçš„ç¬¬å‡ ä¸ªslide
+         * ·µ»Øµ±Ç°ÏÔÊ¾µÄµÚ¼¸¸öslide
          * @method getIndex
          * @chainable
-         * @return {Number} å½“å‰çš„sildeåºå·
+         * @return {Number} µ±Ç°µÄsildeĞòºÅ
          */
         getIndex: function() {
             return this.index;
         },
 
         /**
-         * é”€æ¯ç»„ä»¶
+         * Ïú»Ù×é¼ş
          * @method destroy
          */
         destroy: function() {
@@ -4454,50 +4454,50 @@ var gmu = gmu || {
 
         /**
          * @event ready
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description å½“ç»„ä»¶åˆå§‹åŒ–å®Œåè§¦å‘ã€‚
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description µ±×é¼ş³õÊ¼»¯Íêºó´¥·¢¡£
          */
 
         /**
          * @event done.dom
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @param {Zepto} $el sliderå…ƒç´ 
-         * @param {Object} opts ç»„ä»¶åˆå§‹åŒ–æ—¶çš„é…ç½®é¡¹
-         * @description DOMåˆ›å»ºå®Œæˆåè§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Zepto} $el sliderÔªËØ
+         * @param {Object} opts ×é¼ş³õÊ¼»¯Ê±µÄÅäÖÃÏî
+         * @description DOM´´½¨Íê³Éºó´¥·¢
          */
 
         /**
          * @event width.change
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description sliderå®¹å™¨å®½åº¦å‘ç”Ÿå˜åŒ–æ—¶è§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description sliderÈİÆ÷¿í¶È·¢Éú±ä»¯Ê±´¥·¢
          */
 
         /**
          * @event slideend
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @param {Number} index å½“å‰slideçš„åºå·
-         * @description slideåˆ‡æ¢å®Œæˆåè§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Number} index µ±Ç°slideµÄĞòºÅ
+         * @description slideÇĞ»»Íê³Éºó´¥·¢
          */
 
         /**
          * @event slide
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @param {Number} to ç›®æ ‡slideçš„åºå·
-         * @param {Number} from å½“å‰slideçš„åºå·
-         * @description slideåˆ‡æ¢æ—¶è§¦å‘ï¼ˆå¦‚æœåˆ‡æ¢æ—¶æœ‰åŠ¨ç”»ï¼Œæ­¤äº‹ä»¶è§¦å‘æ—¶ï¼Œslideä¸ä¸€å®šå·²ç»å®Œæˆåˆ‡æ¢ï¼‰
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Number} to Ä¿±êslideµÄĞòºÅ
+         * @param {Number} from µ±Ç°slideµÄĞòºÅ
+         * @description slideÇĞ»»Ê±´¥·¢£¨Èç¹ûÇĞ»»Ê±ÓĞ¶¯»­£¬´ËÊÂ¼ş´¥·¢Ê±£¬slide²»Ò»¶¨ÒÑ¾­Íê³ÉÇĞ»»£©
          */
 
         /**
          * @event destroy
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description ç»„ä»¶åœ¨é”€æ¯çš„æ—¶å€™è§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description ×é¼şÔÚÏú»ÙµÄÊ±ºò´¥·¢
          */
     } );
 
 })( gmu, gmu.$ );
 
 /**
- * @file å›¾ç‰‡è½®æ’­æ˜¾ç¤ºç‚¹åŠŸèƒ½
+ * @file Í¼Æ¬ÂÖ²¥ÏÔÊ¾µã¹¦ÄÜ
  * @import widget/slider/slider.js
  */
 (function( gmu, $, undefined ) {
@@ -4511,7 +4511,7 @@ var gmu = gmu || {
         options: {
 
             /**
-             * @property {Boolean} [dots=true] æ˜¯å¦æ˜¾ç¤ºç‚¹
+             * @property {Boolean} [dots=true] ÊÇ·ñÏÔÊ¾µã
              * @namespace options
              * @for Slider
              * @uses Slider.dots
@@ -4519,7 +4519,7 @@ var gmu = gmu || {
             dots: true,
 
             /**
-             * @property {Object} [selector={dots:'.ui-slider-dots'}] æ‰€æœ‰ç‚¹çˆ¶çº§çš„é€‰æ‹©å™¨
+             * @property {Object} [selector={dots:'.ui-slider-dots'}] ËùÓĞµã¸¸¼¶µÄÑ¡ÔñÆ÷
              * @namespace options
              * @for Slider
              * @uses Slider.dots
@@ -4531,7 +4531,7 @@ var gmu = gmu || {
     } );
 
     /**
-     * å›¾ç‰‡è½®æ’­æ˜¾ç¤ºç‚¹åŠŸèƒ½
+     * Í¼Æ¬ÂÖ²¥ÏÔÊ¾µã¹¦ÄÜ
      * @class dots
      * @namespace Slider
      * @pluginfor Slider
@@ -4573,7 +4573,7 @@ var gmu = gmu || {
 })( gmu, gmu.$ );
 
 /**
- * @file å›¾ç‰‡è½®æ’­æ‰‹æŒ‡è·Ÿéšæ’ä»¶
+ * @file Í¼Æ¬ÂÖ²¥ÊÖÖ¸¸úËæ²å¼ş
  * @import widget/slider/slider.js
  */
 (function( gmu, $, undefined ) {
@@ -4591,11 +4591,11 @@ var gmu = gmu || {
         delta,
         moved;
 
-    // æä¾›é»˜è®¤options
+    // Ìá¹©Ä¬ÈÏoptions
     $.extend( gmu.Slider.options, {
 
         /**
-         * @property {Boolean} [stopPropagation=false] æ˜¯å¦é˜»æ­¢äº‹ä»¶å†’æ³¡
+         * @property {Boolean} [stopPropagation=false] ÊÇ·ñ×èÖ¹ÊÂ¼şÃ°Åİ
          * @namespace options
          * @for Slider
          * @uses Slider.touch
@@ -4603,7 +4603,7 @@ var gmu = gmu || {
         stopPropagation: false,
 
         /**
-         * @property {Boolean} [disableScroll=false] æ˜¯å¦é˜»æ­¢æ»šåŠ¨
+         * @property {Boolean} [disableScroll=false] ÊÇ·ñ×èÖ¹¹ö¶¯
          * @namespace options
          * @for Slider
          * @uses Slider.touch
@@ -4612,7 +4612,7 @@ var gmu = gmu || {
     } );
 
     /**
-     * å›¾ç‰‡è½®æ’­æ‰‹æŒ‡è·Ÿéšæ’ä»¶
+     * Í¼Æ¬ÂÖ²¥ÊÖÖ¸¸úËæ²å¼ş
      * @class touch
      * @namespace Slider
      * @pluginfor Slider
@@ -4629,10 +4629,10 @@ var gmu = gmu || {
 
             me.on( 'ready', function() {
 
-                // ç»‘å®šæ‰‹åŠ¿
+                // °ó¶¨ÊÖÊÆ
                 $el.on( 'touchstart' + me.eventNs, me._handler );
 
-                // é˜»æ­¢è¯¯ç‚¹å‡», çŠ¹è±«touchmoveè¢«preventDefaultäº†ï¼Œå¯¼è‡´é•¿æŒ‰ä¹Ÿä¼šè§¦å‘click
+                // ×èÖ¹Îóµã»÷, ÓÌÔ¥touchmove±»preventDefaultÁË£¬µ¼ÖÂ³¤°´Ò²»á´¥·¢click
                 me._container.on( 'click' + me.eventNs, me._handler );
             } );
         },
@@ -4643,7 +4643,7 @@ var gmu = gmu || {
 
         _onStart: function( e ) {
 
-            // ä¸å¤„ç†å¤šæŒ‡
+            // ²»´¦Àí¶àÖ¸
             if ( e.touches.length > 1 ) {
                 return false;
             }
@@ -4676,7 +4676,7 @@ var gmu = gmu || {
 
         _onMove: function( e ) {
 
-            // å¤šæŒ‡æˆ–ç¼©æ”¾ä¸å¤„ç†
+            // ¶àÖ¸»òËõ·Å²»´¦Àí
             if ( e.touches.length > 1 || e.scale &&
                 e.scale !== 1 ) {
                 return false;
@@ -4706,14 +4706,14 @@ var gmu = gmu || {
 
                 if ( !opts.loop ) {
 
-                    // å¦‚æœå·¦è¾¹å·²ç»åˆ°å¤´
+                    // Èç¹û×ó±ßÒÑ¾­µ½Í·
                     delta.x /= (!index && delta.x > 0 ||
 
-                        // å¦‚æœå³è¾¹åˆ°å¤´
+                        // Èç¹ûÓÒ±ßµ½Í·
                         index === this._items.length - 1 &&
                         delta.x < 0) ?
 
-                        // åˆ™æ¥ä¸€å®šçš„å‡é€Ÿ
+                        // ÔòÀ´Ò»¶¨µÄ¼õËÙ
                         (Math.abs( delta.x ) / this.width + 1) : 1;
                 }
 
@@ -4732,7 +4732,7 @@ var gmu = gmu || {
 
         _onEnd: function() {
 
-            // è§£é™¤äº‹ä»¶
+            // ½â³ıÊÂ¼ş
             this.$el.off( 'touchmove' + this.eventNs + ' touchend' +
                     this.eventNs + ' touchcancel' + this.eventNs,
                 this._handler );
@@ -4749,11 +4749,11 @@ var gmu = gmu || {
                 duration = +new Date() - start.time,
                 absDeltaX = Math.abs( delta.x ),
 
-            // æ˜¯å¦æ»‘å‡ºè¾¹ç•Œ
+            // ÊÇ·ñ»¬³ö±ß½ç
                 isPastBounds = !opts.loop && (!index && delta.x > 0 ||
                     index === slidePos.length - viewNum && delta.x < 0),
 
-            // -1 å‘å³ 1 å‘å·¦
+            // -1 ÏòÓÒ 1 Ïò×ó
                 dir = delta.x > 0 ? 1 : -1,
                 speed,
                 diff,
@@ -4763,7 +4763,7 @@ var gmu = gmu || {
 
             if ( duration < 250 ) {
 
-                // å¦‚æœæ»‘åŠ¨é€Ÿåº¦æ¯”è¾ƒå¿«ï¼Œåç§»é‡è·Ÿæ ¹æ®é€Ÿåº¦æ¥ç®—
+                // Èç¹û»¬¶¯ËÙ¶È±È½Ï¿ì£¬Æ«ÒÆÁ¿¸ú¸ù¾İËÙ¶ÈÀ´Ëã
                 speed = absDeltaX / duration;
                 diff = Math.min( Math.round( speed * viewNum * 1.2 ),
                     viewNum );
@@ -4775,7 +4775,7 @@ var gmu = gmu || {
                 me._slide( index, diff, dir, me.width, opts.speed,
                     opts, true );
 
-                // åœ¨ä»¥ä¸‹æƒ…å†µï¼Œéœ€è¦å¤šç§»åŠ¨ä¸€å¼ 
+                // ÔÚÒÔÏÂÇé¿ö£¬ĞèÒª¶àÒÆ¶¯Ò»ÕÅ
                 if ( viewNum > 1 && duration >= 250 &&
                     Math.ceil( absDeltaX / me.perWidth ) !== diff ) {
 
@@ -4785,7 +4785,7 @@ var gmu = gmu || {
                 }
             } else {
 
-                // æ»‘å›å»
+                // »¬»ØÈ¥
                 for ( i = index - viewNum, len = index + 2 * viewNum;
                       i < len; i++ ) {
 
@@ -4799,21 +4799,21 @@ var gmu = gmu || {
 })( gmu, gmu.$ );
 
 /**
- * @file è‡ªåŠ¨æ’­æ”¾æ’ä»¶
+ * @file ×Ô¶¯²¥·Å²å¼ş
  * @import widget/slider/slider.js
  */
 (function( gmu, $ ) {
     $.extend( true, gmu.Slider, {
         options: {
             /**
-             * @property {Boolean} [autoPlay=true] æ˜¯å¦å¼€å¯è‡ªåŠ¨æ’­æ”¾
+             * @property {Boolean} [autoPlay=true] ÊÇ·ñ¿ªÆô×Ô¶¯²¥·Å
              * @namespace options
              * @for Slider
              * @uses Slider.autoplay
              */
             autoPlay: true,
             /**
-             * @property {Number} [interval=4000] è‡ªåŠ¨æ’­æ”¾çš„é—´éš”æ—¶é—´ï¼ˆæ¯«ç§’ï¼‰
+             * @property {Number} [interval=4000] ×Ô¶¯²¥·ÅµÄ¼ä¸ôÊ±¼ä£¨ºÁÃë£©
              * @namespace options
              * @for Slider
              * @uses Slider.autoplay
@@ -4823,7 +4823,7 @@ var gmu = gmu || {
     } );
 
     /**
-     * è‡ªåŠ¨æ’­æ”¾æ’ä»¶
+     * ×Ô¶¯²¥·Å²å¼ş
      * @class autoplay
      * @namespace Slider
      * @pluginfor Slider
@@ -4833,20 +4833,20 @@ var gmu = gmu || {
             var me = this;
             me.on( 'slideend ready', me.resume )
 
-                // æ¸…é™¤timer
+                // Çå³ıtimer
                 .on( 'destory', me.stop );
 
-            // é¿å…æ»‘åŠ¨æ—¶ï¼Œè‡ªåŠ¨åˆ‡æ¢
+            // ±ÜÃâ»¬¶¯Ê±£¬×Ô¶¯ÇĞ»»
             me.getEl()
                 .on( 'touchstart' + me.eventNs, $.proxy( me.stop, me ) )
                 .on( 'touchend' + me.eventNs, $.proxy( me.resume, me ) );
         },
 
         /**
-         * æ¢å¤è‡ªåŠ¨æ’­æ”¾ã€‚
+         * »Ö¸´×Ô¶¯²¥·Å¡£
          * @method resume
          * @chainable
-         * @return {self} è¿”å›æœ¬èº«
+         * @return {self} ·µ»Ø±¾Éí
          * @for Slider
          * @uses Slider.autoplay
          */
@@ -4864,10 +4864,10 @@ var gmu = gmu || {
         },
 
         /**
-         * åœæ­¢è‡ªåŠ¨æ’­æ”¾
+         * Í£Ö¹×Ô¶¯²¥·Å
          * @method stop
          * @chainable
-         * @return {self} è¿”å›æœ¬èº«
+         * @return {self} ·µ»Ø±¾Éí
          * @for Slider
          * @uses Slider.autoplay
          */
@@ -4884,7 +4884,7 @@ var gmu = gmu || {
 })( gmu, gmu.$ );
 
 /**
- * @file å›¾ç‰‡æ‡’åŠ è½½æ’ä»¶
+ * @file Í¼Æ¬ÀÁ¼ÓÔØ²å¼ş
  * @import widget/slider/slider.js
  */
 (function( gmu ) {
@@ -4896,7 +4896,7 @@ var gmu = gmu || {
         '</div>';
 
     /**
-     * å›¾ç‰‡æ‡’åŠ è½½æ’ä»¶
+     * Í¼Æ¬ÀÁ¼ÓÔØ²å¼ş
      * @class lazyloadimg
      * @namespace Slider
      * @pluginfor Slider
@@ -4922,9 +4922,9 @@ var gmu = gmu || {
         },
 
         /**
-         * åŠ è½½æŒ‡å®šitemä¸­çš„å›¾ç‰‡
+         * ¼ÓÔØÖ¸¶¨itemÖĞµÄÍ¼Æ¬
          * @method loadImage
-         * @param {Number} index è¦åŠ è½½çš„å›¾ç‰‡çš„åºå·
+         * @param {Number} index Òª¼ÓÔØµÄÍ¼Æ¬µÄĞòºÅ
          * @for Slider
          * @uses Slider.lazyloadimg
          */
@@ -4947,13 +4947,13 @@ var gmu = gmu || {
 })( gmu );
 
 /**
- * @file å›¾ç‰‡è‡ªåŠ¨é€‚åº”åŠŸèƒ½
+ * @file Í¼Æ¬×Ô¶¯ÊÊÓ¦¹¦ÄÜ
  * @import widget/slider/slider.js
  */
 (function( gmu ) {
 
     /**
-     * @property {Boolean} [imgZoom=true] æ˜¯å¦å¼€å¯å›¾ç‰‡è‡ªé€‚åº”
+     * @property {Boolean} [imgZoom=true] ÊÇ·ñ¿ªÆôÍ¼Æ¬×ÔÊÊÓ¦
      * @namespace options
      * @for Slider
      * @uses Slider.dots
@@ -4961,7 +4961,7 @@ var gmu = gmu || {
     gmu.Slider.options.imgZoom = true;
 
     /**
-     * å›¾ç‰‡è‡ªåŠ¨é€‚åº”åŠŸèƒ½
+     * Í¼Æ¬×Ô¶¯ÊÊÓ¦¹¦ÄÜ
      * @class imgZoom
      * @namespace Slider
      * @pluginfor Slider
@@ -5007,13 +5007,13 @@ var gmu = gmu || {
 })( gmu );
 
 /**
- * @file å¼¹å‡ºæ¡†ç»„ä»¶
+ * @file µ¯³ö¿ò×é¼ş
  * @import core/widget.js, extend/highlight.js, extend/parseTpl.js, extend/event.ortchange.js
  * @module GMU
  */
 (function( gmu, $, undefined ) {
     var tpl = {
-        close: '<a class="ui-dialog-close" title="å…³é—­"><span class="ui-icon ui-icon-delete"></span></a>',
+        close: '<a class="ui-dialog-close" title="¹Ø±Õ"><span class="ui-icon ui-icon-delete"></span></a>',
         mask: '<div class="ui-mask"></div>',
         title: '<div class="ui-dialog-title">'+
             '<h3><%=title%></h3>'+
@@ -5031,101 +5031,101 @@ var gmu = gmu || {
     };
 
     /**
-     * å¼¹å‡ºæ¡†ç»„ä»¶
+     * µ¯³ö¿ò×é¼ş
      *
      * @class Dialog
-     * @constructor Htmléƒ¨åˆ†
+     * @constructor Html²¿·Ö
      * ```html
-     * <div id="dialog1" title="ç™»é™†æç¤º">
-     *     <p>è¯·ä½¿ç”¨ç™¾åº¦è´¦å·ç™»å½•å, è·å¾—æ›´å¤šä¸ªæ€§åŒ–ç‰¹è‰²åŠŸèƒ½</p>
+     * <div id="dialog1" title="µÇÂ½ÌáÊ¾">
+     *     <p>ÇëÊ¹ÓÃ°Ù¶ÈÕËºÅµÇÂ¼ºó, »ñµÃ¸ü¶à¸öĞÔ»¯ÌØÉ«¹¦ÄÜ</p>
      * </div>
      * ```
      *
-     * javascriptéƒ¨åˆ†
+     * javascript²¿·Ö
      * ```javascript
      *  $('#dialog1').dialog({
      *      autoOpen: false,
      *      closeBtn: false,
      *      buttons: {
-     *          'å–æ¶ˆ': function(){
+     *          'È¡Ïû': function(){
      *              this.close();
      *          },
-     *          'ç¡®å®š': function(){
+     *          'È·¶¨': function(){
      *              this.close();
      *              $('#dialog2').dialog('open');
      *          }
      *      }
      *  });
      * ```
-     * @param {dom | zepto | selector} [el] ç”¨æ¥åˆå§‹åŒ–å¯¹è¯æ¡†çš„å…ƒç´ 
-     * @param {Object} [options] ç»„ä»¶é…ç½®é¡¹ã€‚å…·ä½“å‚æ•°è¯·æŸ¥çœ‹[Options](#GMU:Dialog:options)
+     * @param {dom | zepto | selector} [el] ÓÃÀ´³õÊ¼»¯¶Ô»°¿òµÄÔªËØ
+     * @param {Object} [options] ×é¼şÅäÖÃÏî¡£¾ßÌå²ÎÊıÇë²é¿´[Options](#GMU:Dialog:options)
      * @grammar $( el ).dialog( options ) => zepto
      * @grammar new gmu.Dialog( el, options ) => instance
      */
     gmu.define( 'Dialog', {
         options: {
             /**
-             * @property {Boolean} [autoOpen=true] åˆå§‹åŒ–åæ˜¯å¦è‡ªåŠ¨å¼¹å‡º
+             * @property {Boolean} [autoOpen=true] ³õÊ¼»¯ºóÊÇ·ñ×Ô¶¯µ¯³ö
              * @namespace options
              */
             autoOpen: true,
             /**
-             * @property {Array} [buttons=null] å¼¹å‡ºæ¡†ä¸Šçš„æŒ‰é’®
+             * @property {Array} [buttons=null] µ¯³ö¿òÉÏµÄ°´Å¥
              * @namespace options
              */
             buttons: null,
             /**
-             * @property {Boolean} [closeBtn=true] æ˜¯å¦æ˜¾ç¤ºå…³é—­æŒ‰é’®
+             * @property {Boolean} [closeBtn=true] ÊÇ·ñÏÔÊ¾¹Ø±Õ°´Å¥
              * @namespace options
              */
             closeBtn: true,
             /**
-             * @property {Boolean} [mask=true] æ˜¯å¦æœ‰é®ç½©å±‚
+             * @property {Boolean} [mask=true] ÊÇ·ñÓĞÕÚÕÖ²ã
              * @namespace options
              */
             mask: true,
             /**
-             * @property {Number} [width=300] å¼¹å‡ºæ¡†å®½åº¦
+             * @property {Number} [width=300] µ¯³ö¿ò¿í¶È
              * @namespace options
              */
             width: 300,
             /**
-             * @property {Number|String} [height='auto'] å¼¹å‡ºæ¡†é«˜åº¦
+             * @property {Number|String} [height='auto'] µ¯³ö¿ò¸ß¶È
              * @namespace options
              */
             height: 'auto',
             /**
-             * @property {String} [title=null] å¼¹å‡ºæ¡†æ ‡é¢˜
+             * @property {String} [title=null] µ¯³ö¿ò±êÌâ
              * @namespace options
              */
             title: null,
             /**
-             * @property {String} [content=null] å¼¹å‡ºæ¡†å†…å®¹
+             * @property {String} [content=null] µ¯³ö¿òÄÚÈİ
              * @namespace options
              */
             content: null,
             /**
-             * @property {Boolean} [scrollMove=true] æ˜¯å¦ç¦ç”¨æ‰scrollï¼Œåœ¨å¼¹å‡ºçš„æ—¶å€™
+             * @property {Boolean} [scrollMove=true] ÊÇ·ñ½ûÓÃµôscroll£¬ÔÚµ¯³öµÄÊ±ºò
              * @namespace options
              */
             scrollMove: true,
             /**
-             * @property {Element} [container=null] å¼¹å‡ºæ¡†å®¹å™¨
+             * @property {Element} [container=null] µ¯³ö¿òÈİÆ÷
              * @namespace options
              */
             container: null,
             /**
-             * @property {Function} [maskClick=null] åœ¨é®ç½©ä¸Šç‚¹å‡»æ—¶è§¦å‘çš„äº‹ä»¶
+             * @property {Function} [maskClick=null] ÔÚÕÚÕÖÉÏµã»÷Ê±´¥·¢µÄÊÂ¼ş
              * @namespace options
              */
             maskClick: null,
-            position: null //éœ€è¦dialog.positionæ’ä»¶æ‰èƒ½ç”¨
+            position: null //ĞèÒªdialog.position²å¼ş²ÅÄÜÓÃ
         },
 
         /**
-         * è·å–æœ€å¤–å±‚çš„èŠ‚ç‚¹
+         * »ñÈ¡×îÍâ²ãµÄ½Úµã
          * @method getWrap
-         * @return {Element} æœ€å¤–å±‚çš„èŠ‚ç‚¹
+         * @return {Element} ×îÍâ²ãµÄ½Úµã
          */
         getWrap: function(){
             return this._options._wrap;
@@ -5152,7 +5152,7 @@ var gmu = gmu || {
 
                 opts._title = $(tpl.title);
                 opts._close = opts.closeBtn && $(tpl.close).highlight('ui-dialog-close-hover');
-                me.$el = me.$el || opts._content;//å¦‚æœä¸éœ€è¦æ”¯æŒrenderæ¨¡å¼ï¼Œæ­¤å¥è¦åˆ é™¤
+                me.$el = me.$el || opts._content;//Èç¹û²»ĞèÒªÖ§³ÖrenderÄ£Ê½£¬´Ë¾äÒªÉ¾³ı
 
                 me.title(opts.title);
                 me.content(opts.content);
@@ -5163,7 +5163,7 @@ var gmu = gmu || {
                     height: opts.height
                 });
 
-                //bind eventsç»‘å®šäº‹ä»¶
+                //bind events°ó¶¨ÊÂ¼ş
                 $(window).on('ortchange', eventHanlder);
                 opts._wrap.on('click', eventHanlder);
                 opts._mask && opts._mask.on('click', eventHanlder);
@@ -5209,7 +5209,7 @@ var gmu = gmu || {
 
             opts.mask && (ret.mask = isBody ? {
                 width:  '100%',
-                height: Math.max(root.scrollHeight, root.clientHeight)-1//ä¸å‡1çš„è¯ucæµè§ˆå™¨å†æ—‹è½¬çš„æ—¶å€™ä¸è§¦å‘resize.å¥‡è‘©ï¼
+                height: Math.max(root.scrollHeight, root.clientHeight)-1//²»¼õ1µÄ»°ucä¯ÀÀÆ÷ÔÙĞı×ªµÄÊ±ºò²»´¥·¢resize.Ææİâ£¡
             }:{
                 width: '100%',
                 height: '100%'
@@ -5227,9 +5227,9 @@ var gmu = gmu || {
         },
 
         /**
-         * ç”¨æ¥æ›´æ–°å¼¹å‡ºæ¡†ä½ç½®å’Œmaskå¤§å°ã€‚å¦‚çˆ¶å®¹å™¨å¤§å°å‘ç”Ÿå˜åŒ–æ—¶ï¼Œå¯èƒ½å¼¹å‡ºæ¡†ä½ç½®ä¸å¯¹ï¼Œå¯ä»¥å¤–éƒ¨è°ƒç”¨refreshæ¥ä¿®æ­£ã€‚
+         * ÓÃÀ´¸üĞÂµ¯³ö¿òÎ»ÖÃºÍmask´óĞ¡¡£Èç¸¸ÈİÆ÷´óĞ¡·¢Éú±ä»¯Ê±£¬¿ÉÄÜµ¯³ö¿òÎ»ÖÃ²»¶Ô£¬¿ÉÒÔÍâ²¿µ÷ÓÃrefreshÀ´ĞŞÕı¡£
          * @method refresh
-         * @return {self} è¿”å›æœ¬èº«
+         * @return {self} ·µ»Ø±¾Éí
          */
         refresh: function(){
             var me = this, opts = me._options, ret, action;
@@ -5241,7 +5241,7 @@ var gmu = gmu || {
                     opts._wrap.css(ret.wrap);
                 }
 
-                //å¦‚æœæœ‰é”®ç›˜åœ¨ï¼Œéœ€è¦å¤šåŠ å»¶æ—¶
+                //Èç¹ûÓĞ¼üÅÌÔÚ£¬ĞèÒª¶à¼ÓÑÓÊ±
                 if( $.os.ios &&
                     document.activeElement &&
                     /input|textarea|select/i.test(document.activeElement.tagName)){
@@ -5257,11 +5257,11 @@ var gmu = gmu || {
         },
 
         /**
-         * å¼¹å‡ºå¼¹å‡ºæ¡†ï¼Œå¦‚æœè®¾ç½®äº†ä½ç½®ï¼Œå†…éƒ¨ä¼šæ•°å€¼è½¬ç»™[position](widget/dialog.js#position)æ¥å¤„ç†ã€‚
+         * µ¯³öµ¯³ö¿ò£¬Èç¹ûÉèÖÃÁËÎ»ÖÃ£¬ÄÚ²¿»áÊıÖµ×ª¸ø[position](widget/dialog.js#position)À´´¦Àí¡£
          * @method open
-         * @param {String|Number} [x] Xè½´ä½ç½®
-         * @param {String|Number} [y] Yè½´ä½ç½®
-         * @return {self} è¿”å›æœ¬èº«
+         * @param {String|Number} [x] XÖáÎ»ÖÃ
+         * @param {String|Number} [y] YÖáÎ»ÖÃ
+         * @return {self} ·µ»Ø±¾Éí
          */
         open: function(x, y){
             var opts = this._options;
@@ -5277,9 +5277,9 @@ var gmu = gmu || {
         },
 
         /**
-         * å…³é—­å¼¹å‡ºæ¡†
+         * ¹Ø±Õµ¯³ö¿ò
          * @method close
-         * @return {self} è¿”å›æœ¬èº«
+         * @return {self} ·µ»Ø±¾Éí
          */
         close: function(){
             var eventData, opts = this._options;
@@ -5297,10 +5297,10 @@ var gmu = gmu || {
         },
 
         /**
-         * è®¾ç½®æˆ–è€…è·å–å¼¹å‡ºæ¡†æ ‡é¢˜ã€‚valueæ¥å—å¸¦htmlæ ‡ç­¾å­—ç¬¦ä¸²
+         * ÉèÖÃ»òÕß»ñÈ¡µ¯³ö¿ò±êÌâ¡£value½ÓÊÜ´øhtml±êÇ©×Ö·û´®
          * @method title
-         * @param {String} [value] å¼¹å‡ºæ¡†æ ‡é¢˜
-         * @return {self} è¿”å›æœ¬èº«
+         * @param {String} [value] µ¯³ö¿ò±êÌâ
+         * @return {self} ·µ»Ø±¾Éí
          */
         title: function(value) {
             var opts = this._options, setter = value !== undefined;
@@ -5313,10 +5313,10 @@ var gmu = gmu || {
         },
 
         /**
-         * è®¾ç½®æˆ–è€…è·å–å¼¹å‡ºæ¡†å†…å®¹ã€‚valueæ¥å—å¸¦htmlæ ‡ç­¾å­—ç¬¦ä¸²å’Œzeptoå¯¹è±¡ã€‚
+         * ÉèÖÃ»òÕß»ñÈ¡µ¯³ö¿òÄÚÈİ¡£value½ÓÊÜ´øhtml±êÇ©×Ö·û´®ºÍzepto¶ÔÏó¡£
          * @method content
-         * @param {String|Element} [val] å¼¹å‡ºæ¡†å†…å®¹
-         * @return {self} è¿”å›æœ¬èº«
+         * @param {String|Element} [val] µ¯³ö¿òÄÚÈİ
+         * @return {self} ·µ»Ø±¾Éí
          */
         content: function(val) {
             var opts = this._options, setter = val!==undefined;
@@ -5325,7 +5325,7 @@ var gmu = gmu || {
         },
 
         /**
-         * @desc é”€æ¯ç»„ä»¶ã€‚
+         * @desc Ïú»Ù×é¼ş¡£
          * @name destroy
          */
         destroy: function(){
@@ -5340,48 +5340,48 @@ var gmu = gmu || {
 
         /**
          * @event ready
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description å½“ç»„ä»¶åˆå§‹åŒ–å®Œåè§¦å‘ã€‚
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description µ±×é¼ş³õÊ¼»¯Íêºó´¥·¢¡£
          */
 
         /**
          * @event open
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description å½“å¼¹å‡ºæ¡†å¼¹å‡ºåè§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description µ±µ¯³ö¿òµ¯³öºó´¥·¢
          */
 
         /**
          * @event beforeClose
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description åœ¨å¼¹å‡ºæ¡†å…³é—­ä¹‹å‰è§¦å‘ï¼Œå¯ä»¥é€šè¿‡e.preventDefault()æ¥é˜»æ­¢
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description ÔÚµ¯³ö¿ò¹Ø±ÕÖ®Ç°´¥·¢£¬¿ÉÒÔÍ¨¹ıe.preventDefault()À´×èÖ¹
          */
 
         /**
          * @event close
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description åœ¨å¼¹å‡ºæ¡†å…³é—­ä¹‹åè§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description ÔÚµ¯³ö¿ò¹Ø±ÕÖ®ºó´¥·¢
          */
 
         /**
          * @event destroy
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description ç»„ä»¶åœ¨é”€æ¯çš„æ—¶å€™è§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description ×é¼şÔÚÏú»ÙµÄÊ±ºò´¥·¢
          */
     });
 })( gmu, gmu.$ );
 
 /**
- * @file Dialog ï¼ çˆ¶å®¹å™¨æ’ä»¶
+ * @file Dialog £­ ¸¸ÈİÆ÷²å¼ş
  * @module GMU
  * @import widget/dialog/dialog.js, extend/position.js
  */
 (function( gmu, $, undefined ) {
     /**
      * @name dialog.position
-     * @desc ç”¨zepto.positionæ¥å®šä½dialog
+     * @desc ÓÃzepto.positionÀ´¶¨Î»dialog
      */
     /**
-     * ç”¨zepto.positionæ¥å®šä½dialog
+     * ÓÃzepto.positionÀ´¶¨Î»dialog
      *
      * @class position
      * @namespace Dialog
@@ -5396,18 +5396,18 @@ var gmu = gmu || {
         },
 
         /**
-         * ç”¨æ¥è®¾ç½®å¼¹å‡ºæ¡†çš„ä½ç½®ï¼Œå¦‚æœä¸å¦å¤–è®¾ç½®ï¼Œç»„ä»¶é»˜è®¤ä¸ºä¸Šä¸‹å·¦å³å±…ä¸­å¯¹é½ã€‚ä½ç½®å‚æ•°æ¥å—ï¼Œæ•°å€¼ï¼Œç™¾åˆ†æ¯”ï¼Œå¸¦å•ä½çš„æ•°å€¼ï¼Œæˆ–è€…'center'ã€‚
-         * å¦‚: 100ï¼Œ 100px, 100em, 10%, center;æš‚æ—¶ä¸æ”¯æŒ left, right, top, bottom.
+         * ÓÃÀ´ÉèÖÃµ¯³ö¿òµÄÎ»ÖÃ£¬Èç¹û²»ÁíÍâÉèÖÃ£¬×é¼şÄ¬ÈÏÎªÉÏÏÂ×óÓÒ¾ÓÖĞ¶ÔÆë¡£Î»ÖÃ²ÎÊı½ÓÊÜ£¬ÊıÖµ£¬°Ù·Ö±È£¬´øµ¥Î»µÄÊıÖµ£¬»òÕß'center'¡£
+         * Èç: 100£¬ 100px, 100em, 10%, center;ÔİÊ±²»Ö§³Ö left, right, top, bottom.
          * @method position
-         * @param {String|Number} [x] Xè½´ä½ç½®
-         * @param {String|Number} [y] Yè½´ä½ç½®
+         * @param {String|Number} [x] XÖáÎ»ÖÃ
+         * @param {String|Number} [y] YÖáÎ»ÖÃ
          * @for Dialog
          * @uses Dialog.position
-         * @return {self} è¿”å›æœ¬èº«ã€‚
+         * @return {self} ·µ»Ø±¾Éí¡£
          */
         position: function(x, y){
             var opts = this._options;
-            if(!$.isPlainObject(x)){//å…¼å®¹è€æ ¼å¼ï¼
+            if(!$.isPlainObject(x)){//¼æÈİÀÏ¸ñÊ½£¡
                 opts.position.at = 'left'+(x>0?'+'+x: x)+' top'+(y>0?'+'+y: y);
             } else $.extend(opts.position, x);
             return this.refresh();
@@ -5431,7 +5431,7 @@ var gmu = gmu || {
 })( gmu, gmu.$);
 
 /**
- * @file é€‰é¡¹å¡ç»„ä»¶
+ * @file Ñ¡Ïî¿¨×é¼ş
  * @import extend/touch.js, core/widget.js, extend/highlight.js, extend/event.ortchange.js
  * @importCSS transitions.css, loading.css
  * @module GMU
@@ -5446,10 +5446,10 @@ var gmu = gmu || {
         idRE = /^#(.+)$/;
 
     /**
-     * é€‰é¡¹å¡ç»„ä»¶
+     * Ñ¡Ïî¿¨×é¼ş
      *
      * @class Tabs
-     * @constructor Htmléƒ¨åˆ†
+     * @constructor Html²¿·Ö
      * ```html
      * <div id="tabs">
      *      <ul>
@@ -5458,17 +5458,17 @@ var gmu = gmu || {
      *         <li><a href="#conten3">Tab3</a></li>
      *     </ul>
      *     <div id="conten1">content1</div>
-     *     <div id="conten2"><input type="checkbox" id="input1" /><label for="input1">é€‰ä¸­æˆ‘åtabsä¸å¯åˆ‡æ¢</label></div>
+     *     <div id="conten2"><input type="checkbox" id="input1" /><label for="input1">Ñ¡ÖĞÎÒºótabs²»¿ÉÇĞ»»</label></div>
      *     <div id="conten3">content3</div>
      * </div>
      * ```
      *
-     * javascriptéƒ¨åˆ†
+     * javascript²¿·Ö
      * ```javascript
      * $('#tabs').tabs();
      * ```
-     * @param {dom | zepto | selector} [el] ç”¨æ¥åˆå§‹åŒ–Tabçš„å…ƒç´ 
-     * @param {Object} [options] ç»„ä»¶é…ç½®é¡¹ã€‚å…·ä½“å‚æ•°è¯·æŸ¥çœ‹[Options](#GMU:Tabs:options)
+     * @param {dom | zepto | selector} [el] ÓÃÀ´³õÊ¼»¯TabµÄÔªËØ
+     * @param {Object} [options] ×é¼şÅäÖÃÏî¡£¾ßÌå²ÎÊıÇë²é¿´[Options](#GMU:Tabs:options)
      * @grammar $( el ).tabs( options ) => zepto
      * @grammar new gmu.Tabs( el, options ) => instance
      */
@@ -5476,19 +5476,19 @@ var gmu = gmu || {
         options: {
 
             /**
-             * @property {Number} [active=0] åˆå§‹æ—¶å“ªä¸ªä¸ºé€‰ä¸­çŠ¶æ€ï¼Œå¦‚æœæ—¶setupæ¨¡å¼ï¼Œå¦‚æœç¬¬2ä¸ªliä¸ŠåŠ äº†ui-state-activeæ ·å¼æ—¶ï¼Œactiveå€¼ä¸º1
+             * @property {Number} [active=0] ³õÊ¼Ê±ÄÄ¸öÎªÑ¡ÖĞ×´Ì¬£¬Èç¹ûÊ±setupÄ£Ê½£¬Èç¹ûµÚ2¸öliÉÏ¼ÓÁËui-state-activeÑùÊ½Ê±£¬activeÖµÎª1
              * @namespace options
              */
             active: 0,
 
             /**
-             * @property {Array} [items=null] åœ¨renderæ¨¡å¼ä¸‹éœ€è¦å¿…é¡»è®¾ç½® æ ¼å¼ä¸º\[{title:\'\', content:\'\', href:\'\'}\], hrefå¯ä»¥ä¸è®¾ï¼Œå¯ä»¥ç”¨æ¥è®¾ç½®ajaxå†…å®¹
+             * @property {Array} [items=null] ÔÚrenderÄ£Ê½ÏÂĞèÒª±ØĞëÉèÖÃ ¸ñÊ½Îª\[{title:\'\', content:\'\', href:\'\'}\], href¿ÉÒÔ²»Éè£¬¿ÉÒÔÓÃÀ´ÉèÖÃajaxÄÚÈİ
              * @namespace options
              */
             items:null,
 
             /**
-             * @property {String} [transition='slide'] è®¾ç½®åˆ‡æ¢åŠ¨ç”»ï¼Œç›®å‰åªæ”¯æŒslideåŠ¨ç”»ï¼Œæˆ–æ— åŠ¨ç”»
+             * @property {String} [transition='slide'] ÉèÖÃÇĞ»»¶¯»­£¬Ä¿Ç°Ö»Ö§³Öslide¶¯»­£¬»òÎŞ¶¯»­
              * @namespace options
              */
             transition: 'slide'
@@ -5547,7 +5547,7 @@ var gmu = gmu || {
                             items.push({
                                 id: id,
                                 href: href,
-                                title: $a?$a.attr('href', 'javascript:;').text():$(this).text(),//å¦‚æœhrefä¸åˆ é™¤çš„è¯ï¼Œåœ°å€æ ä¼šå‡ºç°ï¼Œç„¶åä¸€ä¼šåˆæ¶ˆå¤±ã€‚
+                                title: $a?$a.attr('href', 'javascript:;').text():$(this).text(),//Èç¹ûhref²»É¾³ıµÄ»°£¬µØÖ·À¸»á³öÏÖ£¬È»ºóÒ»»áÓÖÏûÊ§¡£
                                 content: $content
                             });
                         });
@@ -5609,15 +5609,22 @@ var gmu = gmu || {
             var _opts = this._options, $content = _opts._content;
             _opts._plus === undefined && (_opts._plus = parseFloat($content.css('border-top-width'))+parseFloat($content.css('border-bottom-width')))
             $content.height( div.height() + _opts._plus);
+            var $par = $content.parent().parent();
+
+            if($par && $par.hasClass('ui-viewport'))
+            {
+                var navHeight = $content.prev().height();
+                $par.height(parseFloat($par.css('border-top-width'))+parseFloat($par.css('border-bottom-width')) +  div.height() + _opts._plus + navHeight);
+            }
             return this;
         },
 
         /**
-         * åˆ‡æ¢åˆ°æŸä¸ªTab
+         * ÇĞ»»µ½Ä³¸öTab
          * @method switchTo
-         * @param {Number} index Tabç¼–å·
+         * @param {Number} index Tab±àºÅ
          * @chainable
-         * @return {self} è¿”å›æœ¬èº«ã€‚
+         * @return {self} ·µ»Ø±¾Éí¡£
          */
         switchTo: function(index) {
             var me = this, _opts = me._options, items = _opts.items, eventData, to, from, reverse, endEvent;
@@ -5644,8 +5651,8 @@ var gmu = gmu || {
                     _opts._content.addClass('ui-viewport-transitioning');
                     from.div.addClass('out'+reverse);
                     to.div.addClass('in'+reverse).on(endEvent, function(e){
-                        if (e.target != e.currentTarget) return //å¦‚æœæ˜¯å†’æ³¡ä¸Šæ¥çš„ï¼Œåˆ™ä¸æ“ä½œ
-                        to.div.off(endEvent, arguments.callee);//è§£é™¤ç»‘å®š
+                        if (e.target != e.currentTarget) return //Èç¹ûÊÇÃ°ÅİÉÏÀ´µÄ£¬Ôò²»²Ù×÷
+                        to.div.off(endEvent, arguments.callee);//½â³ı°ó¶¨
                         _opts._buzy = false;
                         from.div.removeClass('out reverse');
                         to.div.removeClass('in reverse');
@@ -5662,17 +5669,17 @@ var gmu = gmu || {
         },
 
         /**
-         * å½“å¤–éƒ¨ä¿®æ”¹tabså†…å®¹å¥½ï¼Œéœ€è¦è°ƒç”¨refreshè®©tabsè‡ªåŠ¨æ›´æ–°é«˜åº¦
+         * µ±Íâ²¿ĞŞ¸ÄtabsÄÚÈİºÃ£¬ĞèÒªµ÷ÓÃrefreshÈÃtabs×Ô¶¯¸üĞÂ¸ß¶È
          * @method refresh
          * @chainable
-         * @return {self} è¿”å›æœ¬èº«ã€‚
+         * @return {self} ·µ»Ø±¾Éí¡£
          */
         refresh: function(){
             return this._fitToContent(this._getPanel());
         },
 
         /**
-         * é”€æ¯ç»„ä»¶
+         * Ïú»Ù×é¼ş
          * @method destroy
          */
         destroy:function () {
@@ -5688,106 +5695,298 @@ var gmu = gmu || {
 
         /**
          * @event ready
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description å½“ç»„ä»¶åˆå§‹åŒ–å®Œåè§¦å‘ã€‚
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description µ±×é¼ş³õÊ¼»¯Íêºó´¥·¢¡£
          */
 
         /**
          * @event beforeActivate
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @param {Object} to åŒ…å«å¦‚ä¸‹å±æ€§ï¼šdiv(å†…å®¹div), index(ä½ç½®), title(æ ‡é¢˜), content(å†…å®¹), href(é“¾æ¥)
-         * @param {Object} from åŒ…å«å¦‚ä¸‹å±æ€§ï¼šdiv(å†…å®¹div), index(ä½ç½®), title(æ ‡é¢˜), content(å†…å®¹), href(é“¾æ¥)
-         * @description å†…å®¹åˆ‡æ¢ä¹‹å‰è§¦å‘ï¼Œå¯ä»¥é€šè¿‡e.preventDefault()æ¥é˜»æ­¢
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Object} to °üº¬ÈçÏÂÊôĞÔ£ºdiv(ÄÚÈİdiv), index(Î»ÖÃ), title(±êÌâ), content(ÄÚÈİ), href(Á´½Ó)
+         * @param {Object} from °üº¬ÈçÏÂÊôĞÔ£ºdiv(ÄÚÈİdiv), index(Î»ÖÃ), title(±êÌâ), content(ÄÚÈİ), href(Á´½Ó)
+         * @description ÄÚÈİÇĞ»»Ö®Ç°´¥·¢£¬¿ÉÒÔÍ¨¹ıe.preventDefault()À´×èÖ¹
          */
 
         /**
          * @event activate
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @param {Object} to åŒ…å«å¦‚ä¸‹å±æ€§ï¼šdiv(å†…å®¹div), index(ä½ç½®), title(æ ‡é¢˜), content(å†…å®¹), href(é“¾æ¥)
-         * @param {Object} from åŒ…å«å¦‚ä¸‹å±æ€§ï¼šdiv(å†…å®¹div), index(ä½ç½®), title(æ ‡é¢˜), content(å†…å®¹), href(é“¾æ¥)
-         * @description å†…å®¹åˆ‡æ¢ä¹‹åè§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Object} to °üº¬ÈçÏÂÊôĞÔ£ºdiv(ÄÚÈİdiv), index(Î»ÖÃ), title(±êÌâ), content(ÄÚÈİ), href(Á´½Ó)
+         * @param {Object} from °üº¬ÈçÏÂÊôĞÔ£ºdiv(ÄÚÈİdiv), index(Î»ÖÃ), title(±êÌâ), content(ÄÚÈİ), href(Á´½Ó)
+         * @description ÄÚÈİÇĞ»»Ö®ºó´¥·¢
          */
 
         /**
          * @event animateComplete
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @param {Object} to åŒ…å«å¦‚ä¸‹å±æ€§ï¼šdiv(å†…å®¹div), index(ä½ç½®), title(æ ‡é¢˜), content(å†…å®¹), href(é“¾æ¥)
-         * @param {Object} from åŒ…å«å¦‚ä¸‹å±æ€§ï¼šdiv(å†…å®¹div), index(ä½ç½®), title(æ ‡é¢˜), content(å†…å®¹), href(é“¾æ¥)
-         * @description åŠ¨ç”»å®Œæˆåæ‰§è¡Œï¼Œå¦‚æœæ²¡æœ‰è®¾ç½®åŠ¨ç”»ï¼Œæ­¤æ—¶é—´ä¸ä¼šè§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Object} to °üº¬ÈçÏÂÊôĞÔ£ºdiv(ÄÚÈİdiv), index(Î»ÖÃ), title(±êÌâ), content(ÄÚÈİ), href(Á´½Ó)
+         * @param {Object} from °üº¬ÈçÏÂÊôĞÔ£ºdiv(ÄÚÈİdiv), index(Î»ÖÃ), title(±êÌâ), content(ÄÚÈİ), href(Á´½Ó)
+         * @description ¶¯»­Íê³ÉºóÖ´ĞĞ£¬Èç¹ûÃ»ÓĞÉèÖÃ¶¯»­£¬´ËÊ±¼ä²»»á´¥·¢
          */
 
         /**
          * @event destroy
-         * @param {Event} e gmu.Eventå¯¹è±¡
-         * @description ç»„ä»¶åœ¨é”€æ¯çš„æ—¶å€™è§¦å‘
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @description ×é¼şÔÚÏú»ÙµÄÊ±ºò´¥·¢
          */
     });
 })( gmu, gmu.$ );
 
+/**
+ * @file ajax²å¼ş
+ * @import widget/tabs/tabs.js
+ */
+(function ($, undefined) {
+    var idRE = /^#.+$/,
+        loaded = {},
+        tpl = {
+            loading: '<div class="ui-loading">Loading</div>',
+            error: '<p class="ui-load-error">ÄÚÈİ¼ÓÔØÊ§°Ü!</p>'
+        };
+
+    /**
+     * ÔÚaÉÏÃæhrefÉèÖÃµÄÊÇµØÖ·£¬¶ø²»ÊÇid£¬Ôò×é¼şÈÏÎªÕâ¸öÎªajaxÀàĞÍµÄ¡£ÔÚoptionsÉÏ´«Èëajax¶ÔÏó¿ÉÒÔÅäÖÃ[ajaxÑ¡Ïî](#$.ajax)
+     * @class ajax
+     * @namespace Tabs
+     * @pluginfor Tabs
+     */
+    gmu.Tabs.register( 'ajax', {
+        _init:function () {
+            var _opts = this._options, items, i, length;
+
+            this.on( 'ready', function(){
+                items = _opts.items;
+                for (i = 0, length = items.length; i < length; i++) {
+                    items[i].href && !idRE.test(items[i].href) && (items[i].isAjax = true);
+                }
+                this.on('activate', this._onActivate);
+                items[_opts.active].isAjax && this.load(_opts.active);//Èç¹ûµ±Ç°ÊÇajax
+            } );
+        },
+
+        destroy:function () {
+            this.off('activate', this._onActivate);
+            this.xhr && this.xhr.abort();
+            return this.origin();
+        },
+
+        _fitToContent: function(div) {
+            var _opts = this._options;
+
+            if(!_opts._fitLock)return this.origin(div);
+        },
+
+        _onActivate:function (e, to) {
+            to.isAjax && this.load(to.index);
+        },
+
+        /**
+         * ¼ÓÔØÄÚÈİ£¬Ö¸¶¨µÄtab±ØĞëÊÇajaxÀàĞÍ¡£¼ÓÔØµÄÄÚÈİ»á»º´æÆğÀ´£¬Èç¹ûÒªÇ¿ĞĞÔÙ´Î¼ÓÔØ£¬µÚ¶ş¸ö²ÎÊı´«Èëtrue
+         * @method load
+         * @param {Number} index Tab±àºÅ
+         * @param {Boolean} [force=false] ÊÇ·ñÇ¿ÖÆÖØĞÂ¼ÓÔØ
+         * @for Tabs
+         * @uses Tabs.ajax
+         * @return {self} ·µ»Ø±¾Éí¡£
+         */
+        load:function (index, force) {
+            var me = this, _opts = me._options, items = _opts.items, item, $panel, prevXHR;
+
+            if (index < 0 ||
+                index > items.length - 1 ||
+                !(item = items[index]) || //Èç¹û·¶Î§´íÎó
+                !item.isAjax || //Èç¹û²»ÊÇajaxÀàĞÍµÄ
+                ( ( $panel = me._getPanel(index)).text() && !force && loaded[index] ) //Èç¹ûÃ»ÓĞ¼ÓÔØ¹ı£¬²¢ÇÒtabÄÚÈİÎª¿Õ
+                )return this;
+
+            (prevXHR = me.xhr) && setTimeout(function(){//°ÑÇĞ³öÈ¥Ã»ÓĞ¼ÓÔØÍæµÄxhr abortÁË
+                prevXHR.abort();
+            }, 400);
+
+            _opts._loadingTimer = setTimeout(function () {//Èç¹û¼ÓÔØÔÚ50msÄÚÍê³ÉÁË£¬¾ÍÃ»±ØÒªÔÙÈ¥ÏÔÊ¾ loadingÁË
+                $panel.html(tpl.loading);
+            }, 50);
+
+            _opts._fitLock = true;
+
+            me.xhr = $.ajax($.extend(_opts.ajax || {}, {
+                url:item.href,
+                context:me.$el.get(0),
+                beforeSend:function (xhr, settings) {
+                    var eventData = gmu.Event('beforeLoad');
+                    me.trigger(eventData, xhr, settings);
+                    if (eventData.isDefaultPrevented())return false;
+                },
+                success:function (response, xhr) {
+                    var eventData = gmu.Event('beforeRender');
+                    clearTimeout(_opts._loadingTimer);//Çå³ıÏÔÊ¾loadingµÄ¼ÆÊ±Æ÷
+                    me.trigger(eventData, response, $panel, index, xhr)//Íâ²¿¿ÉÒÔĞŞ¸Ädata£¬»òÕßÖ±½Ó°ÑpannelĞŞ¸ÄÁË
+                    if (!eventData.isDefaultPrevented()) {
+                        $panel.html(response);
+                    }
+                    _opts._fitLock = false;
+                    loaded[index] = true;
+                    me.trigger('load', $panel);
+                    delete me.xhr;
+                    me._fitToContent($panel);
+                },
+                error:function () {
+                    var eventData = gmu.Event('loadError');
+                    clearTimeout(_opts._loadingTimer);//Çå³ıÏÔÊ¾loadingµÄ¼ÆÊ±Æ÷
+                    loaded[index] = false;
+                    me.trigger(eventData, $panel);
+                    if(!eventData.isDefaultPrevented()){
+                        $panel.html(tpl.error);
+                    }
+                    delete me.xhr;
+                }
+            }));
+        }
+
+        /**
+         * @event beforeLoad
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Object} xhr xhr¶ÔÏó
+         * @param {Object} settings ajaxÇëÇóµÄ²ÎÊı
+         * @description ÔÚÇëÇóÇ°´¥·¢£¬¿ÉÒÔÍ¨¹ıe.preventDefault()À´È¡Ïû´Ë´ÎajaxÇëÇó
+         * @for Tabs
+         * @uses Tabs.ajax
+         */
+
+        /**
+         * @event beforeRender
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Object} response ·µ»ØÖµ
+         * @param {Object} panel ¶ÔÓ¦µÄTabÄÚÈİµÄÈİÆ÷
+         * @param {Number} index TabµÄĞòºÅ
+         * @param {Object} xhr xhr¶ÔÏó
+         * @description ajaxÇëÇó½øÀ´Êı¾İ£¬ÔÚrenderµ½divÉÏÖ®Ç°´¥·¢£¬¶ÔÓÚjsonÊı¾İ£¬¿ÉÒÔÍ¨¹ı´Ë·½À´×ÔĞĞĞ´render£¬È»ºóÍ¨¹ıe.preventDefault()À´×èÖ¹£¬½«responseÊä³öÔÚdivÉÏ
+         * @for Tabs
+         * @uses Tabs.ajax
+         */
+
+        /**
+         * @event load
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Zepto} panel ¶ÔÓ¦µÄTabÄÚÈİµÄÈİÆ÷
+         * @description µ±ajaxÇëÇóµ½µÄÄÚÈİ¹ıÀ´ºó£¬Æ½ÒÑ¾­Renderµ½divÉÏÁËºó´¥·¢
+         * @for Tabs
+         * @uses Tabs.ajax
+         */
+
+        /**
+         * @event loadError
+         * @param {Event} e gmu.Event¶ÔÏó
+         * @param {Zepto} panel ¶ÔÓ¦µÄTabÄÚÈİµÄÈİÆ÷
+         * @description µ±ajaxÇëÇóÄÚÈİÊ§°ÜÊ±´¥·¢£¬Èç¹û´ËÊÂ¼ş±»preventDefaultÁË£¬Ôò²»»á°Ñ×Ô´øµÄ´íÎóĞÅÏ¢Renderµ½divÉÏ
+         * @for Tabs
+         * @uses Tabs.ajax
+         */
+    } );
+})(Zepto);
+
+
 if(window.localStorage)
 {
-    var collectObj = {length:0}, historyObj ={length:0};
+    var collectObj = {length:0}, historyCarArr =[], historyShopArr = [];
     if(localStorage.getItem("collectObj"))
     {
         collectObj = JSON.parse(localStorage.getItem("collectObj"));
     }
-    if(localStorage.getItem("historyObj"))
+    if(localStorage.getItem("historyCarArr"))
     {
-        historyObj = JSON.parse(localStorage.getItem("historyObj"));
+        historyCarArr = JSON.parse(localStorage.getItem("historyCarArr"));
+    }
+    if(localStorage.getItem("historyShopArr"))
+    {
+        historyShopArr = JSON.parse(localStorage.getItem("historyShopArr"));
     }
 }
-function createCarItem(itemExample ,itemData, url)
+function createCarItem(itemExample ,itemData)
 {
     var $item = $(itemExample.cloneNode(true));
-    $item.find('a').attr('href', url);
+    $item.find('a').attr('href', itemData.url);
     $item.find(".carItem").text(itemData.name);
     $item.find(".carPrice").find('i').text(itemData.price);
     return $item;
 }
 
-function createShopItem(itemExample ,itemData, url)
+function createShopItem(itemExample ,itemData)
 {
     var $item = $(itemExample.cloneNode(true));
-    $item.find('a').attr('href', url);
+    $item.find('a').attr('href', itemData.url);
     $item.find(".shopItem").text(itemData.name);
-    $item.find(".shopPhone").text(itemData.phone);
     return $item;
 }
 
-
-function initHistory(historyObj, carItem, shopItem)
+//²éÕÒÔÚÊı×éÖĞµÄÎ»ÖÃ
+function indexOfArr(arr, url)
 {
-    var len = historyObj.length;
-    if(len === 0)
+    var len = arr;
+    for(var i = 0; i < len; ++i)
     {
-        $("#browsing-record").html('<p>æš‚æ—¶æ— æµè§ˆè®°å½•</p>');
+        if(arr[i].url === url)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function initHistory(historyCarArr, historyShopArr, carItem, shopItem)
+{
+    var carLen = historyCarArr.length;
+    var shopLen = historyShopArr.length;
+    if(carLen === 0 && shopLen === 0)
+    {
+        $("#browsing-record-list").html('<p>ÔİÊ±ÎŞä¯ÀÀ¼ÇÂ¼</p>');
         return;
     }
     var $container = $('#browsing-record-list').empty();
-    for(var url in historyObj)
+
+    for(var i = 0; i < carLen; ++i)
     {
         var $item;
-        if(historyObj[url].type == "car")
-        {
-            $item = createCarItem(carItem, historyObj[url], url);
-        }
-        else
-        {
-            $item = createShopItem(shopItem, historyObj[url], url);
-        }
-        $container.append($item);
+        $item = createCarItem(carItem, historyCarArr[i]);
+        $container.prepend($item);
     }
+
+    for(var i = 0; i < shopLen; ++i)
+    {
+        var $item;
+        $item = createShopItem(shopItem, historyShopArr[i]);
+        $container.prepend($item);
+    }
+
     $container.find(".deleteBtn").each(function(i, item)
     {
         $(this).on("tap", function()
         {
-            historyObj[$container.find('li').eq(i).find('a').attr('href')] = null;
-            historyObj.length--;
-            window.localStorage.setItem('historyObj', JSON.stringify(historyObj));
-            if(historyObj.length === 0)
+            var $curNode = $(this).parent();
+            var href = $curNode.find('a').attr('href');
+            if($curNode.find('a').hasClass('carItem'))
             {
-                $("#browsing-record").html('<p>æš‚æ—¶æ— æµè§ˆè®°å½•</p>');
+                var index = indexOfArr(historyCarArr, href);
+                if(index !== -1)
+                {
+                    historyCarArr.splice(index, 1);
+                }
+                window.localStorage.setItem('historyCarArr', JSON.stringify(historyCarArr));
             }
+            else if($curNode.find('a').hasClass('shopItem'))
+            {
+                var index = indexOfArr(historyShopArr, href);
+                if(index !== -1)
+                {
+                    historyShopArr.splice(index, 1);
+                }
+                window.localStorage.setItem('historyShopArr', JSON.stringify(historyShopArr));
+            }
+
+            if(historyShopArr.length === 0 && historyCarArr.length === 0)
+            {
+                $("#browsing-record-list").html('<p>ÔİÊ±ÎŞä¯ÀÀ¼ÇÂ¼</p>');
+            }
+            $(this).parent().remove();
         });
     });
 }
@@ -5797,7 +5996,7 @@ function initCollect(collectObj, carItem, shopItem)
     var len = collectObj.length;
     if(len === 0)
     {
-        $("#collect-record").html('<p>æš‚æ—¶æ— æ”¶è—è®°å½•</p>');
+        $("#collect-record-list").html('<p>ÔİÊ±ÎŞÊÕ²Ø¼ÇÂ¼</p>');
         return;
     }
     var $container = $('#collect-record-list').empty();
@@ -5806,24 +6005,30 @@ function initCollect(collectObj, carItem, shopItem)
         var $item;
         if(collectObj[url].type == "car")
         {
-            $item = createCarItem(carItem, collectObj[url], url);
+            $item = createCarItem(carItem, collectObj[url]);
         }
-        else
+        else if(collectObj[url].type == "shop")
         {
-            $item = createShopItem(shopItem, collectObj[url], url);
+            $item = createShopItem(shopItem, collectObj[url]);
         }
-        $container.append($item);
+        $container.prepend($item);
     }
     $container.find(".deleteBtn").each(function(i, item)
     {
         $(this).on("tap", function()
         {
-            collectObj[$container.find('li').eq(i).find('a').attr('href')] = null;
-            collectObj.length--;
+            var href = $container.find('li').eq(i).find('a').attr('href');
+            collectObj[href] = null;
+            --collectObj.length;
             window.localStorage.setItem('collectObj', JSON.stringify(collectObj));
             if(collectObj.length === 0)
             {
-                $("#collect-record").html('<p>æš‚æ—¶æ— æ”¶è—è®°å½•</p>');
+                $("#collect-record-list").html('<p>ÔİÊ±ÎŞÊÕ²Ø¼ÇÂ¼</p>');
+            }
+            $(this).parent().remove();
+            if(window.location.href == href && $("#collectBtn").hasClass('active'))
+            {
+                $("#collectBtn").removeClass('active').text('ÊÕ²Ø´Ë³µ');
             }
         });
     });

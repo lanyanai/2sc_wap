@@ -249,7 +249,7 @@ header{ padding: 10px; border-bottom: 4px solid #000; overflow: hidden; }
 
 
 /*广告位样式*/
-#banner{ width: 100%; height: 55px; background: url("../images/ornament.png") center bottom no-repeat;
+#adBanner{ width: 100%; height: 55px; background: url("../images/ornament.png") center bottom no-repeat;
     background-color: #3c3c3c;display: block;position: relative;
 }
 .tsc-logo{ display: block; height: 100%; top:0; left: 10px; position: absolute;
@@ -656,9 +656,6 @@ header{ padding: 10px; border-bottom: 4px solid #000; overflow: hidden; }
     position: relative;
 }
 #suggest-dialog, #report-dialog,#message-dialog{ width: 100%; overflow: hidden;}
-#suggest-dialog{height: 72px;}
-#message-dialog{height: 136px;}
-#report-dialog{height: 102px;}
 #suggest-content, #message-content, #report-content{ width: 100%; height: 72px; resize: none; line-height: 20px; font-size: 14px;
     box-sizing: border-box;
     -moz-box-sizing:border-box;
@@ -671,7 +668,7 @@ header{ padding: 10px; border-bottom: 4px solid #000; overflow: hidden; }
     -webkit-box-sizing: border-box;
     padding: 5px;
 }
-.message-input{display: block; padding:0 5px; box-sizing: border-box;
+.message-input, .report-input, .suggest-input{display: block; padding:0 5px; box-sizing: border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing: border-box;
     width: 100%; line-height: 30px; font-size: 14px;
@@ -1025,8 +1022,8 @@ header{ padding: 10px; border-bottom: 4px solid #000; overflow: hidden; }
     background: url("../images/close.png") center no-repeat; margin:5px 0 0 10px; }
 .carItem{ display: block; float: left; width: 60%; overflow: hidden; height: 30px;}
 .carPrice{ display: block;float: left; width: 30%; overflow: hidden; height: 30px; text-align: right;}
-.shopItem{ display: block; float: left; width: 40%; overflow: hidden; height: 30px;}
-.shopPhone{ display: block;float: left; width: 50%; overflow: hidden; height: 30px; text-align: right;}
+.shopItem{ display: block; float: left; width: 90%; overflow: hidden; height: 30px;}
+.shopItem:last-child{ margin-bottom: 10px;}
 .deleteBtn{display: block; float: right; width:25px; height: 25px; background: url("../images/close.png") center no-repeat; }
 .carPrice i, .shopPhone i{ color: #f00;}
 

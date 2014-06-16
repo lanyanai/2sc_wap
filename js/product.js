@@ -199,22 +199,30 @@ function closeLinkInfo(type) {
 }
 
 $(function() {
-
     var $collectItems = $("#collect-record-list").find('li');
     var carItem = $collectItems[0], shopItem = $collectItems[1];
     //填充历史与收藏数据
     if(window.localStorage)
     {
-        historyObj[location.href] =
+        var index = indexOfArr(historyCarArr, location.href);
+        if(index === -1)
         {
-            'type':'car',
-            'price':$('.car-price-con').text(),
-            'name':$('.car-tit-con').find('h4').text()
-        };
-        historyObj.length++;
-        localStorage.setItem('historyObj', JSON.stringify(historyObj));
+            historyCarArr.push({
+                'type':'car',
+                'price':$('.car-price-con').find('.left').text() + $('.car-price-con').find('.right').text(),
+                'name':$('.car-tit-con').find('h4').text(),
+                'url':location.href
+            });
+            if(historyCarArr.length > 5)
+            {
+                historyCarArr.shift();
+            }
+            localStorage.setItem('historyCarArr', JSON.stringify(historyCarArr));
+        }
+
+
         initCollect(collectObj, carItem, shopItem);
-        initHistory(historyObj, carItem, shopItem);
+        initHistory(historyCarArr, historyShopArr, carItem, shopItem);
         //清空按钮
         $('#clearBtn').on('tap', function()
         {
@@ -223,14 +231,16 @@ $(function() {
                 collectObj = {length:0};
                 localStorage.setItem('collectObj', JSON.stringify(collectObj));
                 $('#collect-record-list').empty();
-                $("#collect-record").html('<p>暂时无收藏记录</p>');
+                $("#collect-record-list").html('<p>暂时无收藏记录</p>');
+                $('#collectBtn').removeClass('active').text('收藏此车');
             }
             else
             {
-                historyObj = {length:0};
-                localStorage.setItem('historyObj', JSON.stringify(historyObj));
+                historyCarArr = historyShopArr = [];
+                localStorage.setItem('historyCarArr', JSON.stringify(historyCarArr));
+                localStorage.setItem('historyShopArr', JSON.stringify(historyShopArr));
                 $('#history-record-list').empty();
-                $("#history-record").html('<p>暂时无浏览记录</p>');
+                $("#history-record-list").html('<p>暂时无浏览记录</p>');
             }
         });
 
@@ -245,7 +255,7 @@ $(function() {
             {
                 $(this).removeClass('active').text('收藏此车');
                 collectObj[location.href] = null;
-                collectObj.length--;
+                --collectObj.length;
                 localStorage.setItem('collectObj', JSON.stringify(collectObj));
             }
             else
@@ -254,10 +264,11 @@ $(function() {
                 collectObj[location.href] =
                 {
                     'type':'car',
-                    'price':$('.car-price-con').text(),
-                    'name':$('.car-tit-con').find('h4').text()
+                    'price':$('.car-price-con').find('.left').text() + $('.car-price-con').find('.right').text(),
+                    'name':$('.car-tit-con').find('h4').text(),
+                    'url':location.href
                 };
-                collectObj.length++;
+                ++collectObj.length;
                 localStorage.setItem('collectObj', JSON.stringify(collectObj));
             }
         });
@@ -270,7 +281,7 @@ $(function() {
 
 
     //关闭广告栏
-    $('#adBanner').find('.close').on('tap', function()
+    $('#adBanner').find('.close').on('click', function(e)
     {
         $('#adBanner').hide();
         return false;
@@ -296,7 +307,6 @@ $(function() {
     $("#history").on("tap", function()
     {
         $('.search-wrap').css('visibility', 'hidden');
-
         var $history_wrap = $('.history-wrap');
         if($history_wrap.css('visibility') == 'hidden')
         {

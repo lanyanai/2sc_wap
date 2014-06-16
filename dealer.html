@@ -6,7 +6,7 @@
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta content="telephone=no" name="format-detection">
         <link type="text/css" rel="stylesheet" href="style/dealer.css"/>
-        <script type="text/javascript" src="js/gmu.mearge.js"></script>
+        <script type="text/javascript" src="js/gmu.merge.js"></script>
         <script type="text/javascript" src="http://api.go2map.com/maps/js/api_v2.0.js"></script>
         <script type="text/javascript" src="js/dealer.js"></script>
     </head>
@@ -16,7 +16,7 @@
             <!--头-->
             <header>
                 <span class="logo"></span>
-                <a id="city" href="">
+                <a id="city" href="citylist.html">
                     北京
                 </a>
                 <div class="icons">
@@ -89,7 +89,7 @@
                             <span class="shop-item-right"><span>身份</span><span>执照</span><span>税务</span></span>
                         </p>
                         <p class="shop-item"><span class="shop-item-left">营业时间：</span><span class="shop-item-right">上午9:00--下午5:00</span></p>
-                        <p class="shop-item"><span class="shop-item-left">公司地址：</span><span class="shop-item-right">北京市朝阳区姚家园路甲一号15号店东风雪铁龙4S店。</span></p>
+                        <p class="shop-address"><span class="shop-item-left">公司地址：</span><span class="shop-item-right">北京市朝阳区姚家园路甲一号15号店东风雪铁龙4S店。</span></p>
                         <div class="shop-item">
                             <!-- JiaThis Button BEGIN -->
                             <div class="jiathis_style_24x24">
@@ -811,17 +811,16 @@
 
         <!--意见弹出对话框-->
         <div id="suggest-dialog" title="建议">
+            <input id="suggest-name" class="suggest-input" placeholder="请输入姓名--必填">
+            <input id="suggest-phone" class="suggest-input" placeholder="请输入联系电话--必填">
             <textarea id="suggest-content" placeholder="请输入您的建议"></textarea>
         </div>
 
-        <!--分享对话框-->
-        <div id="share-dialog" title="分享">
-            <ul class="share-list">
-                <li class="renren">人人网</li>
-                <li class="sina">新浪微博</li>
-                <li class="sms">短信息</li>
-                <li class="email">用电子邮件发送信息</li>
-            </ul>
+        <!--留言弹出对话框-->
+        <div id="message-dialog">
+            <input id="message-name" class="message-input" placeholder="请输入姓名--必填">
+            <input id="message-phone" class="message-input" placeholder="请输入联系电话--必填">
+            <textarea id="message-content" placeholder="请输入您的留言"></textarea>
         </div>
 
         <!--举报对话框-->
@@ -837,6 +836,7 @@
                 <option value="6">联系不上</option>
                 <option value="7">其他</option>
             </select>
+            <input id="report-phone" class="report-input" placeholder="请输入联系电话--必填">
             <textarea id="report-content" placeholder="请输入您的举报说明"></textarea>
         </div>
 

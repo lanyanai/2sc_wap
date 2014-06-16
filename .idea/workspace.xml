@@ -23,58 +23,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="result.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/result.js">
+      <file leaf-file-name="product.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61141014" vertical-offset="1142" max-vertical-offset="2356">
-              <caret line="90" column="37" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
+            <state vertical-scroll-proportion="56.25" vertical-offset="4026" max-vertical-offset="13110">
+              <caret line="129" column="62" selection-start-line="129" selection-start-column="62" selection-end-line="129" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result.html">
+      <file leaf-file-name="buycar.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/buycar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.75" vertical-offset="1022" max-vertical-offset="3116">
-              <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
-              <folding>
-                <element signature="tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7432" max-vertical-offset="18544">
-              <caret line="416" column="94" selection-start-line="403" selection-start-column="0" selection-end-line="416" selection-end-column="94" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6783" max-vertical-offset="11799">
+              <caret line="357" column="11" selection-start-line="337" selection-start-column="8" selection-end-line="357" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style/result.css">
+      <file leaf-file-name="buycar.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/buycar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5360" max-vertical-offset="16796">
-              <caret line="308" column="11" selection-start-line="308" selection-start-column="11" selection-end-line="308" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.33296338" vertical-offset="40835" max-vertical-offset="44593">
+              <caret line="2165" column="46" selection-start-line="2165" selection-start-column="46" selection-end-line="2165" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.html">
+      <file leaf-file-name="evaluate.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/evaluate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.1698112" vertical-offset="7402" max-vertical-offset="11476">
-              <caret line="404" column="12" selection-start-line="404" selection-start-column="12" selection-end-line="496" selection-end-column="18" />
-              <folding>
-                <element signature="tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-16.964285" vertical-offset="8531" max-vertical-offset="10716">
+              <caret line="474" column="143" selection-start-line="474" selection-start-column="143" selection-end-line="474" selection-end-column="143" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sell.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sell.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.5094337" vertical-offset="9284" max-vertical-offset="11267">
+              <caret line="504" column="46" selection-start-line="504" selection-start-column="43" selection-end-line="504" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new_model.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/new_model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.52" vertical-offset="0" max-vertical-offset="171">
+              <caret line="2" column="42083" selection-start-line="2" selection-start-column="42081" selection-end-line="2" selection-end-column="42083" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,17 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/widget/slider/dots.js" />
-        <option value="$PROJECT_DIR$/js/widget/slider/imgzoom.js" />
-        <option value="$PROJECT_DIR$/js/widget/slider/slider.js" />
-        <option value="$PROJECT_DIR$/js/widget/suggestion/$iscroll.js" />
-        <option value="$PROJECT_DIR$/js/widget/suggestion/$posadapt.js" />
-        <option value="$PROJECT_DIR$/js/widget/suggestion/$quickdelete.js" />
-        <option value="$PROJECT_DIR$/js/widget/suggestion/compatdata.js" />
-        <option value="$PROJECT_DIR$/js/widget/suggestion/renderlist.js" />
-        <option value="$PROJECT_DIR$/js/widget/suggestion/sendrequest.js" />
-        <option value="$PROJECT_DIR$/js/widget/suggestion/suggestion.js" />
-        <option value="$PROJECT_DIR$/js/widget/tabs/$ajax.js" />
         <option value="$PROJECT_DIR$/js/widget/tabs/$swipe.js" />
         <option value="$PROJECT_DIR$/js/widget/toolbar/$position.js" />
         <option value="$PROJECT_DIR$/js/widget/toolbar/toolbar.js" />
@@ -112,34 +105,45 @@
         <option value="$PROJECT_DIR$/js/extend/iscroll.js" />
         <option value="$PROJECT_DIR$/js/widget/tabs/tabs.js" />
         <option value="$PROJECT_DIR$/js/brandSelect.js" />
-        <option value="$PROJECT_DIR$/js/new_model.js" />
         <option value="$PROJECT_DIR$/js/carmasterselect.js" />
         <option value="$PROJECT_DIR$/replace.html" />
-        <option value="$PROJECT_DIR$/js/mobileSohuBase.js" />
         <option value="$PROJECT_DIR$/js/zepto.js" />
+        <option value="$PROJECT_DIR$/js/aa" />
         <option value="$PROJECT_DIR$/js/gmu.mearge.js" />
-        <option value="$PROJECT_DIR$/js/buycar.js" />
+        <option value="$PROJECT_DIR$/js/mobileSohuBase.js" />
+        <option value="$PROJECT_DIR$/style/citylist.css" />
+        <option value="$PROJECT_DIR$/js/citylist.js" />
+        <option value="$PROJECT_DIR$/citylist.html" />
+        <option value="$PROJECT_DIR$/evaluate.html" />
+        <option value="$PROJECT_DIR$/result.html" />
+        <option value="$PROJECT_DIR$/sell.html" />
+        <option value="$PROJECT_DIR$/dealer.html" />
+        <option value="$PROJECT_DIR$/main.html" />
+        <option value="$PROJECT_DIR$/style/example.less" />
+        <option value="$PROJECT_DIR$/style/evaluate.css" />
+        <option value="$PROJECT_DIR$/style/main.css" />
+        <option value="$PROJECT_DIR$/style/result.css" />
+        <option value="$PROJECT_DIR$/style/sell.css" />
+        <option value="$PROJECT_DIR$/style/example.scss" />
+        <option value="$PROJECT_DIR$/style/exapmple.scss" />
+        <option value="$PROJECT_DIR$/style/ex.less" />
+        <option value="$PROJECT_DIR$/style/exxx.scss" />
+        <option value="$PROJECT_DIR$/style/xx.scss" />
+        <option value="$PROJECT_DIR$/js/new_model.js" />
+        <option value="$PROJECT_DIR$/buycar.html" />
+        <option value="$PROJECT_DIR$/product.html" />
+        <option value="$PROJECT_DIR$/js/gmu.merge.js" />
+        <option value="$PROJECT_DIR$/js/product.js" />
         <option value="$PROJECT_DIR$/js/dealer.js" />
+        <option value="$PROJECT_DIR$/js/buycar.js" />
         <option value="$PROJECT_DIR$/js/evaluate.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/js/product.js" />
-        <option value="$PROJECT_DIR$/js/sell.js" />
-        <option value="$PROJECT_DIR$/main.html" />
-        <option value="$PROJECT_DIR$/style/main.css" />
-        <option value="$PROJECT_DIR$/style/evaluate.css" />
-        <option value="$PROJECT_DIR$/evaluate.html" />
-        <option value="$PROJECT_DIR$/buycar.html" />
-        <option value="$PROJECT_DIR$/dealer.html" />
-        <option value="$PROJECT_DIR$/product.html" />
-        <option value="$PROJECT_DIR$/sell.html" />
-        <option value="$PROJECT_DIR$/style/buycar.css" />
-        <option value="$PROJECT_DIR$/style/dealer.css" />
-        <option value="$PROJECT_DIR$/style/product.css" />
-        <option value="$PROJECT_DIR$/style/sell.css" />
-        <option value="$PROJECT_DIR$/result.html" />
-        <option value="$PROJECT_DIR$/style/result.css" />
-        <option value="$PROJECT_DIR$/js/aa" />
         <option value="$PROJECT_DIR$/js/result.js" />
+        <option value="$PROJECT_DIR$/js/sell.js" />
+        <option value="$PROJECT_DIR$/style/dealer.css" />
+        <option value="$PROJECT_DIR$/style/common.css" />
+        <option value="$PROJECT_DIR$/style/product.css" />
+        <option value="$PROJECT_DIR$/style/buycar.css" />
       </list>
     </option>
   </component>
@@ -230,7 +234,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/hq/列表页浮层-" />
+    <property name="options.lastSelected" value="settings" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -300,15 +308,15 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -331,50 +339,19 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/car.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ng/g.js">
+    <entry file="file://$PROJECT_DIR$/js/gmu.merge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6637555" vertical-offset="0" max-vertical-offset="5149">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="113696" max-vertical-offset="114779">
+          <caret line="5984" column="52" selection-start-line="5984" selection-start-column="52" selection-end-line="5984" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/widget/tabs/$swipe.js">
+    <entry file="file://$PROJECT_DIR$/js/gmu.merge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91233766" vertical-offset="1091" max-vertical-offset="1995">
-          <caret line="87" column="29" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/widget/tabs/$ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4179105" vertical-offset="855" max-vertical-offset="3002">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/extend/touch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2375">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/extend/iscroll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5416" max-vertical-offset="17613">
-          <caret line="207" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="924" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/extend/matchMedia.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1558">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="113354" max-vertical-offset="114095">
+          <caret line="5966" column="30" selection-start-line="5966" selection-start-column="30" selection-end-line="5966" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -490,13 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/widget/tabs/tabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41293532" vertical-offset="1765" max-vertical-offset="5662">
-          <caret line="106" column="111" selection-start-line="0" selection-start-column="0" selection-end-line="292" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/widget/dialog/$position.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1235">
@@ -511,192 +481,232 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/widget/tabs/$swipe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1066" max-vertical-offset="1995">
+          <caret line="87" column="29" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/widget/tabs/tabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3329646" vertical-offset="3024" max-vertical-offset="5662">
+          <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/widget/tabs/$ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24327233" vertical-offset="1560" max-vertical-offset="3002">
+          <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/mobileSohuBase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19684" max-vertical-offset="26144">
-          <caret line="1036" column="3" selection-start-line="1036" selection-start-column="0" selection-end-line="1036" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/gmu.mearge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33296943" vertical-offset="109743" max-vertical-offset="110846">
-          <caret line="5794" column="9" selection-start-line="5794" selection-start-column="9" selection-end-line="5794" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/new_model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2337" max-vertical-offset="153482">
-          <caret line="123" column="18" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40258342" vertical-offset="7245" max-vertical-offset="9348">
-          <caret line="401" column="55" selection-start-line="401" selection-start-column="55" selection-end-line="401" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5285253" vertical-offset="5266" max-vertical-offset="8018">
-          <caret line="303" column="55" selection-start-line="303" selection-start-column="55" selection-end-line="303" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67491925" vertical-offset="798" max-vertical-offset="3059">
-          <caret line="75" column="55" selection-start-line="75" selection-start-column="55" selection-end-line="75" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/dealer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4908504" vertical-offset="1026" max-vertical-offset="3439">
-          <caret line="261" column="55" selection-start-line="261" selection-start-column="55" selection-end-line="261" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/buycar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59311086" vertical-offset="2375" max-vertical-offset="7068">
-          <caret line="388" column="12" selection-start-line="388" selection-start-column="12" selection-end-line="389" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/evaluate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6340151" vertical-offset="7030" max-vertical-offset="9348">
-          <caret line="401" column="55" selection-start-line="0" selection-start-column="0" selection-end-line="486" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.285715" vertical-offset="798" max-vertical-offset="10716">
-          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buycar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40066594" vertical-offset="912" max-vertical-offset="44365">
-          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dealer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.035714" vertical-offset="916" max-vertical-offset="17328">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sell.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69589347" vertical-offset="627" max-vertical-offset="11267">
-          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5011261" vertical-offset="771" max-vertical-offset="13053">
-          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/buycar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329646" vertical-offset="5057" max-vertical-offset="35682">
-          <caret line="282" column="5" selection-start-line="282" selection-start-column="5" selection-end-line="282" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/dealer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329646" vertical-offset="4468" max-vertical-offset="20824">
-          <caret line="251" column="3" selection-start-line="251" selection-start-column="3" selection-end-line="251" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/evaluate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329646" vertical-offset="4677" max-vertical-offset="29754">
-          <caret line="262" column="9" selection-start-line="262" selection-start-column="7" selection-end-line="262" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/product.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3329646" vertical-offset="4468" max-vertical-offset="20330">
-          <caret line="251" column="2" selection-start-line="251" selection-start-column="2" selection-end-line="251" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/sell.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2909292" vertical-offset="4506" max-vertical-offset="29811">
-          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1698112" vertical-offset="7402" max-vertical-offset="11476">
-          <caret line="404" column="12" selection-start-line="404" selection-start-column="12" selection-end-line="496" selection-end-column="18" />
-          <folding>
-            <element signature="tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7432" max-vertical-offset="18544">
-          <caret line="416" column="94" selection-start-line="403" selection-start-column="0" selection-end-line="416" selection-end-column="94" />
-          <folding />
+        <state vertical-scroll-proportion="-0.56113535" vertical-offset="15657" max-vertical-offset="26011">
+          <caret line="797" column="33" selection-start-line="797" selection-start-column="33" selection-end-line="797" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.75" vertical-offset="1022" max-vertical-offset="3116">
-          <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
-          <folding>
-            <element signature="tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-2.0244174" vertical-offset="2166" max-vertical-offset="5358">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/citylist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4517203" vertical-offset="258" max-vertical-offset="1159">
+          <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dealer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.199325" vertical-offset="14338" max-vertical-offset="17328">
+          <caret line="91" column="77" selection-start-line="91" selection-start-column="77" selection-end-line="91" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/citylist.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9386437" vertical-offset="2130" max-vertical-offset="3116">
+          <caret line="158" column="1" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style/result.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5360" max-vertical-offset="16796">
-          <caret line="308" column="11" selection-start-line="308" selection-start-column="11" selection-end-line="308" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.3329646" vertical-offset="4506" max-vertical-offset="16796">
+          <caret line="253" column="4" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/sell.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3240043" vertical-offset="4506" max-vertical-offset="29811">
+          <caret line="253" column="29" selection-start-line="253" selection-start-column="29" selection-end-line="253" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-424.7857" vertical-offset="0" max-vertical-offset="13281">
+          <caret line="626" column="13" selection-start-line="626" selection-start-column="13" selection-end-line="626" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/citylist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1779476" vertical-offset="41701" max-vertical-offset="42864">
+          <caret line="2138" column="23" selection-start-line="2138" selection-start-column="23" selection-end-line="2138" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6103337" vertical-offset="6444" max-vertical-offset="9367">
+          <caret line="369" column="5" selection-start-line="369" selection-start-column="5" selection-end-line="369" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/result.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61141014" vertical-offset="1142" max-vertical-offset="2356">
-          <caret line="90" column="37" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.5898816" vertical-offset="41" max-vertical-offset="2375">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6512379" vertical-offset="3" max-vertical-offset="3078">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/evaluate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7125942" vertical-offset="6330" max-vertical-offset="9367">
+          <caret line="368" column="11" selection-start-line="368" selection-start-column="11" selection-end-line="368" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/brand.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/gmu.merge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="112837" max-vertical-offset="114741">
+          <caret line="5984" column="52" selection-start-line="5984" selection-start-column="52" selection-end-line="5984" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/dealer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20805">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/evaluate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29754">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="18506">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/buycar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6156" max-vertical-offset="11761">
+          <caret line="357" column="11" selection-start-line="337" selection-start-column="8" selection-end-line="357" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/buycar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5726588" vertical-offset="1710" max-vertical-offset="35644">
+          <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dealer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3594" max-vertical-offset="7068">
+          <caret line="231" column="11" selection-start-line="196" selection-start-column="8" selection-end-line="231" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4657" max-vertical-offset="8208">
+          <caret line="273" column="11" selection-start-line="206" selection-start-column="8" selection-end-line="273" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/product.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6752" max-vertical-offset="20273">
+          <caret line="314" column="50" selection-start-line="314" selection-start-column="50" selection-end-line="314" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="56.25" vertical-offset="4026" max-vertical-offset="13110">
+          <caret line="129" column="62" selection-start-line="129" selection-start-column="62" selection-end-line="129" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.964285" vertical-offset="8531" max-vertical-offset="10716">
+          <caret line="474" column="143" selection-start-line="474" selection-start-column="143" selection-end-line="474" selection-end-column="143" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sell.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5094337" vertical-offset="9284" max-vertical-offset="11267">
+          <caret line="504" column="46" selection-start-line="504" selection-start-column="43" selection-end-line="504" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/new_model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.52" vertical-offset="0" max-vertical-offset="171">
+          <caret line="2" column="42083" selection-start-line="2" selection-start-column="42081" selection-end-line="2" selection-end-column="42083" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buycar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33296338" vertical-offset="40835" max-vertical-offset="44593">
+          <caret line="2165" column="46" selection-start-line="2165" selection-start-column="46" selection-end-line="2165" selection-end-column="46" />
           <folding />
         </state>
       </provider>

@@ -251,7 +251,7 @@ header{ padding: 10px; border-bottom: 4px solid #000; overflow: hidden; }
 
 
 /*广告位样式*/
-#banner{ width: 100%; height: 55px; background: url("../images/ornament.png") center bottom no-repeat;
+#adBanner{ width: 100%; height: 55px; background: url("../images/ornament.png") center bottom no-repeat;
     background-color: #3c3c3c;display: block;position: relative;
 }
 .tsc-logo{ display: block; height: 100%; top:0; left: 10px; position: absolute;

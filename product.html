@@ -6,7 +6,7 @@
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta content="telephone=no" name="format-detection">
         <link type="text/css" rel="stylesheet" href="style/product.css"/>
-        <script type="text/javascript" src="js/gmu.mearge.js"></script>
+        <script type="text/javascript" src="js/gmu.merge.js"></script>
         <script type="text/javascript" src="http://api.go2map.com/maps/js/api_v2.0.js"></script>
         <script type="text/javascript" src="js/product.js"></script>
     </head>
@@ -16,7 +16,7 @@
             <!--头-->
             <header>
                 <span class="logo"></span>
-                <a id="city" href="">
+                <a id="city" href="citylist.html">
                     北京
                 </a>
                 <div class="icons">
@@ -62,7 +62,7 @@
         <div id="static-part">
 
             <!--广告位-->
-            <a id="banner" href="">
+            <a id="adBanner" href="">
                 <span class="tsc-logo"></span>
                 <span class="slogan"></span>
                 <em class="close"></em>
@@ -589,6 +589,8 @@
 
         <!--意见弹出对话框-->
         <div id="suggest-dialog" title="建议">
+            <input id="suggest-name" class="suggest-input" placeholder="请输入姓名--必填">
+            <input id="suggest-phone" class="suggest-input" placeholder="请输入联系电话--必填">
             <textarea id="suggest-content" placeholder="请输入您的建议"></textarea>
         </div>
 
@@ -612,6 +614,7 @@
                 <option value="6">联系不上</option>
                 <option value="7">其他</option>
             </select>
+            <input id="report-phone" class="report-input" placeholder="请输入联系电话--必填">
             <textarea id="report-content" placeholder="请输入您的举报说明"></textarea>
         </div>
 
@@ -652,7 +655,7 @@
                                 <a class="carItem" href=""></a><span class="carPrice"><i></i>万</span><span class="deleteBtn"></span>
                             </li>
                             <li>
-                                <a class="shopItem" href=""></a><span class="shopPhone"></span><span class="deleteBtn"></span>
+                                <a class="shopItem" href=""></a><span class="deleteBtn"></span>
                             </li>
                         </ul>
                     </div>

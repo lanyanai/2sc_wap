@@ -6,8 +6,15 @@
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta content="telephone=no" name="format-detection">
         <link type="text/css" rel="stylesheet" href="style/buycar.css"/>
-        <script type="text/javascript" src="js/gmu.mearge.js"></script>
+        <script type="text/javascript" src="js/gmu.merge.js"></script>
+        <script type="text/javascript" src="js/mobileSohuBase.js"></script>
         <script type="text/javascript" src="js/new_model.js"></script>
+        <script>
+            var linkTpl = {
+                linkBrandTpl:'/bj/auto-{p}/a0b3c0d0e0f0g0h0j0k0m0n0/',
+                linkModelTpl:'/bj/auto1-{p}/a0b3c0d0e0f0g0h0j0k0m0n0/'
+            };
+        </script>
         <script type="text/javascript" src="js/buycar.js"></script>
     </head>
     <body>
@@ -17,7 +24,7 @@
                 <!--头-->
                 <header>
                     <span class="logo"></span>
-                    <a id="city" href="">
+                    <a id="city" href="citylist.html">
                         北京
                     </a>
                     <div class="icons">
@@ -65,7 +72,7 @@
             <div id="static-part">
 
             <!--广告位-->
-                <a id="banner" href="">
+                <a id="adBanner" href="">
                     <span class="tsc-logo"></span>
                     <span class="slogan"></span>
                     <em class="close"></em>
@@ -1827,6 +1834,8 @@
 
             <!--意见弹出对话框-->
             <div id="suggest-dialog" title="建议">
+                <input id="suggest-name" class="suggest-input" placeholder="请输入姓名--必填">
+                <input id="suggest-phone" class="suggest-input" placeholder="请输入联系电话--必填">
                 <textarea id="suggest-content" placeholder="请输入您的建议"></textarea>
             </div>
 
@@ -1984,7 +1993,6 @@
                             <strong>D</strong>
                             <ul class="m-root-item clearfix">
                                 <li id="mb_349"><a href="javascript:;" class="m-brand m_349_b"></a><a href="javascript:;" class="m-car-name">DS</a></li>
-                                <li id="mb_331"><a href="javascript:;" class="m-brand m_331_b"></a><a href="javascript:;" class="m-car-name">MAXUS大通</a></li>
                                 <li id="mb_233"><a href="javascript:;" class="m-brand m_233_b"></a><a href="javascript:;" class="m-car-name">大迪</a></li>
                                 <li id="mb_183"><a href="javascript:;" class="m-brand m_183_b"></a><a href="javascript:;" class="m-car-name">大宇</a></li>
                                 <li id="mb_197"><a href="javascript:;" class="m-brand m_197_b"></a><a href="javascript:;" class="m-car-name">大众</a></li>
@@ -2044,7 +2052,6 @@
                             <ul class="m-root-item clearfix">
                                 <li id="mb_153"><a href="javascript:;" class="m-brand m_153_b"></a><a href="javascript:;" class="m-car-name">Jeep</a></li>
                                 <li id="mb_159"><a href="javascript:;" class="m-brand m_159_b"></a><a href="javascript:;" class="m-car-name">吉利</a></li>
-                                <li id="mb_307"><a href="javascript:;" class="m-brand m_307_b"></a><a href="javascript:;" class="m-car-name">吉利帝豪</a></li>
                                 <li id="mb_306"><a href="javascript:;" class="m-brand m_306_b"></a><a href="javascript:;" class="m-car-name">吉利全球鹰</a></li>
                                 <li id="mb_308"><a href="javascript:;" class="m-brand m_308_b"></a><a href="javascript:;" class="m-car-name">吉利英伦</a></li>
                                 <li id="mb_235"><a href="javascript:;" class="m-brand m_235_b"></a><a href="javascript:;" class="m-car-name">江淮</a></li>
@@ -2142,6 +2149,7 @@
                                 <li id="mb_273"><a href="javascript:;" class="m-brand m_273_b"></a><a href="javascript:;" class="m-car-name">赛宝</a></li>
                                 <li id="mb_157"><a href="javascript:;" class="m-brand m_157_b"></a><a href="javascript:;" class="m-car-name">三菱</a></li>
                                 <li id="mb_376"><a href="javascript:;" class="m-brand m_376_b"></a><a href="javascript:;" class="m-car-name">陕汽通家</a></li>
+                                <li id="mb_331"><a href="javascript:;" class="m-brand m_331_b"></a><a href="javascript:;" class="m-car-name">上汽MAXUS大通</a></li>
                                 <li id="mb_359"><a href="javascript:;" class="m-brand m_359_b"></a><a href="javascript:;" class="m-car-name">绅宝</a></li>
                                 <li id="mb_245"><a href="javascript:;" class="m-brand m_245_b"></a><a href="javascript:;" class="m-car-name">世爵</a></li>
                                 <li id="mb_234"><a href="javascript:;" class="m-brand m_234_b"></a><a href="javascript:;" class="m-car-name">双环</a></li>
@@ -2155,6 +2163,7 @@
                             <strong>T</strong>
                             <ul class="m-root-item clearfix">
                                 <li id="mb_304"><a href="javascript:;" class="m-brand m_304_b"></a><a href="javascript:;" class="m-car-name">Tesla</a></li>
+                                <li id="mb_271"><a href="javascript:;" class="m-brand m_345_b"></a><a href="javascript:;" class="m-car-name">腾势</a></li>
                                 <li id="mb_274"><a href="javascript:;" class="m-brand m_274_b"></a><a href="javascript:;" class="m-car-name">天马</a></li>
                                 <li id="mb_271"><a href="javascript:;" class="m-brand m_271_b"></a><a href="javascript:;" class="m-car-name">通田</a></li>
                             </ul>
@@ -2327,4 +2336,7 @@
         </div>
 
     </body>
+    <script>
+        SA.job.run('');
+    </script>
 </html>

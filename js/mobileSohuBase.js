@@ -795,14 +795,7 @@ SA.register('app.iplocation',function(a,$){
 	}
 
 	function drawHtml( item ){
-		$('#cityName').text( item.name );
-		if( item.path=='' ) return;
-		var p1=item.path;
-		var p2=item.path.match('-') ? item.path : item.path;
-		$('#navlist>li>a').each(function(){
-			var $t=$(this),href=$t.attr('data');
-			href && $t.attr('href', href.replace('{1}',p1).replace('{2}',p2) );
-		});
+		$('#city').text( item.name );
 	}
 
 	function ipLoaded( jump ){

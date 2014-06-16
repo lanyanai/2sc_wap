@@ -249,7 +249,7 @@ header{ padding: 10px; border-bottom: 4px solid #000; overflow: hidden; }
 
 
 /*广告位样式*/
-#banner{ width: 100%; height: 55px; background: url("../images/ornament.png") center bottom no-repeat;
+#adBanner{ width: 100%; height: 55px; background: url("../images/ornament.png") center bottom no-repeat;
     background-color: #3c3c3c;display: block;position: relative;
 }
 .tsc-logo{ display: block; height: 100%; top:0; left: 10px; position: absolute;
@@ -293,12 +293,13 @@ header{ padding: 10px; border-bottom: 4px solid #000; overflow: hidden; }
 .shop-con1-left{ margin: 0 120px 0 0;}
 .shop-con1-right{ position: absolute; top: 0; right: 5px; width: 110px; overflow: hidden;}
 .shop-item{ padding: 0 5px; line-height: 28px; border-bottom: 1px solid #e6e6e6; overflow: hidden; font-size: 12px; position: relative;}
+.shop-address{ padding: 0 5px; line-height: 28px; border-bottom: 1px solid #e6e6e6; overflow: hidden; font-size: 12px; position: relative; height: 56px;}
 .shop-item-left{  color: #999999; }
 .shop-item-right{ margin-right: 5px; color:#000; }
 .shop-item-right span{ margin: 0 3px; background-color: #28960f; padding: 3px 5px; color: #fff;}
 i.red{ color: #ff4400; font-style: normal;}
 .jiathis_style_24x24{ margin: 3px 5px; overflow: hidden;}
-.jiathis_style_24x24 a{ margin-left: 10px; display: block; float: left;}
+.jiathis_style_24x24 a{ margin: 5px 15%; display: block; float: left;}
 .report{color: #999; position: absolute; right:5px; top:0;}
 .report i{ background-color: #ff4400; color: #fff; padding: 0 5px; margin: 0 3px; font-style: normal;}
 .shop-pic{ width: 110px; height: 90px; overflow: hidden; position: relative; display: block;}
@@ -682,10 +683,8 @@ i.red{ color: #ff4400; font-style: normal;}
     padding: 0;
     position: relative;
 }
-#suggest-dialog, #report-dialog{ width: 100%; overflow: hidden;}
-#suggest-dialog{height: 72px;}
-#report-dialog{height: 102px;}
-#suggest-content, #report-content{ width: 100%; height: 72px; resize: none; line-height: 20px; font-size: 14px;
+#suggest-dialog, #report-dialog,#message-dialog{ width: 100%; overflow: hidden;}
+#suggest-content, #message-content, #report-content{ width: 100%; height: 72px; resize: none; line-height: 20px; font-size: 14px;
     box-sizing: border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing: border-box;
@@ -697,7 +696,7 @@ i.red{ color: #ff4400; font-style: normal;}
     -webkit-box-sizing: border-box;
     padding: 5px;
 }
-.message-input{display: block; padding:0 5px; box-sizing: border-box;
+.message-input, .report-input, .suggest-input{display: block; padding:0 5px; box-sizing: border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing: border-box;
     width: 100%; line-height: 30px; font-size: 14px;

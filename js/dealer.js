@@ -194,16 +194,23 @@ $(function() {
     //填充历史与收藏数据
     if(window.localStorage)
     {
-        historyObj[location.href] =
+        var index = indexOfArr(historyShopArr, location.href);
+        if(index === -1)
         {
-            'type':'shop',
-            'phone':$('.shop-tel').text(),
-            'name':$('.shopName').text()
-        };
-        historyObj.length++;
-        localStorage.setItem('historyObj', JSON.stringify(historyObj));
+            historyShopArr.push({
+                'type':'car',
+                'price':$('.car-price-con').find('.left').text() + $('.car-price-con').find('.right').text(),
+                'name':$('.car-tit-con').find('h4').text(),
+                'url':location.href
+            });
+            if(historyShopArr.length > 5)
+            {
+                historyShopArr.shift();
+            }
+            localStorage.setItem('historyShopArr', JSON.stringify(historyShopArr));
+        }
         initCollect(collectObj, carItem, shopItem);
-        initHistory(historyObj, carItem, shopItem);
+        initHistory(historyCarArr, historyShopArr, carItem, shopItem);
         //清空按钮
         $('#clearBtn').on('tap', function()
         {
@@ -216,10 +223,11 @@ $(function() {
             }
             else
             {
-                historyObj = {length:0};
-                localStorage.setItem('historyObj', JSON.stringify(historyObj));
+                historyCarArr = historyShopArr = [];
+                localStorage.setItem('historyCarArr', JSON.stringify(historyCarArr));
+                localStorage.setItem('historyShopArr', JSON.stringify(historyShopArr));
                 $('#history-record-list').empty();
-                $("#history-record").html('<p>暂时无浏览记录</p>');
+                $("#history-record-list").html('<p>暂时无浏览记录</p>');
             }
         });
     }
@@ -230,7 +238,7 @@ $(function() {
     }
 
     //关闭广告栏
-    $('#adBanner').find('.close').on('tap', function () {
+    $('#adBanner').find('.close').on('click', function () {
         $('#adBanner').hide();
         return false;
     });

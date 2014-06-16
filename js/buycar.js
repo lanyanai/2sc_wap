@@ -220,17 +220,19 @@ var CarMasterSelect = {
 
 function SetJsonToData(bsid, data) {
     var popupBox = "";
+
+
     if (bsid > 0 && data) {
         popupBox += "<div class=\"m-popup m-cars\">";
-        popupBox += '<dd class="select-all"><a href="">不限</a></dd>';
-        for (var i = 0; i < data.length; i++) {
-            var brand = data[i];
+        popupBox += '<dd class="select-all"><a href="' + linkTpl.linkBrandTpl.replace('{p}',data.e) + '">不限</a></dd>';
+        for (var i = 0; i < data.s.length; i++) {
+            var brand = data.s[i];
             popupBox += "<dl>";
             var brandName = brand.n;
             popupBox += '<dt>' + brandName + '</dt>';
             for (var j = 0; j < brand.b.length; j++) {
                 var serial = brand.b[j];
-                popupBox += '<dd><a href="">' + serial.n + '</a></dd>';
+                popupBox += '<dd><a href="' + linkTpl.linkModelTpl.replace('{p}',serial.e) + '">' + serial.n + '</a></dd>';
             }
             popupBox += "</dl>";
         }
@@ -298,7 +300,12 @@ function getWinWidth() {
 function scrollShow()
 {
     var offset = $('#shop-cars').offset();
-    if((offset.top > $(window).scrollTop() && offset.top < $(window).scrollTop() + window.screen.availHeight)
+    if($(window).scrollTop() <= 82)
+    {
+        $('#page-head').show();
+        $('#toolbar').hide();
+    }
+    else if((offset.top > $(window).scrollTop() && offset.top < $(window).scrollTop() + window.screen.availHeight)
         || (offset.top + offset.height > $(window).scrollTop() && offset.top + offset.height < $(window).scrollTop() + window.screen.availHeight)
         || (offset.top < $(window).scrollTop() && offset.top + offset.height > $(window).scrollTop() + window.screen.availHeight))
     {
@@ -318,7 +325,7 @@ $(function() {
         if (typeof (brandMods) != "undefined") {
             var len = brandMods.length;
             for (var i = 0; i <= brandMods.length; i++) {
-                SetJsonToData(brandMods[i].i, brandMods[i].s);
+                SetJsonToData(brandMods[i].i, brandMods[i]);
             }
         }
     }
@@ -329,7 +336,7 @@ $(function() {
     if(window.localStorage)
     {
         initCollect(collectObj, carItem, shopItem);
-        initHistory(historyObj, carItem, shopItem);
+        initHistory(historyCarArr, historyShopArr, carItem, shopItem);
         //清空按钮
         $('#clearBtn').on('tap', function()
         {
@@ -342,10 +349,11 @@ $(function() {
             }
             else
             {
-                historyObj = {length:0};
-                localStorage.setItem('historyObj', JSON.stringify(historyObj));
+                historyCarArr = historyShopArr = [];
+                localStorage.setItem('historyCarArr', JSON.stringify(historyCarArr));
+                localStorage.setItem('historyShopArr', JSON.stringify(historyShopArr));
                 $('#history-record-list').empty();
-                $("#history-record").html('<p>暂时无浏览记录</p>');
+                $("#history-record-list").html('<p>暂时无浏览记录</p>');
             }
         });
     }
@@ -356,7 +364,7 @@ $(function() {
     }
 
     //关闭广告栏
-    $('#adBanner').find('.close').on('tap', function()
+    $('#adBanner').find('.close').on('click', function()
     {
         $('#adBanner').hide();
         return false;
@@ -377,6 +385,8 @@ $(function() {
 
     //tabs切换
     $(".history-tabs").tabs();
+
+
 
     //历史与收藏
     $("#history").on("tap", function()
@@ -466,7 +476,13 @@ $(function() {
     $(".tab-car").tabs();
     $("#shop-cars").tabs();
 
-
+    //查看更多
+    $(".see-more").on('tap', function(e)
+    {
+        var $carList = $(this).prev();
+        $carList.append($carList.html());
+        $(e.target).parent().parent().parent().tabs('refresh');
+    });
 
     $(window).on('scroll', scrollShow);
 
@@ -521,7 +537,6 @@ $(function() {
             $("#main-page").show();
             $("#price-page").hide();
         }
-        isShow = !isShow;
     });
 
     $("#selectYear").on('tap', function()
@@ -596,6 +611,6 @@ $(function() {
         $("#more-page").show();
     });
 
-    $('#collect-record-wrap').iScroll();
-    $('#browsing-record-wrap').iScroll();
+    //$('#collect-record-wrap').iScroll();
+    //$('#browsing-record-wrap').iScroll();
 });
